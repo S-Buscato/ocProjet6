@@ -1,0 +1,180 @@
+INFO    2021-05-06 23:24:55,856 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-06 23:24:56,140 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - api/person (getAll) => ok
+INFO    2021-05-06 23:26:20,281 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-06 23:26:20,517 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - api/person (getAll) => ok
+INFO    2021-05-06 23:27:15,397 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-06 23:27:15,662 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.Controller.UsersController  - api/person (getAll) => ok
+INFO    2021-05-07 12:20:18,986 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-07 12:20:19,483 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.Controller.UsersController  - api/person (getAll) => ok
+INFO    2021-05-07 12:22:37,146 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-07 12:22:37,490 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.Controller.UsersController  - api/person (getAll) => ok
+INFO    2021-05-07 12:29:07,109 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-07 12:29:07,453 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - api/person (getAll) => ok
+INFO    2021-05-07 12:35:26,256 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-07 12:35:26,602 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - api/person (getAll) => ok
+ERROR   2021-05-07 12:35:30,888 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.Controller.UsersController  - api/person/add => error : org.springframework.dao.InvalidDataAccessResourceUsageException: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+INFO    2021-05-07 12:35:35,951 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-07 12:35:35,957 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.Controller.UsersController  - api/person (getAll) => ok
+ERROR   2021-05-07 12:35:55,167 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.Controller.UsersController  - api/person/add => error : org.springframework.dao.InvalidDataAccessResourceUsageException: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+ERROR   2021-05-07 18:10:02,102 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.Controller.UsersController  - api/person/add => error : org.springframework.dao.InvalidDataAccessResourceUsageException: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+INFO    2021-05-07 18:10:57,785 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - api/person/add => ok
+INFO    2021-05-07 18:11:07,636 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-07 18:11:07,921 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.Controller.UsersController  - api/person (getAll) => ok
+INFO    2021-05-07 21:59:00,357 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-07 21:59:00,357 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-07 22:03:55,876 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-07 22:03:55,887 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-07 22:39:38,180 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-07 22:39:38,181 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-07 23:03:59,472 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-07 23:03:59,475 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-07 23:07:10,592 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-07 23:07:10,596 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-07 23:15:15,672 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-07 23:15:15,680 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-07 23:18:33,917 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-07 23:18:33,922 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-07 23:50:01,067 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-07 23:50:01,074 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-07 23:50:38,540 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-07 23:50:38,541 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-07 23:55:56,989 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-07 23:55:56,997 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 19:07:56,117 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-08 19:07:56,122 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 19:09:53,382 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-08 19:09:53,394 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 19:22:50,466 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-08 19:22:50,470 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 19:22:53,498 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-08 19:22:53,499 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 19:23:51,075 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-08 19:23:51,075 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 19:35:05,576 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-08 19:35:05,582 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 21:41:52,890 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 21:41:53,056 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAllFriends
+INFO    2021-05-08 21:42:40,897 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 21:42:41,032 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAllFriends
+INFO    2021-05-08 21:42:53,719 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 21:42:53,732 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAllFriends
+INFO    2021-05-08 21:47:21,991 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 21:47:22,003 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAllFriends
+INFO    2021-05-08 21:47:27,636 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 21:47:27,640 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAllFriends
+INFO    2021-05-08 21:52:10,661 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 21:52:10,820 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAllFriends
+INFO    2021-05-08 21:55:43,984 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 21:55:44,191 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAllFriends
+INFO    2021-05-08 21:55:55,817 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 21:55:55,825 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAllFriends
+INFO    2021-05-08 21:55:59,693 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 21:55:59,716 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAllFriends
+INFO    2021-05-08 21:56:05,460 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 21:56:05,471 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAllFriends
+INFO    2021-05-08 22:04:36,058 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 22:04:36,223 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAllFriends
+INFO    2021-05-08 22:06:11,169 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 22:06:11,291 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAllFriends
+INFO    2021-05-08 22:06:17,200 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 22:06:17,221 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAllFriends
+INFO    2021-05-08 22:06:21,699 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 22:06:21,705 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAllFriends
+INFO    2021-05-08 22:06:31,069 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 22:06:31,082 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAllFriends
+INFO    2021-05-08 22:06:34,188 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 22:06:34,201 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAllFriends
+INFO    2021-05-08 22:06:36,582 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 22:06:36,586 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAllFriends
+INFO    2021-05-08 22:06:39,210 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 22:06:39,218 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAllFriends
+INFO    2021-05-08 22:06:41,767 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 22:06:41,777 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAllFriends
+INFO    2021-05-08 22:06:58,028 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 22:06:58,042 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAllFriends
+INFO    2021-05-08 22:34:53,611 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 22:34:53,623 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAllFriends
+INFO    2021-05-08 22:34:57,327 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 22:34:57,331 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAllFriends
+INFO    2021-05-08 22:35:00,346 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 22:35:00,349 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAllFriends
+INFO    2021-05-08 22:35:17,875 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 22:35:17,879 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAllFriends
+INFO    2021-05-08 22:35:20,615 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 22:35:20,623 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAllFriends
+INFO    2021-05-08 23:28:37,696 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 23:28:37,742 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAllFriends
+INFO    2021-05-08 23:28:44,961 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-08 23:28:44,976 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAllFriends
+INFO    2021-05-09 15:13:02,272 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-09 15:13:02,468 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAllFriends
+INFO    2021-05-09 15:13:08,319 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-09 15:13:08,331 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAllFriends
+INFO    2021-05-09 17:37:15,133 [http-nio-8080-exec-5] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-09 17:37:15,143 [http-nio-8080-exec-5] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-09 17:37:20,007 [http-nio-8080-exec-6] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-09 17:37:20,008 [http-nio-8080-exec-6] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-09 21:04:36,519 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-09 21:04:36,529 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-09 21:05:53,492 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-09 21:05:53,502 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-09 21:17:07,601 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-09 21:17:07,608 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-09 22:00:51,984 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-09 22:00:51,987 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-09 22:04:36,109 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-09 22:04:36,110 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-09 22:09:42,744 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-09 22:09:42,750 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-09 22:11:42,465 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-09 22:11:42,469 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-09 22:27:02,987 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-09 22:33:41,166 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-09 22:53:17,475 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-09 23:52:32,964 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-09 23:52:54,688 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-09 23:54:28,745 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-09 23:55:31,864 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-09 23:56:43,181 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-09 23:59:24,939 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-10 00:00:10,813 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-10 00:00:58,457 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-10 00:01:05,507 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-10 00:01:53,793 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-10 00:04:24,491 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-10 00:04:26,897 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-10 00:04:36,020 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-10 00:10:39,616 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-10 00:10:48,617 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-10 00:11:16,413 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-10 00:13:49,397 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-10 00:13:51,588 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-10 00:13:57,502 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-10 12:56:14,359 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-10 13:43:51,158 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-10 15:49:23,274 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-11 21:12:45,677 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users/add => ok
+INFO    2021-05-11 21:16:00,289 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users/add => ok
+INFO    2021-05-11 21:16:50,936 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users/add => ok
+INFO    2021-05-11 21:17:33,725 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users/add => ok
+INFO    2021-05-11 21:17:48,434 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users/add => ok
+INFO    2021-05-11 21:35:58,871 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users/add => ok
+INFO    2021-05-11 21:55:26,517 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users/add => ok
+INFO    2021-05-11 22:05:47,080 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users/add => ok
+INFO    2021-05-12 08:49:59,050 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users/add => ok
+INFO    2021-05-12 09:00:59,055 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users/add => ok
+INFO    2021-05-12 09:03:13,786 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users/add => ok
+ERROR   2021-05-12 09:04:52,189 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users/add => error : org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+INFO    2021-05-12 09:05:48,348 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-12 09:07:01,450 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-12 09:07:01,456 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-12 09:10:01,083 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users/add => ok
+INFO    2021-05-12 09:10:10,132 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-12 09:10:10,178 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-12 09:12:43,159 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-12 09:12:43,197 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+INFO    2021-05-12 10:30:24,907 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - users findAll
+INFO    2021-05-12 10:30:24,955 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users (getAll) => ok
+ERROR   2021-05-12 10:31:11,938 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users/add => error : org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+ERROR   2021-05-12 11:20:09,064 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users/add => error : org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+ERROR   2021-05-12 11:50:53,841 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.Controller.UsersController  - api/users/add => error : org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
