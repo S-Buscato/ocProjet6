@@ -1,8 +1,8 @@
-package com.paymybuddy.paymybuddy.Service.IServices;
+package com.paymybuddy.paymybuddy.service.iservice;
 
-import com.paymybuddy.paymybuddy.DTO.UsersDTO;
-import com.paymybuddy.paymybuddy.DTO.UsersFriendsDTO;
-import com.paymybuddy.paymybuddy.Models.Users;
+import com.paymybuddy.paymybuddy.dto.UsersDTO;
+import com.paymybuddy.paymybuddy.dto.UsersFriendsDTO;
+import com.paymybuddy.paymybuddy.models.Users;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,4 +16,5 @@ public interface IUsersService {
     Users update(Users users, Long id);
     Users findByfirstNameAndLastName(String firstName, String lastName);
     Iterable<Users> saveAll(List<Users> lstPerson);
+    UsersDTO addFriends(Long userId, Long userFriendId);
 }
