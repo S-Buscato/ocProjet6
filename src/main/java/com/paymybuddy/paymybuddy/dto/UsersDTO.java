@@ -1,4 +1,4 @@
-package com.paymybuddy.paymybuddy.DTO;
+package com.paymybuddy.paymybuddy.dto;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,7 +14,6 @@ public class UsersDTO {
     private String firstName;
     private String lastName;
     private String email;
-    private String password;
     private double totalAmount;
     private List<UsersFriendsDTO> friends;
 }

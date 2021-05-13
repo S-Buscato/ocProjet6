@@ -1,6 +1,6 @@
-package com.paymybuddy.paymybuddy.Controller;
+package com.paymybuddy.paymybuddy.controller;
 
-import com.paymybuddy.paymybuddy.Service.IServices.UsersService;
+import com.paymybuddy.paymybuddy.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HomeController{
 
-    @Autowired
-    UsersService usersService;
+   /* @Autowired
+    UsersService usersService;*/
 
-    @RequestMapping("/")
+/*    @RequestMapping("/")
     public String home(Model model)
     {
         return "home";
@@ -23,6 +23,6 @@ public class HomeController{
     {
         model.addAttribute("users", usersService.findall());
         return "/users/list";
-    }
+    }*/
 
 }
