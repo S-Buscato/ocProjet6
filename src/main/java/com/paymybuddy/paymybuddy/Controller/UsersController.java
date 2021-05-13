@@ -1,12 +1,15 @@
-package com.paymybuddy.paymybuddy.controller;
+package com.paymybuddy.paymybuddy.Controller;
 
-import com.paymybuddy.paymybuddy.dto.mapper.UsersMapper;
-import com.paymybuddy.paymybuddy.dto.UsersDTO;
-import com.paymybuddy.paymybuddy.service.UsersService;
+import com.paymybuddy.paymybuddy.DTO.Mapper.UsersMapper;
+import com.paymybuddy.paymybuddy.DTO.UsersDTO;
+import com.paymybuddy.paymybuddy.DTO.UsersFriendsDTO;
+import com.paymybuddy.paymybuddy.Models.Users;
+import com.paymybuddy.paymybuddy.Service.IServices.UsersService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -55,20 +58,6 @@ public class UsersController {
         try {
             ResponseEntity resp = ResponseEntity.status(HttpStatus.CREATED).body(usersService.save(usersDTO));
             logger.info("api/users/add => ok");
-            return resp;
-
-        } catch (Exception e) {
-            logger.error("api/users/add => error : " + e);
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
-
-    @PostMapping("/users/addfriends/{userId}/{userFriendsId}")
-    public ResponseEntity<UsersDTO> addPerson(@PathVariable("userId") Long userId,
-                                              @PathVariable("userFriendsId") Long userFriendsId) {
-        try {
-            ResponseEntity resp = ResponseEntity.status(HttpStatus.CREATED).body(usersService.addFriends(userId, userFriendsId));
-            logger.info("api/users/add friends => ok");
             return resp;
 
         } catch (Exception e) {

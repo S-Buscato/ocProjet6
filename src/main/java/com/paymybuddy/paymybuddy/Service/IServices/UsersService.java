@@ -1,23 +1,23 @@
-package com.paymybuddy.paymybuddy.service;
+package com.paymybuddy.paymybuddy.Service.IServices;
 
-import com.paymybuddy.paymybuddy.controller.UsersController;
-import com.paymybuddy.paymybuddy.dto.UsersDTO;
-import com.paymybuddy.paymybuddy.dto.UsersFriendsDTO;
-import com.paymybuddy.paymybuddy.dto.mapper.UsersMapper;
-import com.paymybuddy.paymybuddy.models.Users;
-import com.paymybuddy.paymybuddy.repository.UsersRepository;
-import com.paymybuddy.paymybuddy.service.iservice.IUsersService;
+import com.paymybuddy.paymybuddy.Controller.UsersController;
+import com.paymybuddy.paymybuddy.DTO.Mapper.UsersMapper;
+import com.paymybuddy.paymybuddy.DTO.UsersDTO;
+import com.paymybuddy.paymybuddy.DTO.UsersFriendsDTO;
+import com.paymybuddy.paymybuddy.Models.Users;
+import com.paymybuddy.paymybuddy.Repository.UsersRepository;
 import lombok.AllArgsConstructor;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 @AllArgsConstructor
 @Service
-public class UsersService implements IUsersService {
+public class UsersService implements IUsersService{
 
     static Logger logger = Logger.getLogger(UsersController.class);
 
@@ -60,16 +60,6 @@ public class UsersService implements IUsersService {
     public Users save(UsersDTO usersDTO) {
         Users users = UsersMapper.INSTANCE.convertUsersDTOToUsers(usersDTO);
         return usersRepository.save(users);
-    }
-
-    public UsersDTO addFriends(Long userId, Long usersFriendId){
-        Users users = findById(userId).get();
-        Users userFriends = findById(usersFriendId).get();
-        List<Users> usersList = users.getFriends();
-        usersList.add(userFriends);
-        users.setFriends(usersList);
-
-        return UsersMapper.INSTANCE.convertUsersToUsersDTO(usersRepository.save(users));
     }
 
     @Override
