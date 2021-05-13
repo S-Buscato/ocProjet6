@@ -1,16 +1,14 @@
-package com.paymybuddy.paymybuddy.DTO.Mapper;
+package com.paymybuddy.paymybuddy.dto.mapper;
 
-import com.paymybuddy.paymybuddy.DTO.UsersDTO;
-import com.paymybuddy.paymybuddy.DTO.UsersFriendsDTO;
-import com.paymybuddy.paymybuddy.Models.Users;
+import com.paymybuddy.paymybuddy.dto.UsersDTO;
+import com.paymybuddy.paymybuddy.dto.UsersFriendsDTO;
+import com.paymybuddy.paymybuddy.models.Users;
 import org.mapstruct.BeanMapping;
 import org.mapstruct.Mapper;
-import org.mapstruct.MappingTarget;
 import org.mapstruct.NullValuePropertyMappingStrategy;
 import org.mapstruct.factory.Mappers;
 
 import java.util.List;
-import java.util.Optional;
 
 @Mapper(componentModel="spring")
 public interface UsersMapper {
