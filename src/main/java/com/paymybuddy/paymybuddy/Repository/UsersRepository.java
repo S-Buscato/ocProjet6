@@ -1,6 +1,6 @@
-package com.paymybuddy.paymybuddy.repository;
+package com.paymybuddy.paymybuddy.Repository;
 
-import com.paymybuddy.paymybuddy.models.Users;
+import com.paymybuddy.paymybuddy.Models.Users;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

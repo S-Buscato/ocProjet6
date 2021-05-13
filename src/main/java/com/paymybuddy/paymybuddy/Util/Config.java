@@ -1,4 +1,4 @@
-package com.paymybuddy.paymybuddy.util;
+package com.paymybuddy.paymybuddy.Util;
 
 import org.springframework.boot.actuate.trace.http.HttpTraceRepository;
 import org.springframework.boot.actuate.trace.http.InMemoryHttpTraceRepository;
