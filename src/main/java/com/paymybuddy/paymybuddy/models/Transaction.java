@@ -1,2 +1,4 @@
-package com.paymybuddy.paymybuddy.models;public class Transaction {
+package com.paymybuddy.paymybuddy.models;
+
+public class Transaction {
 }
