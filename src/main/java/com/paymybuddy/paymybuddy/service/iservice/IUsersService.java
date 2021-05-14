@@ -16,5 +16,7 @@ public interface IUsersService {
     Users update(Users users, Long id);
     Users findByfirstNameAndLastName(String firstName, String lastName);
     Iterable<Users> saveAll(List<Users> lstPerson);
-    UsersDTO addFriends(Long userId, Long userFriendId);
+    Users addFriends(Long userId, Long usersFriendId);
+    Users removeFriends(Long userId, Long usersFriendId);
+    Users sendMoneyToFriends(Long userId, Long usersFriendId, double amount);
 }

@@ -7,10 +7,12 @@ import org.mapstruct.BeanMapping;
 import org.mapstruct.Mapper;
 import org.mapstruct.NullValuePropertyMappingStrategy;
 import org.mapstruct.factory.Mappers;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Mapper(componentModel="spring")
+@Service
 public interface UsersMapper {
 
     UsersMapper INSTANCE = Mappers.getMapper(UsersMapper.class);
@@ -29,6 +31,4 @@ public interface UsersMapper {
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     List<UsersDTO> convertUsersToUsersDTOList(List<Users> usersList);
-
-
 }
