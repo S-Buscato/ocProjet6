@@ -1,5 +1,6 @@
 package com.paymybuddy.paymybuddy.service;
 
+import com.paymybuddy.paymybuddy.constant.FeeRate;
 import com.paymybuddy.paymybuddy.controller.UsersController;
 import com.paymybuddy.paymybuddy.dto.UsersDTO;
 import com.paymybuddy.paymybuddy.dto.UsersFriendsDTO;
@@ -7,22 +8,26 @@ import com.paymybuddy.paymybuddy.dto.mapper.UsersMapper;
 import com.paymybuddy.paymybuddy.models.Users;
 import com.paymybuddy.paymybuddy.repository.UsersRepository;
 import com.paymybuddy.paymybuddy.service.iservice.IUsersService;
-import lombok.AllArgsConstructor;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
-@AllArgsConstructor
 @Service
 public class UsersService implements IUsersService {
 
     static Logger logger = Logger.getLogger(UsersController.class);
 
-
-    final UsersRepository usersRepository;
+   /* @Autowired
+    UsersMapper usersMapper;
+*/
+    @Autowired
+    UsersRepository usersRepository;
 
     @Override
     public List<Users> findall() {
@@ -36,7 +41,6 @@ public class UsersService implements IUsersService {
     public UsersFriendsDTO findUsersFriends(Long id) {
         UsersFriendsDTO usersFriendsDTO = new UsersFriendsDTO();
         if(usersRepository.findById(id).isPresent()){
-            System.out.println(usersRepository.findById(id));
             usersFriendsDTO = UsersMapper.INSTANCE.convertUsersToUsersFriendsDTO(usersRepository.findById(id).get());
            // usersFriendsDTO.setFriendsList(UsersMapper.INSTANCE.convertUsersToUsersDTOList(usersRepository.findById(id).get().getFriends()));
             logger.info("users findAllFriends");
@@ -62,14 +66,46 @@ public class UsersService implements IUsersService {
         return usersRepository.save(users);
     }
 
-    public UsersDTO addFriends(Long userId, Long usersFriendId){
+    @Override
+    public Users addFriends(Long userId, Long usersFriendId){
         Users users = findById(userId).get();
         Users userFriends = findById(usersFriendId).get();
-        List<Users> usersList = users.getFriends();
+        List<Users> usersList = new ArrayList<>();
+        if(users.getFriends().size() != 0){
+            usersList = users.getFriends();
+        }
         usersList.add(userFriends);
         users.setFriends(usersList);
+        return usersRepository.save(users);
+    }
 
-        return UsersMapper.INSTANCE.convertUsersToUsersDTO(usersRepository.save(users));
+    @Override
+    public Users removeFriends(Long userId, Long usersFriendId) {
+        Users users = findById(userId).get();
+        Users userFriends = findById(usersFriendId).get();
+        List<Users> usersList = new ArrayList<>();
+        if(users.getFriends().size() != 0){
+            usersList=users.getFriends();
+        }
+        usersList.remove(userFriends);
+        users.setFriends(usersList);
+        return usersRepository.save(users);
+    }
+
+    @Override
+    public Users sendMoneyToFriends(Long userId, Long usersFriendId, double amount) {
+        Users users = findById(userId).get();
+        Users userFriends = findById(usersFriendId).get();
+        Double fee = amount * FeeRate.FEE_RATE;
+        Double totalAmountTransfert = amount + fee;
+        Boolean friends = users.getFriends().contains(userFriends);
+        Boolean amountOk = users.getTotalAmount() >= totalAmountTransfert;
+        if(friends && amountOk){
+            users.setTotalAmount(users.getTotalAmount() - totalAmountTransfert);
+            userFriends.setTotalAmount(userFriends.getTotalAmount() + amount);
+            usersRepository.save(userFriends);
+        }
+        return usersRepository.save(users);
     }
 
     @Override
