@@ -1,28 +1,32 @@
-package com.paymybuddy.paymybuddy.Service.IServices;
+package com.paymybuddy.paymybuddy.service;
 
-import com.paymybuddy.paymybuddy.Controller.UsersController;
-import com.paymybuddy.paymybuddy.DTO.Mapper.UsersMapper;
-import com.paymybuddy.paymybuddy.DTO.UsersDTO;
-import com.paymybuddy.paymybuddy.DTO.UsersFriendsDTO;
-import com.paymybuddy.paymybuddy.Models.Users;
-import com.paymybuddy.paymybuddy.Repository.UsersRepository;
-import lombok.AllArgsConstructor;
+import com.paymybuddy.paymybuddy.controller.UsersController;
+import com.paymybuddy.paymybuddy.dto.UsersFriendsDTO;
+import com.paymybuddy.paymybuddy.dto.mapper.UsersMapper;
+import com.paymybuddy.paymybuddy.models.Users;
+import com.paymybuddy.paymybuddy.repository.TransactionRepository;
+import com.paymybuddy.paymybuddy.repository.UsersRepository;
+import com.paymybuddy.paymybuddy.service.iservice.IUsersService;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
-@AllArgsConstructor
 @Service
-public class UsersService implements IUsersService{
+public class UsersService implements IUsersService {
 
     static Logger logger = Logger.getLogger(UsersController.class);
 
+    @Autowired
+    UsersRepository usersRepository;
 
-    final UsersRepository usersRepository;
+    @Autowired
+    TransactionRepository transactionRepository;
 
     @Override
     public List<Users> findall() {
@@ -36,7 +40,6 @@ public class UsersService implements IUsersService{
     public UsersFriendsDTO findUsersFriends(Long id) {
         UsersFriendsDTO usersFriendsDTO = new UsersFriendsDTO();
         if(usersRepository.findById(id).isPresent()){
-            System.out.println(usersRepository.findById(id));
             usersFriendsDTO = UsersMapper.INSTANCE.convertUsersToUsersFriendsDTO(usersRepository.findById(id).get());
            // usersFriendsDTO.setFriendsList(UsersMapper.INSTANCE.convertUsersToUsersDTOList(usersRepository.findById(id).get().getFriends()));
             logger.info("users findAllFriends");
@@ -57,10 +60,36 @@ public class UsersService implements IUsersService{
     }
 
     @Override
-    public Users save(UsersDTO usersDTO) {
-        Users users = UsersMapper.INSTANCE.convertUsersDTOToUsers(usersDTO);
+    public Users save(Users users) {
         return usersRepository.save(users);
     }
+
+    @Override
+    public Users addFriends(Long userId, Long usersFriendId){
+        Users users = findById(userId).get();
+        Users userFriends = findById(usersFriendId).get();
+        List<Users> usersList = new ArrayList<>();
+        if(users.getFriends().size() != 0){
+            usersList = users.getFriends();
+        }
+        usersList.add(userFriends);
+        users.setFriends(usersList);
+        return usersRepository.save(users);
+    }
+
+    @Override
+    public Users removeFriends(Long userId, Long usersFriendId) {
+        Users users = findById(userId).get();
+        Users userFriends = findById(usersFriendId).get();
+        List<Users> usersList = new ArrayList<>();
+        if(users.getFriends().size() != 0){
+            usersList=users.getFriends();
+        }
+        usersList.remove(userFriends);
+        users.setFriends(usersList);
+        return usersRepository.save(users);
+    }
+
 
     @Override
     public Users update(Users users, Long id) {
