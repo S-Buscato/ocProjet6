@@ -351,3 +351,4 @@ INFO    2021-05-15 13:26:38,653 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy
 INFO    2021-05-15 13:29:39,001 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - api/users (getAll) => ok
 INFO    2021-05-15 13:29:39,001 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
 ERROR   2021-05-15 13:29:39,005 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - api/users (getAll) => error : java.util.NoSuchElementException: No value present
+INFO    2021-05-15 14:11:14,978 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.TransactionController  - api/users/sendMoney => ok

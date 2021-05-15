@@ -1,9 +1,6 @@
 package com.paymybuddy.paymybuddy.controller;
 
-import com.paymybuddy.paymybuddy.dto.UsersDTO;
-import com.paymybuddy.paymybuddy.dto.mapper.UsersMapper;
 import com.paymybuddy.paymybuddy.models.Transaction;
-import com.paymybuddy.paymybuddy.repository.TransactionRepository;
 import com.paymybuddy.paymybuddy.service.TransactionService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;

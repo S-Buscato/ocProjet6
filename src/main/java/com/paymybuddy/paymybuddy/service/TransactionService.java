@@ -1,6 +1,6 @@
 package com.paymybuddy.paymybuddy.service;
 
-import com.paymybuddy.paymybuddy.constant.FeeRate;
+import com.paymybuddy.paymybuddy.constant.Fee;
 import com.paymybuddy.paymybuddy.models.Transaction;
 import com.paymybuddy.paymybuddy.models.Users;
 import com.paymybuddy.paymybuddy.repository.TransactionRepository;
@@ -20,12 +20,15 @@ public class TransactionService implements ITransactionService {
 
     @Override
     public Transaction sendMoneyToFriends(Long userId, Long usersFriendId, double amount) {
+        Double fee = amount * Fee.FEE_RATE;
+        Double totalAmountTransfert = amount + fee;
+
         Users users = usersRepository.findById(userId).get();
         Users userFriends = usersRepository.findById(usersFriendId).get();
-        Double fee = amount * FeeRate.FEE_RATE;
-        Double totalAmountTransfert = amount + fee;
+
         Boolean friends = users.getFriends().contains(userFriends);
         Boolean amountOk = users.getTotalAmount() >= totalAmountTransfert;
+
         Transaction transaction = new Transaction();
         if(friends && amountOk){
             users.setTotalAmount(users.getTotalAmount() - totalAmountTransfert);
@@ -37,7 +40,6 @@ public class TransactionService implements ITransactionService {
             transaction.setDescription("test transaction");
             usersRepository.save(userFriends);
             usersRepository.save(users);
-
         }
         return  transactionRepository.save(transaction);
     }
