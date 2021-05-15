@@ -2,7 +2,6 @@ package com.paymybuddy.paymybuddy.models;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -40,4 +39,5 @@ public class Users {
                     @JoinColumn(name = "users_id", referencedColumnName = "id",
                             nullable = false, updatable = false)})
     private List<Users> friends;
-}
+
+   }

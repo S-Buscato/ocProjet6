@@ -1,11 +1,10 @@
 package com.paymybuddy.paymybuddy.service;
 
-import com.paymybuddy.paymybuddy.constant.FeeRate;
 import com.paymybuddy.paymybuddy.controller.UsersController;
-import com.paymybuddy.paymybuddy.dto.UsersDTO;
 import com.paymybuddy.paymybuddy.dto.UsersFriendsDTO;
 import com.paymybuddy.paymybuddy.dto.mapper.UsersMapper;
 import com.paymybuddy.paymybuddy.models.Users;
+import com.paymybuddy.paymybuddy.repository.TransactionRepository;
 import com.paymybuddy.paymybuddy.repository.UsersRepository;
 import com.paymybuddy.paymybuddy.service.iservice.IUsersService;
 import org.apache.log4j.Logger;
@@ -23,11 +22,11 @@ public class UsersService implements IUsersService {
 
     static Logger logger = Logger.getLogger(UsersController.class);
 
-   /* @Autowired
-    UsersMapper usersMapper;
-*/
     @Autowired
     UsersRepository usersRepository;
+
+    @Autowired
+    TransactionRepository transactionRepository;
 
     @Override
     public List<Users> findall() {
@@ -61,8 +60,7 @@ public class UsersService implements IUsersService {
     }
 
     @Override
-    public Users save(UsersDTO usersDTO) {
-        Users users = UsersMapper.INSTANCE.convertUsersDTOToUsers(usersDTO);
+    public Users save(Users users) {
         return usersRepository.save(users);
     }
 
@@ -92,21 +90,6 @@ public class UsersService implements IUsersService {
         return usersRepository.save(users);
     }
 
-    @Override
-    public Users sendMoneyToFriends(Long userId, Long usersFriendId, double amount) {
-        Users users = findById(userId).get();
-        Users userFriends = findById(usersFriendId).get();
-        Double fee = amount * FeeRate.FEE_RATE;
-        Double totalAmountTransfert = amount + fee;
-        Boolean friends = users.getFriends().contains(userFriends);
-        Boolean amountOk = users.getTotalAmount() >= totalAmountTransfert;
-        if(friends && amountOk){
-            users.setTotalAmount(users.getTotalAmount() - totalAmountTransfert);
-            userFriends.setTotalAmount(userFriends.getTotalAmount() + amount);
-            usersRepository.save(userFriends);
-        }
-        return usersRepository.save(users);
-    }
 
     @Override
     public Users update(Users users, Long id) {
