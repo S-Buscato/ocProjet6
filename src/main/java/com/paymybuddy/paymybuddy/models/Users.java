@@ -40,4 +40,5 @@ public class Users {
                     @JoinColumn(name = "users_id", referencedColumnName = "id",
                             nullable = false, updatable = false)})
     private List<Users> friends;
-}
+
+   }

@@ -64,9 +64,9 @@ public class UsersController {
     }
 
     @PostMapping("/users/add")
-    public ResponseEntity<UsersDTO> addPerson(@RequestBody UsersDTO usersDTO) {
+    public ResponseEntity<Users> addPerson(@RequestBody Users users) {
         try {
-            ResponseEntity resp = ResponseEntity.status(HttpStatus.CREATED).body(usersService.save(usersDTO));
+            ResponseEntity resp = ResponseEntity.status(HttpStatus.CREATED).body(usersService.save(users));
             logger.info("api/users/add => ok");
             return resp;
 
@@ -104,18 +104,5 @@ public class UsersController {
         }
     }
 
-    @PostMapping("/users/sendMoney/{userId}/{userFriendsId}/{amount}")
-    public ResponseEntity<UsersDTO> removeFriends(@PathVariable("userId") Long userId,
-                                                  @PathVariable("userFriendsId") Long userFriendsId,
-                                                  @PathVariable("amount") double amount) {
-        try {
-            ResponseEntity resp = ResponseEntity.status(HttpStatus.CREATED).body(UsersMapper.INSTANCE.convertUsersToUsersDTO(usersService.sendMoneyToFriends(userId, userFriendsId, amount)));
-            logger.info("api/users/remove friends => ok");
-            return resp;
 
-        } catch (Exception e) {
-            logger.error("api/users/remove friends => error : " + e);
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
 }

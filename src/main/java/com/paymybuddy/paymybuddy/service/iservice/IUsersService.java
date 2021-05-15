@@ -1,6 +1,5 @@
 package com.paymybuddy.paymybuddy.service.iservice;
 
-import com.paymybuddy.paymybuddy.dto.UsersDTO;
 import com.paymybuddy.paymybuddy.dto.UsersFriendsDTO;
 import com.paymybuddy.paymybuddy.models.Users;
 
@@ -12,11 +11,10 @@ public interface IUsersService {
     UsersFriendsDTO findUsersFriends(Long id);
     Optional<Users> findById(Long id);
     Long deleteById(Long id);
-    Users save(UsersDTO usersDTO);
+    Users save(Users users);
     Users update(Users users, Long id);
     Users findByfirstNameAndLastName(String firstName, String lastName);
     Iterable<Users> saveAll(List<Users> lstPerson);
     Users addFriends(Long userId, Long usersFriendId);
     Users removeFriends(Long userId, Long usersFriendId);
-    Users sendMoneyToFriends(Long userId, Long usersFriendId, double amount);
 }
