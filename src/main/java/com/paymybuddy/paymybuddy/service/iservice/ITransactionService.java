@@ -1,7 +1,7 @@
 package com.paymybuddy.paymybuddy.service.iservice;
 
-import com.paymybuddy.paymybuddy.models.Transaction;
+import com.paymybuddy.paymybuddy.dto.ReceivedTransactionDTO;
 
 public interface ITransactionService {
-    Transaction sendMoneyToFriends(Long userId, Long usersFriendId, double amount);
+    ReceivedTransactionDTO sendMoneyToFriends(Long userId, Long usersFriendId, double amount);
 }

@@ -1,6 +1,8 @@
 package com.paymybuddy.paymybuddy.service;
 
 import com.paymybuddy.paymybuddy.constant.Fee;
+import com.paymybuddy.paymybuddy.dto.Mapper.ReceivedTransactionMapper;
+import com.paymybuddy.paymybuddy.dto.ReceivedTransactionDTO;
 import com.paymybuddy.paymybuddy.models.Transaction;
 import com.paymybuddy.paymybuddy.models.Users;
 import com.paymybuddy.paymybuddy.repository.TransactionRepository;
@@ -19,18 +21,18 @@ public class TransactionService implements ITransactionService {
     UsersRepository usersRepository;
 
     @Override
-    public Transaction sendMoneyToFriends(Long userId, Long usersFriendId, double amount) {
+    public ReceivedTransactionDTO sendMoneyToFriends(Long userId, Long usersFriendId, double amount) {
         Double fee = amount * Fee.FEE_RATE;
         Double totalAmountTransfert = amount + fee;
 
         Users users = usersRepository.findById(userId).get();
         Users userFriends = usersRepository.findById(usersFriendId).get();
 
-        Boolean friends = users.getFriends().contains(userFriends);
+        Boolean isAfriend = users.getFriends().contains(userFriends);
         Boolean amountOk = users.getTotalAmount() >= totalAmountTransfert;
 
         Transaction transaction = new Transaction();
-        if(friends && amountOk){
+        if(isAfriend && amountOk){
             users.setTotalAmount(users.getTotalAmount() - totalAmountTransfert);
             userFriends.setTotalAmount(userFriends.getTotalAmount() + amount);
             transaction.setAmount(amount);
@@ -41,6 +43,7 @@ public class TransactionService implements ITransactionService {
             usersRepository.save(userFriends);
             usersRepository.save(users);
         }
-        return  transactionRepository.save(transaction);
+        ReceivedTransactionDTO receivedTransactionDTO = ReceivedTransactionMapper.INSTANCE.convertTransactionToTransactionDTO(transactionRepository.save(transaction));
+        return receivedTransactionDTO;
     }
 }

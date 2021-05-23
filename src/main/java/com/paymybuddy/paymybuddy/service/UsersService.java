@@ -1,6 +1,7 @@
 package com.paymybuddy.paymybuddy.service;
 
 import com.paymybuddy.paymybuddy.controller.UsersController;
+import com.paymybuddy.paymybuddy.dto.UsersDTO;
 import com.paymybuddy.paymybuddy.dto.UsersFriendsDTO;
 import com.paymybuddy.paymybuddy.dto.mapper.UsersMapper;
 import com.paymybuddy.paymybuddy.models.Users;
@@ -13,7 +14,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
@@ -49,9 +49,9 @@ public class UsersService implements IUsersService {
 
 
     @Override
-    public Optional<Users> findById(Long id) {
+    public Users findById(Long id) {
         logger.info("find by id " + id);
-        return usersRepository.findById(id);
+        return usersRepository.findById(id).get();
     }
 
     @Override
@@ -66,8 +66,8 @@ public class UsersService implements IUsersService {
 
     @Override
     public Users addFriends(Long userId, Long usersFriendId){
-        Users users = findById(userId).get();
-        Users userFriends = findById(usersFriendId).get();
+        Users users = findById(userId);
+        Users userFriends = findById(usersFriendId);
         List<Users> usersList = new ArrayList<>();
         if(users.getFriends().size() != 0){
             usersList = users.getFriends();
@@ -78,16 +78,17 @@ public class UsersService implements IUsersService {
     }
 
     @Override
-    public Users removeFriends(Long userId, Long usersFriendId) {
-        Users users = findById(userId).get();
-        Users userFriends = findById(usersFriendId).get();
+    public UsersDTO removeFriends(Long userId, Long usersFriendId) {
+        Users users = findById(userId);
+        Users userFriends = findById(usersFriendId);
         List<Users> usersList = new ArrayList<>();
         if(users.getFriends().size() != 0){
             usersList=users.getFriends();
         }
         usersList.remove(userFriends);
         users.setFriends(usersList);
-        return usersRepository.save(users);
+        UsersDTO usersDTO = UsersMapper.INSTANCE.convertUsersToUsersDTO(usersRepository.save(users));
+        return usersDTO;
     }
 
 
