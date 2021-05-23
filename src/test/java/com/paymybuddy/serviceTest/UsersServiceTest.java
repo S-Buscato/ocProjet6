@@ -1,8 +1,6 @@
 package com.paymybuddy.serviceTest;
 
-import com.paymybuddy.paymybuddy.dto.UsersDTO;
 import com.paymybuddy.paymybuddy.dto.UsersFriendsDTO;
-import com.paymybuddy.paymybuddy.dto.mapper.UsersMapper;
 import com.paymybuddy.paymybuddy.models.Users;
 import com.paymybuddy.paymybuddy.repository.UsersRepository;
 import com.paymybuddy.paymybuddy.service.UsersService;
@@ -11,7 +9,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
@@ -26,7 +23,6 @@ public class UsersServiceTest {
 
     @Autowired
     UsersService usersService;
-
 
     @MockBean
     UsersRepository usersRepository;
@@ -72,7 +68,7 @@ public class UsersServiceTest {
     void testUsersFindById(){
         when(usersRepository.findById(1L)).thenReturn(java.util.Optional.ofNullable(users));
 
-        Users usersResult = usersService.findById(1L).get();
+        Users usersResult = usersService.findById(1L);
 
         Assertions.assertEquals(users, usersResult );
 

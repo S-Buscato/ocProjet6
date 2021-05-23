@@ -31,10 +31,10 @@ public class UsersController {
     public ResponseEntity<List<UsersDTO>> findAllUsers() {
         try {
             ResponseEntity resp = ResponseEntity.ok(UsersMapper.INSTANCE.convertUsersToUsersDTOList(usersService.findall()));
-            logger.info("api/users (getAll) => ok");
+            logger.info("/users (getAll) => ok");
             return resp;
         } catch (Exception e) {
-            logger.error("api/users (getAll) => error : " + e);
+            logger.error("/users (getAll) => error : " + e);
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
@@ -42,23 +42,23 @@ public class UsersController {
     @GetMapping("/users/{id}")
     public ResponseEntity<UsersDTO> findUsersFriends(@PathVariable Long id) {
         try {
-            logger.info("api/users (getAll) => ok");
+            logger.info("/users (getOne) => ok");
             ResponseEntity resp = ResponseEntity.ok(usersService.findUsersFriends(id));
             return resp;
         } catch (Exception e) {
-            logger.error("api/users (getAll) => error : " + e);
+            logger.error("/users (getOne) => error : " + e);
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
     @GetMapping("/users/info/{id}")
-    public ResponseEntity<Users> getUsersInfo(@PathVariable Long id) {
+    public ResponseEntity<UsersDTO> getUsersInfo(@PathVariable Long id) {
         try {
-            logger.info("api/users (getAll) => ok");
-            ResponseEntity resp = ResponseEntity.ok(usersService.findById(id).get());
+            logger.info("/users (getInfo) => ok");
+            ResponseEntity resp = ResponseEntity.ok(UsersMapper.INSTANCE.convertUsersToUsersDTO(usersService.findById(id)));
             return resp;
         } catch (Exception e) {
-            logger.error("api/users (getAll) => error : " + e);
+            logger.error("/users (getInfo) => error : " + e);
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
@@ -67,11 +67,11 @@ public class UsersController {
     public ResponseEntity<Users> addPerson(@RequestBody Users users) {
         try {
             ResponseEntity resp = ResponseEntity.status(HttpStatus.CREATED).body(usersService.save(users));
-            logger.info("api/users/add => ok");
+            logger.info("/users/add => ok");
             return resp;
 
         } catch (Exception e) {
-            logger.error("api/users/add => error : " + e);
+            logger.error("/users/add => error : " + e);
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
@@ -81,11 +81,11 @@ public class UsersController {
                                               @PathVariable("userFriendsId") Long userFriendsId) {
         try {
             ResponseEntity resp = ResponseEntity.status(HttpStatus.CREATED).body(UsersMapper.INSTANCE.convertUsersToUsersDTO(usersService.addFriends(userId, userFriendsId)));
-            logger.info("api/users/add friends => ok");
+            //logger.info("/users/add friends => ok");
             return resp;
 
         } catch (Exception e) {
-            logger.error("api/users/add friends => error : " + e);
+            //logger.error("/users/add friends => error : " + e);
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
@@ -94,12 +94,12 @@ public class UsersController {
     public ResponseEntity<UsersDTO> removeFriends(@PathVariable("userId") Long userId,
                                               @PathVariable("userFriendsId") Long userFriendsId) {
         try {
-            ResponseEntity resp = ResponseEntity.status(HttpStatus.CREATED).body(UsersMapper.INSTANCE.convertUsersToUsersDTO(usersService.removeFriends(userId, userFriendsId)));
-            logger.info("api/users/remove friends => ok");
+            ResponseEntity resp = ResponseEntity.status(HttpStatus.CREATED).body(usersService.removeFriends(userId, userFriendsId));
+            //logger.info("/users/remove friends => ok");
             return resp;
 
         } catch (Exception e) {
-            logger.error("api/users/remove friends => error : " + e);
+            //logger.error("/users/remove friends => error : " + e);
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
