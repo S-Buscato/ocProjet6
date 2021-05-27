@@ -1,7 +1,7 @@
 package com.paymybuddy.paymybuddy.controller;
 
 import com.paymybuddy.paymybuddy.dto.BankAccountDTO;
-import com.paymybuddy.paymybuddy.models.BankAccount;
+import com.paymybuddy.paymybuddy.exception.BankAccountExistsException;
 import com.paymybuddy.paymybuddy.service.BankAccountService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,16 +21,20 @@ public class BankAccountController {
 
 
     @PostMapping("/bank/add/{id}")
-    public ResponseEntity<BankAccountDTO> addPerson(@PathVariable Long id,
-                                                    @RequestBody BankAccount bankAccount) {
+    public ResponseEntity<BankAccountDTO> addBankAccount(@PathVariable Long id, @RequestBody BankAccountDTO bankAccountDTO) {
         try {
-            ResponseEntity resp = ResponseEntity.status(HttpStatus.CREATED).body(bankAccountService.save(bankAccount, id));
-            logger.info("/bank/add => ok");
-            return resp;
+            ResponseEntity response = ResponseEntity.status(HttpStatus.CREATED).body(bankAccountService.save(bankAccountDTO, id));
+            logger.info("/bank/add/{id}");
+            return response;
 
-        } catch (Exception e) {
-            logger.error("/bank/add => error : " + e);
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        } catch (BankAccountExistsException e) {
+            logger.error("/bank/add/{id} => ajout impossible : " + e);
+            return new ResponseEntity(e.getMessage(), HttpStatus.FORBIDDEN);
+        }
+        catch (Exception e) {
+            logger.error("/bank/add/{id} => error : " + e);
+            return new ResponseEntity(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+    //TODO le rest des du REST
 }

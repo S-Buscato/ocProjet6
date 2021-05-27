@@ -7,11 +7,10 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class UserTransfertMoneyDTO {
-    private Double amount;
+public class UsersSubscribeDTO {
+    private String firstName;
+    private String lastName;
     private String email;
-    private String iban;
-    private String description;
-    private String transfertType;
-
+    private String password;
+    private double amount = 0.0;
 }

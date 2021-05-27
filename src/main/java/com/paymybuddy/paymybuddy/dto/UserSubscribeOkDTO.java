@@ -1,5 +1,6 @@
 package com.paymybuddy.paymybuddy.dto;
 
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -7,11 +8,9 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class UserTransfertMoneyDTO {
-    private Double amount;
+public class UserSubscribeOkDTO {
+    private String firstName;
+    private String lastName;
     private String email;
-    private String iban;
-    private String description;
-    private String transfertType;
-
+    private double amount = 0.0;
 }

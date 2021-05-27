@@ -1,14 +1,7 @@
-package com.paymybuddy.paymybuddy.dto.Mapper;
+package com.paymybuddy.paymybuddy.dto.mapper;
 
-import com.paymybuddy.paymybuddy.constant.TransfertType;
-import com.paymybuddy.paymybuddy.dto.TransfertFromBankDTO;
-import com.paymybuddy.paymybuddy.dto.TransfertToBankDTO;
-import com.paymybuddy.paymybuddy.models.Transfert;
 import org.mapstruct.*;
 import org.springframework.stereotype.Service;
-
-import java.util.Collection;
-import java.util.List;
 
 @Mapper(componentModel="spring")
 @Service

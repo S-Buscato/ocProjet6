@@ -1,15 +1,15 @@
 package com.paymybuddy.paymybuddy.controller;
 
+import com.paymybuddy.paymybuddy.dto.BankTransfertDTO;
 import com.paymybuddy.paymybuddy.dto.TransfertDTO;
-import com.paymybuddy.paymybuddy.dto.UserTransfertMoneyDTO;
-import com.paymybuddy.paymybuddy.models.BankAccount;
-import com.paymybuddy.paymybuddy.models.Transfert;
+import com.paymybuddy.paymybuddy.exception.BadTransfertTypeException;
+import com.paymybuddy.paymybuddy.exception.InsuffisientBalanceException;
+import com.paymybuddy.paymybuddy.exception.NotActiveBankAccountException;
 import com.paymybuddy.paymybuddy.service.TransfertService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,34 +22,50 @@ public class TransfertController {
 
     static Logger logger = Logger.getLogger(TransfertController.class);
 
-    @PostMapping("/transfert/")
-    public ResponseEntity<Object> receive(@RequestBody UserTransfertMoneyDTO userTransfertMoneyDTO){
-        ResponseEntity<Object> response;
+    @PostMapping("/transfertFromBank/")
+    public ResponseEntity<TransfertDTO> receiveMoneyFromBankAccount(@RequestBody BankTransfertDTO bankTransfertDTO){
         try {
-            response = new ResponseEntity<Object>(transfertService.receiveMoneyFromBankAccount(userTransfertMoneyDTO),HttpStatus.CREATED);
-            logger.info("/transfert/add "  );
+            ResponseEntity response = ResponseEntity.status(HttpStatus.ACCEPTED).body(transfertService.receiveMoneyFromBankAccount(bankTransfertDTO));
+            logger.info("/transfertFromBank");
             return response;
-
-        } catch (Exception e) {
-            logger.error("/transfert/add => error : " + e);
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+        catch (NotActiveBankAccountException e) {
+            logger.error("/transfertFromBank => Transfert impossible : " + e);
+            return new ResponseEntity(e.getMessage(), HttpStatus.FORBIDDEN);
+        }
+        catch (BadTransfertTypeException e) {
+            logger.error("/transfertFromBank => Transfert impossible : " + e);
+            return new ResponseEntity(e.getMessage(), HttpStatus.FORBIDDEN);
+        }
+        catch (Exception e) {
+            logger.error("/transfertFromBank => error : " + e);
+            return new ResponseEntity(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
-  /*  @PostMapping("/transfert/send/{userId}/{bankAccount}/{amount}")
-    public ResponseEntity<Object> send(@PathVariable Long userId,
-                                            @PathVariable Long bankAccount,
-                                            @PathVariable double amount) {
-        ResponseEntity<Object> response;
+    @PostMapping("/transfertToBank")
+    public ResponseEntity<TransfertDTO> sendMoneyToBankAccount(@RequestBody BankTransfertDTO bankTransfertDTO){
         try {
-            response = new ResponseEntity<Object>(transfertService.sendMoneyToBankAccount(userId, bankAccount, amount),HttpStatus.CREATED);
-            logger.info("/transfert/add => ok");
+            ResponseEntity response = ResponseEntity.status(HttpStatus.ACCEPTED).body(transfertService.sendMoneyFromBankAccount(bankTransfertDTO));
+            logger.info("/transfertToBank ");
             return response;
-
-        } catch (Exception e) {
-            logger.error("/transfert/add => error : " + e);
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
-    }*/
+        catch (NotActiveBankAccountException e) {
+            logger.error("/transfertToBank => error : " + e);
+            return new ResponseEntity(e.getMessage(), HttpStatus.FORBIDDEN);
+        }
+        catch (BadTransfertTypeException e) {
+            logger.error("/transfertFromBank => error : " + e);
+            return new ResponseEntity(e.getMessage(), HttpStatus.FORBIDDEN);
+        }
+        catch (InsuffisientBalanceException e) {
+            logger.error("/transfertToBank => error : " + e);
+            return new ResponseEntity(e.getMessage(), HttpStatus.FORBIDDEN);
+        }
+        catch (Exception e) {
+            logger.error("/transfertToBank => error : " + e);
+            return new ResponseEntity(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 
 }

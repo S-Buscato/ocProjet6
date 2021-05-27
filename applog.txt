@@ -695,3 +695,347 @@ ERROR   2021-05-22 23:56:10,383 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy
 INFO    2021-05-23 00:01:38,111 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfert/add 
 INFO    2021-05-23 00:03:10,392 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - /users (getInfo) => ok
 INFO    2021-05-23 00:03:10,393 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-05-23 20:12:40,413 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - /users/add => ok
+INFO    2021-05-23 20:13:19,017 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-23 20:13:19,100 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /users (getAll) => ok
+INFO    2021-05-23 20:13:26,232 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-23 20:13:26,279 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - /users (getAll) => ok
+INFO    2021-05-23 20:22:11,426 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /users/add => ok
+ERROR   2021-05-23 20:33:23,989 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /users/add => error : org.springframework.dao.IncorrectResultSizeDataAccessException: query did not return a unique result: 2; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 2
+INFO    2021-05-23 21:16:26,492 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - /users/add => ok
+INFO    2021-05-23 21:16:55,623 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - /users/add => ok
+ERROR   2021-05-23 21:59:18,608 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.TransactionController  - /users/sendMoney => error : org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+ERROR   2021-05-23 22:02:18,515 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.TransactionController  - /users/sendMoney => error : org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+INFO    2021-05-23 22:07:38,865 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-05-23 22:07:38,872 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 6
+ERROR   2021-05-23 22:08:31,596 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.TransactionController  - /users/sendMoney => error : java.lang.NullPointerException
+ERROR   2021-05-23 22:10:20,509 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.TransactionController  - /users/sendMoney => error : java.lang.NullPointerException
+ERROR   2021-05-23 22:13:07,187 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.TransactionController  - /users/sendMoney => error : java.lang.NullPointerException
+ERROR   2021-05-23 22:13:55,981 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.TransactionController  - /users/sendMoney => error : java.lang.NullPointerException
+ERROR   2021-05-23 22:18:44,780 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.TransactionController  - /users/sendMoney => error : java.lang.NullPointerException
+ERROR   2021-05-23 22:18:57,447 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.TransactionController  - /users/sendMoney => error : java.lang.NullPointerException
+ERROR   2021-05-23 22:22:10,192 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.TransactionController  - /users/sendMoney => error : java.lang.NullPointerException
+ERROR   2021-05-23 22:26:40,024 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.TransactionController  - /users/sendMoney => error : java.lang.NullPointerException
+ERROR   2021-05-23 22:29:14,527 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.TransactionController  - /users/sendMoney => error : java.lang.NullPointerException
+ERROR   2021-05-23 22:29:34,465 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.TransactionController  - /users/sendMoney => error : java.lang.NullPointerException
+INFO    2021-05-23 22:30:10,751 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.TransactionController  - /users/sendMoney => ok
+INFO    2021-05-23 22:31:58,025 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - /users/subscribe => ok
+INFO    2021-05-23 22:33:06,018 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /users/subscribe => ok
+INFO    2021-05-23 22:33:17,177 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - /users/subscribe => ok
+INFO    2021-05-23 22:33:40,392 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-23 22:33:40,473 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - /users (getAll) => ok
+INFO    2021-05-23 22:38:00,493 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.TransactionController  - /users/sendMoney => ok
+INFO    2021-05-23 22:40:28,098 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - /users (getInfo) => ok
+INFO    2021-05-23 22:40:28,099 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-05-23 22:40:31,435 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - /users (getInfo) => ok
+INFO    2021-05-23 22:40:31,435 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 7
+INFO    2021-05-23 22:40:35,936 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - /users (getInfo) => ok
+INFO    2021-05-23 22:40:35,936 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 6
+INFO    2021-05-23 23:18:42,146 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-05-23 23:18:42,410 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - /users/add friends => ok
+INFO    2021-05-23 23:19:03,315 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - /users (getInfo) => ok
+INFO    2021-05-23 23:19:03,315 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 7
+INFO    2021-05-23 23:19:08,742 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - /users (getInfo) => ok
+INFO    2021-05-23 23:19:08,742 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 11
+INFO    2021-05-23 23:25:19,261 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - /users (getInfo) => ok
+INFO    2021-05-23 23:25:19,261 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 10
+INFO    2021-05-23 23:25:54,496 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - /users (getInfo) => ok
+INFO    2021-05-23 23:25:54,496 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 11
+INFO    2021-05-23 23:25:58,445 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.UsersController  - /users (getInfo) => ok
+INFO    2021-05-23 23:25:58,446 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 9
+ERROR   2021-05-23 23:25:58,448 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.UsersController  - /users (getInfo) => error : java.util.NoSuchElementException: No value present
+INFO    2021-05-23 23:26:11,991 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /users (getInfo) => ok
+INFO    2021-05-23 23:26:11,991 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 10
+INFO    2021-05-23 23:26:26,126 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 10
+INFO    2021-05-23 23:26:26,157 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - /users/add friends => ok
+INFO    2021-05-23 23:26:33,801 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - /users (getInfo) => ok
+INFO    2021-05-23 23:26:33,801 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 10
+ERROR   2021-05-23 23:28:22,892 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.UsersController  - /users/subscribe => error : org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+ERROR   2021-05-23 23:29:02,638 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - /users/subscribe => error : org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+INFO    2021-05-23 23:29:41,849 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - /users/subscribe => ok
+INFO    2021-05-23 23:30:06,482 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /users/subscribe => ok
+INFO    2021-05-23 23:30:16,211 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - /users/subscribe => ok
+INFO    2021-05-23 23:31:13,242 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 14
+INFO    2021-05-23 23:31:13,464 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - /users/add friends => ok
+INFO    2021-05-23 23:31:26,605 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - /users (getInfo) => ok
+INFO    2021-05-23 23:31:26,605 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 14
+INFO    2021-05-23 23:31:32,941 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - /users (getInfo) => ok
+INFO    2021-05-23 23:31:32,941 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 15
+INFO    2021-05-23 23:31:37,006 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - /users (getInfo) => ok
+INFO    2021-05-23 23:31:37,006 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 14
+INFO    2021-05-23 23:32:11,315 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 14
+ERROR   2021-05-23 23:32:11,348 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - /users/add friends => error : org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+INFO    2021-05-23 23:38:02,095 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 14
+INFO    2021-05-23 23:38:02,463 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /users/add friends => ok
+INFO    2021-05-23 23:40:13,204 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 14
+INFO    2021-05-23 23:40:13,444 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - /users/add friends => ok
+INFO    2021-05-23 23:44:01,326 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 14
+INFO    2021-05-23 23:44:01,936 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - /users/add friends => ok
+INFO    2021-05-24 20:00:41,094 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 14
+INFO    2021-05-24 20:00:41,508 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - /users/add friends => ok
+INFO    2021-05-24 21:11:03,600 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-24 21:11:03,847 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - /users (getAll) => ok
+INFO    2021-05-24 21:11:45,105 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 14
+INFO    2021-05-24 21:11:45,205 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - /users/add friends => ok
+INFO    2021-05-24 21:18:29,615 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 14
+INFO    2021-05-24 21:18:29,966 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - /users/add friends
+INFO    2021-05-24 21:22:19,717 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 14
+ERROR   2021-05-24 21:22:20,039 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - /users/add friends => error : org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+INFO    2021-05-24 21:23:15,110 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 14
+ERROR   2021-05-24 21:23:15,118 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - /users/add friends => error : org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+INFO    2021-05-24 21:29:55,487 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 14
+INFO    2021-05-24 21:29:55,833 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - /users/removefriends
+INFO    2021-05-24 21:30:03,410 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 14
+INFO    2021-05-24 21:30:03,455 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - /users/add friends
+INFO    2021-05-24 21:30:11,669 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 14
+INFO    2021-05-24 21:30:11,701 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - /users/removefriends
+INFO    2021-05-24 21:32:32,931 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 14
+INFO    2021-05-24 21:32:33,244 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - /users/add friends
+INFO    2021-05-24 21:32:59,580 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 15
+INFO    2021-05-24 21:32:59,593 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - /users/add friends
+INFO    2021-05-24 21:34:04,574 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 15
+INFO    2021-05-24 21:34:04,604 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - /users/removefriends
+INFO    2021-05-24 21:34:33,608 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 10
+INFO    2021-05-24 21:34:33,624 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.UsersController  - /users/removefriends
+INFO    2021-05-24 21:35:23,236 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-05-24 21:35:23,268 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - /users/removefriends
+INFO    2021-05-24 21:35:26,609 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+INFO    2021-05-24 21:35:26,649 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - /users/removefriends
+INFO    2021-05-24 21:35:53,930 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-24 21:35:53,978 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.UsersController  - /users/list
+INFO    2021-05-24 21:36:25,359 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+INFO    2021-05-24 21:36:25,379 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /users/removefriends
+INFO    2021-05-24 21:36:37,520 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-05-24 21:36:37,552 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - /users/removefriends
+INFO    2021-05-24 21:36:43,336 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-05-24 21:36:43,356 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - /users/removefriends
+INFO    2021-05-24 21:37:00,830 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-05-24 21:37:00,850 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - /users/add friends
+INFO    2021-05-24 21:37:13,199 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - /users/info
+INFO    2021-05-24 21:37:13,199 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 15
+INFO    2021-05-24 21:37:16,033 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - /users/info
+INFO    2021-05-24 21:37:16,033 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 14
+INFO    2021-05-24 21:37:50,207 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-05-24 21:37:50,223 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.UsersController  - /users/removefriends
+INFO    2021-05-24 21:38:08,254 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-05-24 21:38:08,270 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - /users/removefriends
+INFO    2021-05-24 21:48:53,314 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - /users/subscribe
+INFO    2021-05-24 21:49:45,799 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - /users/info
+INFO    2021-05-24 21:49:45,799 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 33
+ERROR   2021-05-24 21:49:45,824 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - /users (getInfo) => error : java.util.NoSuchElementException: No value present
+INFO    2021-05-24 22:02:07,240 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.BankAccountController  - /bank/add
+INFO    2021-05-24 22:06:15,979 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-24 22:06:16,162 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - /users/list
+INFO    2021-05-24 22:06:44,325 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfert/add 
+INFO    2021-05-24 22:07:28,697 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - /users/info
+INFO    2021-05-24 22:07:28,698 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-05-24 22:08:14,695 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfert/add 
+INFO    2021-05-24 22:18:18,831 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfert/add 
+INFO    2021-05-24 22:18:30,947 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-24 22:18:31,068 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - /users/list
+INFO    2021-05-24 22:18:49,122 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - /users/info
+INFO    2021-05-24 22:18:49,122 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-05-24 22:19:58,900 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfert/add 
+INFO    2021-05-24 22:20:10,461 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-24 22:20:10,495 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - /users/list
+INFO    2021-05-24 22:56:17,188 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfert/add 
+INFO    2021-05-24 22:56:24,379 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfert/add 
+INFO    2021-05-24 22:56:30,778 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfert/add 
+ERROR   2021-05-24 22:58:41,743 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfert/add => error : java.lang.NullPointerException
+INFO    2021-05-24 22:59:52,926 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfert/add 
+INFO    2021-05-24 23:00:02,223 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - /users/info
+INFO    2021-05-24 23:00:02,223 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-05-25 20:43:59,847 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-25 20:44:00,206 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - /users/list
+INFO    2021-05-25 20:51:31,990 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.UsersController  - /users/info
+INFO    2021-05-25 20:51:32,003 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-05-25 20:51:50,056 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.UsersController  - /users/info
+INFO    2021-05-25 20:51:50,060 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+INFO    2021-05-25 20:53:19,910 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /users/subscribe
+INFO    2021-05-25 20:53:39,659 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - /users/subscribe
+ERROR   2021-05-25 21:04:51,266 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /users/subscribe => error : com.paymybuddy.paymybuddy.exception.ExistingEmailException: Cet email est déjà existant, veuillez le modifier
+INFO    2021-05-25 21:06:43,194 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfert/add 
+INFO    2021-05-25 21:07:23,533 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfert/add 
+INFO    2021-05-25 21:08:39,007 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-05-25 21:08:39,391 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - /users/add friends
+INFO    2021-05-25 21:08:54,761 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-05-25 21:08:55,117 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.UsersController  - /users/add friends
+INFO    2021-05-25 21:09:26,329 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-05-25 21:09:26,439 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - /users/removefriends
+INFO    2021-05-25 21:09:30,769 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-05-25 21:09:30,871 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /users/add friends
+ERROR   2021-05-25 21:09:45,449 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.TransactionController  - /users/sendMoney => error : org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+INFO    2021-05-25 21:12:00,765 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - /users/info
+INFO    2021-05-25 21:12:00,769 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+INFO    2021-05-25 21:12:16,792 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+INFO    2021-05-25 21:12:16,900 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - /users/add friends
+ERROR   2021-05-25 21:12:22,399 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.TransactionController  - /users/sendMoney => error : org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+INFO    2021-05-25 21:13:16,407 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.BankAccountController  - /bank/add
+INFO    2021-05-25 21:13:30,508 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfert/add 
+ERROR   2021-05-25 21:35:51,164 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - /users/subscribe => error : com.paymybuddy.paymybuddy.exception.ExistingEmailException: Cet email est déjà existant, veuillez le modifier
+ERROR   2021-05-25 22:22:11,752 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /users/subscribe => error : com.paymybuddy.paymybuddy.exception.ExistingEmailException: Cet email est déjà existant, veuillez le modifier
+INFO    2021-05-25 22:22:37,818 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-25 22:22:38,156 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - /users
+INFO    2021-05-25 22:22:52,719 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - /users/info
+INFO    2021-05-25 22:22:52,720 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-05-25 22:24:07,758 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /users/{id}
+INFO    2021-05-25 22:24:07,766 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-05-25 22:24:12,190 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - /users/{id}
+INFO    2021-05-25 22:24:12,201 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-05-25 22:24:15,720 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - /users/{id}
+ERROR   2021-05-25 22:24:15,728 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - /users/findUsersFriends => users not found : com.paymybuddy.paymybuddy.exception.UsersNotFoundException: Utilisateur non trouvé, veuillez recommencer votre recherche
+INFO    2021-05-25 22:24:20,473 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - /users/{id}
+ERROR   2021-05-25 22:24:20,481 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - /users/findUsersFriends => users not found : com.paymybuddy.paymybuddy.exception.UsersNotFoundException: Utilisateur non trouvé, veuillez recommencer votre recherche
+INFO    2021-05-25 22:24:22,271 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - /users/{id}
+INFO    2021-05-25 22:24:22,281 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-05-25 22:24:24,621 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - /users/{id}
+INFO    2021-05-25 22:24:24,628 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-05-25 22:24:26,768 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.UsersController  - /users/{id}
+ERROR   2021-05-25 22:24:26,775 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.UsersController  - /users/findUsersFriends => users not found : com.paymybuddy.paymybuddy.exception.UsersNotFoundException: Utilisateur non trouvé, veuillez recommencer votre recherche
+INFO    2021-05-25 22:24:30,871 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - /users/{id}
+INFO    2021-05-25 22:24:30,877 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-05-25 22:24:51,136 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.UsersController  - /users/info
+INFO    2021-05-25 22:24:51,137 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-05-25 22:25:45,518 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+INFO    2021-05-25 22:25:45,949 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - /users/add friends
+INFO    2021-05-25 22:52:46,195 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+INFO    2021-05-25 22:52:46,527 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /users/add friends
+INFO    2021-05-25 22:52:49,309 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+INFO    2021-05-25 22:52:49,325 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - /users/add friends
+ERROR   2021-05-25 22:53:06,336 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfert/add => error : com.paymybuddy.paymybuddy.exception.InsuffisientBalanceException: Le montant à tranférer est supérieur à votre solde
+ERROR   2021-05-25 22:53:42,967 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfert/add => error : com.paymybuddy.paymybuddy.exception.InsuffisientBalanceException: Le montant à tranférer est supérieur à votre solde
+INFO    2021-05-25 23:01:27,755 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfert/add 
+INFO    2021-05-25 23:01:50,357 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - /users/info
+INFO    2021-05-25 23:01:50,361 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-05-26 17:51:02,085 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+ERROR   2021-05-26 17:51:02,509 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /users/subscribe => error : com.paymybuddy.paymybuddy.exception.UserAllReadyExistException: L'utilisateur que vous tentez d'ajouter figure déjà dans vote liste d'amis
+INFO    2021-05-26 17:51:12,395 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+ERROR   2021-05-26 17:51:12,408 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - /users/subscribe => error : com.paymybuddy.paymybuddy.exception.UsersNotFoundException: Utilisateur non trouvé, veuillez recommencer votre recherche
+INFO    2021-05-26 17:51:21,945 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+INFO    2021-05-26 17:51:22,054 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - /users/add friends
+INFO    2021-05-26 17:52:44,961 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+ERROR   2021-05-26 17:52:44,973 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.UsersController  - /users/subscribe => error : com.paymybuddy.paymybuddy.exception.UserAllReadyExistException: L'utilisateur que vous tentez d'ajouter figure déjà dans vote liste d'amis
+INFO    2021-05-26 17:52:53,541 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+ERROR   2021-05-26 17:52:53,546 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - /users/subscribe => error : com.paymybuddy.paymybuddy.exception.UsersNotFoundException: Utilisateur non trouvé, veuillez recommencer votre recherche
+INFO    2021-05-26 17:52:59,275 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+ERROR   2021-05-26 17:52:59,291 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - /users/subscribe => error : com.paymybuddy.paymybuddy.exception.UserAllReadyExistException: L'utilisateur que vous tentez d'ajouter figure déjà dans vote liste d'amis
+ERROR   2021-05-26 18:21:15,953 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfert/add => error : java.lang.NullPointerException
+ERROR   2021-05-26 18:22:42,467 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfert/add => error : org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+ERROR   2021-05-26 18:23:59,426 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfert/add => error : org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+ERROR   2021-05-26 18:25:46,477 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfert/add => error : java.lang.NullPointerException
+ERROR   2021-05-26 22:08:28,446 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfert/add => error : java.lang.NullPointerException
+ERROR   2021-05-26 22:10:40,523 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfert/add => error : java.lang.NullPointerException
+INFO    2021-05-26 22:18:42,680 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-26 22:18:57,325 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - /users/info
+INFO    2021-05-26 22:18:57,325 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-05-26 22:22:58,557 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+ERROR   2021-05-26 22:42:14,736 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfert/add => error : java.util.NoSuchElementException: No value present
+INFO    2021-05-26 22:43:06,890 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfert/add 
+ERROR   2021-05-26 22:55:41,356 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfert/add => error : com.paymybuddy.paymybuddy.exception.NotActiveBankAccountException: Le compte cible n'est pas actif
+ERROR   2021-05-26 22:57:26,235 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfert/add => error : com.paymybuddy.paymybuddy.exception.NotActiveBankAccountException: Le compte cible n'est pas actif
+INFO    2021-05-26 22:57:39,268 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-26 22:57:39,385 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - /users
+INFO    2021-05-26 22:57:47,393 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - /users/info
+INFO    2021-05-26 22:57:47,394 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-05-26 22:58:01,230 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - /users/{id}
+INFO    2021-05-26 22:58:01,233 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-05-26 23:04:45,965 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /users/info
+INFO    2021-05-26 23:04:46,134 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-05-26 23:04:53,653 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - /users/info
+INFO    2021-05-26 23:04:53,658 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-05-26 23:04:56,538 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - /users/info
+ERROR   2021-05-26 23:04:56,549 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - /users/findUsersFriends => users not found : com.paymybuddy.paymybuddy.exception.UsersNotFoundException: Utilisateur non trouvé, veuillez recommencer votre recherche
+INFO    2021-05-26 23:05:00,845 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - /users/info
+INFO    2021-05-26 23:05:00,849 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-05-26 23:05:07,300 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - /users/{id}
+INFO    2021-05-26 23:05:07,311 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-05-26 23:14:07,296 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-26 23:14:07,378 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /users
+ERROR   2021-05-26 23:14:27,690 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfertToBank => error : com.paymybuddy.paymybuddy.exception.NotActiveBankAccountException: Le compte cible n'est pas actif
+ERROR   2021-05-26 23:14:38,954 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfertToBank => error : java.lang.NullPointerException
+INFO    2021-05-26 23:15:18,936 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+ERROR   2021-05-26 23:15:18,961 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - /users/subscribe => userFriends allready exist in friendsList : com.paymybuddy.paymybuddy.exception.UserAllReadyExistException: L'utilisateur que vous tentez d'ajouter figure déjà dans vote liste d'amis
+INFO    2021-05-26 23:15:27,678 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - /users/info
+INFO    2021-05-26 23:15:27,681 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-05-26 23:15:43,157 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.UsersController  - /users/info
+INFO    2021-05-26 23:15:43,160 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-05-26 23:15:54,596 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - /users/info
+INFO    2021-05-26 23:15:54,601 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-05-26 23:16:05,658 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfertToBank 
+ERROR   2021-05-26 23:16:19,440 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfertToBank => error : com.paymybuddy.paymybuddy.exception.InsuffisientBalanceException: Le montant à tranférer est supérieur à votre solde
+INFO    2021-05-26 23:19:28,444 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfertToBank 
+INFO    2021-05-26 23:19:38,287 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - /users/info
+INFO    2021-05-26 23:19:38,294 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+ERROR   2021-05-26 23:28:20,804 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfertToBank => error : com.paymybuddy.paymybuddy.exception.InsuffisientBalanceException: Le montant à tranférer est supérieur à votre solde
+ERROR   2021-05-26 23:29:55,507 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfertFromBank => error : com.paymybuddy.paymybuddy.exception.BadTransfertTypeException: Cet email est déjà existant, veuillez le modifier
+ERROR   2021-05-26 23:31:52,209 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfertFromBank => error : com.paymybuddy.paymybuddy.exception.BadTransfertTypeException: Le type de transfert ne correspond pas à la demande
+ERROR   2021-05-26 23:32:02,882 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfertFromBank => error : com.paymybuddy.paymybuddy.exception.BadTransfertTypeException: Le type de transfert ne correspond pas à la demande
+ERROR   2021-05-26 23:32:32,220 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfertFromBank => error : com.paymybuddy.paymybuddy.exception.BadTransfertTypeException: Le type de transfert ne correspond pas à la demande
+ERROR   2021-05-26 23:33:29,298 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfertFromBank => error : com.paymybuddy.paymybuddy.exception.BadTransfertTypeException: Le type de transfert ne correspond pas à la demande
+ERROR   2021-05-26 23:33:42,149 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfertFromBank => error : com.paymybuddy.paymybuddy.exception.BadTransfertTypeException: Le type de transfert ne correspond pas à la demande
+ERROR   2021-05-26 23:38:04,365 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfertFromBank => error : com.paymybuddy.paymybuddy.exception.BadTransfertTypeException: Le type de transfert ne correspond pas à la demande
+ERROR   2021-05-26 23:38:06,365 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfertFromBank => error : com.paymybuddy.paymybuddy.exception.BadTransfertTypeException: Le type de transfert ne correspond pas à la demande
+INFO    2021-05-26 23:38:57,433 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfertFromBank 
+ERROR   2021-05-26 23:39:04,936 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfertFromBank => error : com.paymybuddy.paymybuddy.exception.BadTransfertTypeException: Le type de transfert ne correspond pas à la demande
+INFO    2021-05-26 23:39:10,410 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfertFromBank 
+ERROR   2021-05-26 23:39:22,751 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfertFromBank => error : com.paymybuddy.paymybuddy.exception.BadTransfertTypeException: Le type de transfert ne correspond pas à la demande
+INFO    2021-05-26 23:39:31,401 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfertFromBank 
+ERROR   2021-05-27 10:38:08,962 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.TransactionController  - /transfertFromBank => transfert impossible : com.paymybuddy.paymybuddy.exception.UserNotInFriendsListException: Cet utilisateur ne figure pas dans votre liste d'amis
+INFO    2021-05-27 10:39:08,979 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.TransactionController  - /users/sendMoney => ok
+ERROR   2021-05-27 10:39:20,372 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.TransactionController  - /transfertFromBank => transfert impossible : com.paymybuddy.paymybuddy.exception.InsuffisientBalanceException: Le montant à tranférer est supérieur à votre solde
+INFO    2021-05-27 10:39:29,914 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.TransactionController  - /users/sendMoney => ok
+INFO    2021-05-27 11:32:46,608 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.TransactionController  - /users/sendMoney => ok
+INFO    2021-05-27 11:33:47,385 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.TransactionController  - /users/sendMoney => ok
+INFO    2021-05-27 11:34:13,647 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.TransactionController  - /users/sendMoney => ok
+INFO    2021-05-27 11:37:01,662 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.TransactionController  - /users/sendMoney => ok
+INFO    2021-05-27 12:13:08,637 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.TransactionController  - /users/sendMoney => ok
+INFO    2021-05-27 12:14:23,339 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.TransactionController  - /users/sendMoney => ok
+INFO    2021-05-27 13:35:07,044 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.TransactionController  - /users/sendMoney => ok
+INFO    2021-05-27 14:08:22,117 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.BankAccountController  - /bank/add
+ERROR   2021-05-27 15:08:12,375 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.BankAccountController  - /bank/add => error : org.springframework.dao.IncorrectResultSizeDataAccessException: query did not return a unique result: 3; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 3
+ERROR   2021-05-27 15:11:08,227 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.BankAccountController  - /bank/add => error : compte existant : com.paymybuddy.paymybuddy.exception.BankAccountExistsException: Ce compte existe déjà
+INFO    2021-05-27 15:46:49,975 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-27 15:46:50,070 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
+INFO    2021-05-27 15:47:02,995 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - /users/{id} getUsersInfo
+INFO    2021-05-27 15:47:03,001 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-05-27 15:47:07,497 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - /users/{id} getUsersInfo
+INFO    2021-05-27 15:47:07,500 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-05-27 15:47:20,698 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - /users/{id} getUsersInfo
+ERROR   2021-05-27 15:47:20,703 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - /users/{id} getUsersInfo => users not found : com.paymybuddy.paymybuddy.exception.UsersNotFoundException: Utilisateur non trouvé, veuillez recommencer votre recherche
+INFO    2021-05-27 15:47:25,309 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - /users/{id} getUsersInfo
+ERROR   2021-05-27 15:47:25,311 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - /users/{id} getUsersInfo => users not found : com.paymybuddy.paymybuddy.exception.UsersNotFoundException: Utilisateur non trouvé, veuillez recommencer votre recherche
+INFO    2021-05-27 15:47:27,822 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - /users/{id} getUsersInfo
+INFO    2021-05-27 15:47:27,825 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-05-27 15:47:43,881 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.UsersController  - /findUsersFriends/{id}
+INFO    2021-05-27 15:47:43,884 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-05-27 15:47:46,322 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - /findUsersFriends/{id}
+ERROR   2021-05-27 15:47:46,324 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - /findUsersFriends/{id} => users not found : com.paymybuddy.paymybuddy.exception.UsersNotFoundException: Utilisateur non trouvé, veuillez recommencer votre recherche
+INFO    2021-05-27 15:47:50,388 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.UsersController  - /findUsersFriends/{id}
+INFO    2021-05-27 15:47:50,390 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-05-27 15:47:56,554 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+ERROR   2021-05-27 15:47:56,635 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - /users/addfriends/{userId} => ajout impossible : com.paymybuddy.paymybuddy.exception.UserAllReadyExistException: L'utilisateur que vous tentez d'ajouter figure déjà dans vote liste d'amis
+INFO    2021-05-27 15:48:02,481 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+ERROR   2021-05-27 15:48:02,486 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /users/addfriends/{userId} => ajout impossible : com.paymybuddy.paymybuddy.exception.UserAllReadyExistException: L'utilisateur que vous tentez d'ajouter figure déjà dans vote liste d'amis
+INFO    2021-05-27 15:48:10,135 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+INFO    2021-05-27 15:48:10,228 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - /users/addfriends/{userId}
+INFO    2021-05-27 15:48:20,318 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-05-27 15:48:20,338 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - /users/removefriends
+INFO    2021-05-27 15:48:21,684 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-05-27 15:48:21,704 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - /users/removefriends
+INFO    2021-05-27 15:48:38,235 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - /users/{id} getUsersInfo
+INFO    2021-05-27 15:48:38,237 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+ERROR   2021-05-27 15:48:56,841 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.TransactionController  - users/sendMoney/ => Transaction impossible : com.paymybuddy.paymybuddy.exception.UserNotInFriendsListException: Cet utilisateur ne figure pas dans votre liste d'amis
+INFO    2021-05-27 15:49:04,141 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.UsersController  - /users/{id} getUsersInfo
+INFO    2021-05-27 15:49:04,143 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-05-27 15:49:31,970 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-05-27 15:49:31,992 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - /users/addfriends/{userId}
+INFO    2021-05-27 15:49:43,899 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.TransactionController  - /users/sendMoney => ok
+ERROR   2021-05-27 15:49:51,274 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.BankAccountController  - /bank/add/{id} => ajout impossible : com.paymybuddy.paymybuddy.exception.BankAccountExistsException: Ce compte existe déjà
+ERROR   2021-05-27 15:49:59,881 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.BankAccountController  - /bank/add/{id} => ajout impossible : com.paymybuddy.paymybuddy.exception.BankAccountExistsException: Ce compte existe déjà
+ERROR   2021-05-27 15:50:02,486 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.BankAccountController  - /bank/add/{id} => ajout impossible : com.paymybuddy.paymybuddy.exception.BankAccountExistsException: Ce compte existe déjà
+ERROR   2021-05-27 15:50:21,285 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.BankAccountController  - /bank/add/{id} => error : java.util.NoSuchElementException: No value present
+INFO    2021-05-27 15:50:34,445 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.BankAccountController  - /bank/add/{id}
+ERROR   2021-05-27 15:51:01,379 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfertFromBank => error : com.paymybuddy.paymybuddy.exception.BadTransfertTypeException: Le type de transfert ne correspond pas à la demande
+INFO    2021-05-27 15:51:07,193 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfertToBank 
+INFO    2021-05-27 15:51:17,574 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - /users/{id} getUsersInfo
+INFO    2021-05-27 15:51:17,576 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend

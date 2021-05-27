@@ -1,4 +1,4 @@
-package com.paymybuddy.paymybuddy.dto.Mapper;
+package com.paymybuddy.paymybuddy.dto.mapper;
 
 import com.paymybuddy.paymybuddy.constant.TransfertType;
 import com.paymybuddy.paymybuddy.dto.TransfertDTO;
@@ -16,7 +16,7 @@ public interface TransfertMapper {
     TransfertDTO convertTransfertToTransfertDTO(Transfert entity);
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    Transfert convertTransfertDTOToTransfert(Transfert TransfertDTO);
+    Transfert convertTransfertDTOToTransfert(TransfertDTO TransfertDTO);
 
 
 }

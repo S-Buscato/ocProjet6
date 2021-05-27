@@ -15,7 +15,7 @@ public class UsersDTO {
     private String lastName;
     private String email;
     private double totalAmount;
-    private List<UsersFriendsDTO> friends;
+    private List<UsersMinimalsInfoDTO> friends;
     private List<ReceivedTransactionDTO> ReceivedTransactions;
     private List<EmmetedTransactionDTO> EmmetedTransactions;
     private List<BankAccountDTO> bankAccounts;
