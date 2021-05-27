@@ -8,9 +8,10 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class EmmetedTransactionDTO {
-    private UsersFriendsDTO receiver;
+    private UsersMinimalsInfoDTO receiver;
     private double amount;
     private double fee;
     private String description;
+    private double totalAmount;
 
 }

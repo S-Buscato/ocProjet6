@@ -1,4 +1,4 @@
-package com.paymybuddy.paymybuddy.dto.Mapper;
+package com.paymybuddy.paymybuddy.dto.mapper;
 
 import com.paymybuddy.paymybuddy.dto.BankAccountDTO;
 import com.paymybuddy.paymybuddy.models.BankAccount;

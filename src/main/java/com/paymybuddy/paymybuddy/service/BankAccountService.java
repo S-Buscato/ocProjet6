@@ -1,7 +1,8 @@
 package com.paymybuddy.paymybuddy.service;
 
 import com.paymybuddy.paymybuddy.dto.BankAccountDTO;
-import com.paymybuddy.paymybuddy.dto.Mapper.BankAccountMapper;
+import com.paymybuddy.paymybuddy.dto.mapper.BankAccountMapper;
+import com.paymybuddy.paymybuddy.exception.BankAccountExistsException;
 import com.paymybuddy.paymybuddy.models.BankAccount;
 import com.paymybuddy.paymybuddy.repository.BankAccountRepository;
 import com.paymybuddy.paymybuddy.repository.UsersRepository;
@@ -19,9 +20,12 @@ public class BankAccountService implements IBankAccountService {
 
 
     @Override
-    public BankAccountDTO save(BankAccount bankAccount, Long usersId) {
+    public BankAccountDTO save(BankAccountDTO bankAccountDTO, Long usersId) throws BankAccountExistsException {
+        if(bankAccountRepository.findByIban(bankAccountDTO.getIban()) != null){
+            throw new BankAccountExistsException();
+        }
+        BankAccount bankAccount = BankAccountMapper.INSTANCE.convertBankAccountDTOToBankAccount(bankAccountDTO);
         bankAccount.setUsers(usersRepository.findById(usersId).get());
-        BankAccountDTO bankAccountDTO = BankAccountMapper.INSTANCE.convertBankAccountToBankAccountDTO(bankAccountRepository.save(bankAccount));
-        return bankAccountDTO;
+        return BankAccountMapper.INSTANCE.convertBankAccountToBankAccountDTO(bankAccountRepository.save(bankAccount));
     }
 }

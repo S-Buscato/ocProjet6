@@ -8,7 +8,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class UsersFriendsDTO {
+public class UsersMinimalsInfoDTO {
     private String firstName;
     private String lastName;
     private String email;

@@ -1,10 +1,12 @@
 package com.paymybuddy.paymybuddy.service;
 
-import com.google.gson.Gson;
 import com.paymybuddy.paymybuddy.constant.TransfertType;
-import com.paymybuddy.paymybuddy.dto.Mapper.TransfertMapper;
+import com.paymybuddy.paymybuddy.dto.BankTransfertDTO;
 import com.paymybuddy.paymybuddy.dto.TransfertDTO;
-import com.paymybuddy.paymybuddy.dto.UserTransfertMoneyDTO;
+import com.paymybuddy.paymybuddy.dto.mapper.TransfertMapper;
+import com.paymybuddy.paymybuddy.exception.BadTransfertTypeException;
+import com.paymybuddy.paymybuddy.exception.InsuffisientBalanceException;
+import com.paymybuddy.paymybuddy.exception.NotActiveBankAccountException;
 import com.paymybuddy.paymybuddy.models.BankAccount;
 import com.paymybuddy.paymybuddy.models.Transfert;
 import com.paymybuddy.paymybuddy.models.Users;
@@ -30,56 +32,64 @@ public class TransfertService implements ITransfertService {
     BankAccountRepository bankAccountRepository;
 
     @Override
-    public Object receiveMoneyFromBankAccount(UserTransfertMoneyDTO userTransfertMoneyDTO){
-        Object resp;
-
-        Users users = usersRepository.findByEmail(userTransfertMoneyDTO.getEmail());
-        BankAccount bankAccount = bankAccountRepository.findByIban(userTransfertMoneyDTO.getIban());
-        double amount = userTransfertMoneyDTO.getAmount();
-
-        Boolean sendToBank = userTransfertMoneyDTO.getTransfertType().equals(TransfertType.VIR_TO_BANK_ACCOUNT.toString());
-        Boolean receiveFromBank = userTransfertMoneyDTO.getTransfertType().equals(TransfertType.VIR_FROM_BANK_ACCOUNT.toString());
+    public TransfertDTO receiveMoneyFromBankAccount(BankTransfertDTO bankTransfertDTO) throws NotActiveBankAccountException, BadTransfertTypeException {
+        if(!bankTransfertDTO.getTransfertType().equals((TransfertType.VIR_FROM_BANK_ACCOUNT).toString())){
+            throw  new BadTransfertTypeException();
+        }
         Transfert transfert = new Transfert();
-        transfert.setTransfertType(userTransfertMoneyDTO.getTransfertType());
-        transfert.setDate(new Date());
-        transfert.setAmount(amount);
-        transfert.setBankAccount(bankAccount);
-        transfert.setUsers(users);
-
-        if(sendToBank){
-            if(users.getTotalAmount() >= amount){
-                users.setTotalAmount(users.getTotalAmount() - transfert.getAmount());
-            }else{
-            return resp  =  new Gson().toJson("Le montant à tranférer est supérieur à votre solde");
+        Users users = usersRepository.findByEmail(bankTransfertDTO.getUserEmail()).get();
+        BankAccount bankAccount = bankAccountRepository.findByIban(bankTransfertDTO.getIban());
+        if(bankAccount.isActif()){
+            setTransfert(bankTransfertDTO, transfert, users, bankAccount);
+            try{
+                transfertRepository.save(transfert);
+                users.setTotalAmount(users.getTotalAmount() + transfert.getAmount());
+                usersRepository.save(users);
+            }catch (Exception e){
+                throw e;
             }
+        }else{
+            throw new NotActiveBankAccountException();
         }
-        else{
-            users.setTotalAmount(users.getTotalAmount() + transfert.getAmount());
-        }
-        usersRepository.save(users);
-        resp  = TransfertMapper.INSTANCE.convertTransfertToTransfertDTO(transfertRepository.save(transfert));
-        return resp;
+        return TransfertMapper.INSTANCE.convertTransfertToTransfertDTO(transfert);
     }
 
-    /*@Override
-    public Object sendMoneyToBankAccount(Long usersId, Long usersBankAccount, double amount){
-        Object resp;
-        Users users = usersRepository.findById(usersId).get();
-        if(users.getTotalAmount() >= amount){
-            users.setTotalAmount(users.getTotalAmount() - amount);
-            BankAccount bankAccount = bankAccountRepository.findById(usersBankAccount).get();
-            Transfert transfert = new Transfert();
-            transfert.setTransfertType(TransfertType.VIR_TO_BANK_ACCOUNT.toString());
-            transfert.setDate(new Date());
-            transfert.setAmount(amount);
-            transfert.setBankAccount(bankAccount);
-            transfert.setUsers(users);
-            usersRepository.save(users);
-            resp = TransfertMapper.INSTANCE.convertTransfertToTransfertDTO(transfertRepository.save(transfert));
-        }else{
-            resp  =  new Gson().toJson("Le montant à tranférer est supérieur à votre solde");
+    @Override
+    public TransfertDTO sendMoneyFromBankAccount(BankTransfertDTO bankTransfertDTO)
+            throws NotActiveBankAccountException, InsuffisientBalanceException, BadTransfertTypeException {
+        if(!bankTransfertDTO.getTransfertType().equals((TransfertType.VIR_TO_BANK_ACCOUNT).toString())){
+            throw  new BadTransfertTypeException();
         }
+        Transfert transfert = new Transfert();
+        Users users = usersRepository.findByEmail(bankTransfertDTO.getUserEmail()).get();
+        BankAccount bankAccount = bankAccountRepository.findByIban(bankTransfertDTO.getIban());
+        if(users.getTotalAmount() - bankTransfertDTO.getAmount() >= 0){
+            if(bankAccount.isActif()){
+                setTransfert(bankTransfertDTO, transfert, users, bankAccount);
+                try{
+                    transfertRepository.save(transfert);
+                    users.setTotalAmount(users.getTotalAmount() - transfert.getAmount());
+                    usersRepository.save(users);
+                }catch (Exception e){
+                    throw e;
+                }
+            }else{
+                throw new NotActiveBankAccountException();
+            }
+        }else{
+            throw new InsuffisientBalanceException();
+        }
+        return TransfertMapper.INSTANCE.convertTransfertToTransfertDTO(transfert);
+    }
 
-        return resp;
-    }*/
+    private void setTransfert(BankTransfertDTO bankTransfertDTO, Transfert transfert, Users users, BankAccount bankAccount) {
+        transfert.setDate(new Date());
+        transfert.setUsers(users);
+        transfert.setBankAccount(bankAccount);
+        transfert.setTransfertType(bankTransfertDTO.getTransfertType());
+        transfert.setAmount(bankTransfertDTO.getAmount());
+        transfert.setBankAccount(bankAccount);
+        transfert.setUsers(users);
+    }
+
 }

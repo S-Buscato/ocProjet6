@@ -1,6 +1,5 @@
 package com.paymybuddy.paymybuddy.dto;
 
-import com.paymybuddy.paymybuddy.models.Users;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -9,7 +8,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class ReceivedTransactionDTO {
-    private UsersFriendsDTO emmeter;
+    private UsersMinimalsInfoDTO emmeter;
     private double amount;
     private String description;
 
