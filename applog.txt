@@ -1039,3 +1039,43 @@ ERROR   2021-05-27 15:51:01,379 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy
 INFO    2021-05-27 15:51:07,193 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfertToBank 
 INFO    2021-05-27 15:51:17,574 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - /users/{id} getUsersInfo
 INFO    2021-05-27 15:51:17,576 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-05-27 23:11:56,854 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-27 23:11:56,990 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
+INFO    2021-05-27 23:12:02,528 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - /users/{id} getUsersInfo
+INFO    2021-05-27 23:12:02,535 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-05-27 23:59:27,339 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - /findUsersFriends/{id}
+INFO    2021-05-27 23:59:27,405 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-05-28 14:09:43,760 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-28 14:09:43,883 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
+INFO    2021-05-28 14:10:00,589 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-28 14:10:00,653 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
+INFO    2021-05-28 14:10:24,603 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-28 14:10:24,705 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
+INFO    2021-05-28 14:11:49,514 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-28 14:11:49,619 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
+INFO    2021-05-28 14:12:59,477 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-28 14:12:59,574 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
+INFO    2021-05-28 14:15:00,063 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-28 14:15:00,171 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
+INFO    2021-05-28 14:15:30,084 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-28 14:15:30,141 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
+INFO    2021-05-28 14:15:34,117 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - /users/{id} getUsersInfo
+INFO    2021-05-28 14:15:34,122 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-05-28 14:15:42,837 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-28 14:15:42,887 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
+INFO    2021-05-28 23:13:18,373 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /subscribe
+INFO    2021-05-28 23:22:50,063 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - /subscribe
+INFO    2021-05-28 23:23:57,993 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-28 23:23:58,105 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
+INFO    2021-05-28 23:24:04,894 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - /subscribe
+ERROR   2021-05-28 23:24:04,896 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - /subscribe => inscription impossible : com.paymybuddy.paymybuddy.exception.ExistingEmailException: Cet email est déjà existant, veuillez le modifier
+INFO    2021-05-28 23:24:15,145 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.UsersController  - /findUsersFriends/{id}
+INFO    2021-05-28 23:24:15,148 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-05-28 23:24:27,336 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - /findUsersFriends/{id}
+INFO    2021-05-28 23:24:27,338 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-05-28 23:26:16,291 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-28 23:26:16,341 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
+INFO    2021-05-28 23:26:47,033 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-28 23:26:47,074 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
+INFO    2021-05-28 23:26:56,801 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /findUsersFriends/{id}
+INFO    2021-05-28 23:26:56,803 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend

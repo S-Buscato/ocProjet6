@@ -6,7 +6,7 @@ import com.paymybuddy.paymybuddy.dto.UsersDTO;
 import com.paymybuddy.paymybuddy.dto.UsersMinimalsInfoDTO;
 import com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO;
 import com.paymybuddy.paymybuddy.dto.mapper.UsersMapper;
-import com.paymybuddy.paymybuddy.dto.mapper.UsersSubscribeMapper;
+import com.paymybuddy.paymybuddy.dto.mapper.UsersSubscribeMApper;
 import com.paymybuddy.paymybuddy.dto.mapper.UsersSubscribeOkMapper;
 import com.paymybuddy.paymybuddy.exception.ExistingEmailException;
 import com.paymybuddy.paymybuddy.exception.UserAllReadyExistException;
@@ -17,9 +17,11 @@ import com.paymybuddy.paymybuddy.repository.UsersRepository;
 import com.paymybuddy.paymybuddy.service.iservice.IUsersService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
@@ -42,6 +44,12 @@ public class UsersService implements IUsersService {
         List<UsersDTO> usersDTOList = UsersMapper.INSTANCE.convertUsersToUsersDTOList(usersList);
         return usersDTOList;
     }
+
+    @Override
+    public Optional<Users> findByEmail(String email){
+        return usersRepository.findByEmail(email);
+    };
+
 
     @Override
     public UsersMinimalsInfoDTO findUsersFriends(Long id) throws UsersNotFoundException {
@@ -83,7 +91,10 @@ public class UsersService implements IUsersService {
     @Override
     public UserSubscribeOkDTO subscribe(UsersSubscribeDTO usersSubscribeDTO) throws ExistingEmailException {
         if(!usersRepository.findByEmail(usersSubscribeDTO.getEmail()).isPresent()){
-            Users users = UsersSubscribeMapper.INSTANCE.convertUsersSubscribeDTOToUsers(usersSubscribeDTO);
+            Users users = UsersSubscribeMApper.INSTANCE.convertUsersSubscribeDTOToUsers(usersSubscribeDTO);
+            BCryptPasswordEncoder b = new BCryptPasswordEncoder();
+            users.setPassword(b.encode(users.getPassword()));
+            System.out.println(users.getEmail());
             return UsersSubscribeOkMapper.INSTANCE.convertUsersToUserSubscribeOkDTO(usersRepository.save(users));
         }else{
             throw new ExistingEmailException();

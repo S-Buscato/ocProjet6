@@ -10,9 +10,9 @@ import org.springframework.stereotype.Service;
 
 @Mapper(componentModel="spring")
 @Service
-public interface UsersSubscribeMapper {
+public interface UsersSubscribeMApper {
 
-    UsersSubscribeMapper INSTANCE = Mappers.getMapper(UsersSubscribeMapper.class);
+    UsersSubscribeMApper INSTANCE = Mappers.getMapper(UsersSubscribeMApper.class);
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     UsersSubscribeDTO convertUsersToUsersSubscribeDTO(Users entity);

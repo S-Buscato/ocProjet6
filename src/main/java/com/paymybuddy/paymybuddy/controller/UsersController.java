@@ -25,7 +25,7 @@ public class UsersController {
 
     static Logger logger = Logger.getLogger(UsersController.class);
 
-    @GetMapping("/users")
+    @GetMapping("/paymybody/users")
     public ResponseEntity<List<UsersDTO>> findAllUsers() {
         try {
             ResponseEntity response = ResponseEntity.status(HttpStatus.OK).body(usersService.findall());
@@ -38,7 +38,7 @@ public class UsersController {
         }
     }
 
-    @GetMapping("/findUsersFriends/{id}")
+    @GetMapping("/paymybody/findUsersFriends/{id}")
     public ResponseEntity<UsersMinimalsInfoDTO> findUsersFriends(@PathVariable Long id) {
         try {
             logger.info("/findUsersFriends/{id}");
@@ -55,7 +55,7 @@ public class UsersController {
         }
     }
 
-    @GetMapping("/users/{id}")
+    @GetMapping("/paymybody/users/{id}")
     public ResponseEntity<UsersDTO> getUsersInfo(@PathVariable Long id) {
         try {
             logger.info("/users/{id} getUsersInfo");
@@ -72,24 +72,24 @@ public class UsersController {
         }
     }
 
-    @PostMapping("/users/subscribe")
+    @PostMapping("subscribe")
     public ResponseEntity<UserSubscribeOkDTO> subscribe(@RequestBody UsersSubscribeDTO usersSubscribeDTO) {
         try {
-            logger.info("/users/subscribe");
+            logger.info("/subscribe");
             ResponseEntity response = ResponseEntity.status(HttpStatus.CREATED).body(usersService.subscribe(usersSubscribeDTO));
             return response;
         }
         catch (ExistingEmailException e) {
-            logger.error("/users/subscribe => inscription impossible : " + e);
+            logger.error("/subscribe => inscription impossible : " + e);
             return new ResponseEntity(e.getMessage(), HttpStatus.CONFLICT);
         }
         catch (Exception e) {
-            logger.error("/users/subscribe => error : " + e);
+            logger.error("/subscribe => error : " + e);
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
-    @PostMapping("/users/addfriends/{userId}")
+    @PostMapping("/paymybody/users/addfriends/{userId}")
     public ResponseEntity<UsersMinimalsInfoDTO> addFriends(@PathVariable("userId") Long userId,
                                                            @RequestBody UsersMinimalsInfoDTO usersMinimalsInfoDTO) {
         try {
@@ -112,7 +112,7 @@ public class UsersController {
         }
     }
 
-    @PostMapping("/users/removefriends/{userId}")
+    @PostMapping("/paymybody/users/removefriends/{userId}")
     public ResponseEntity<UsersMinimalsInfoDTO> removeFriends(@PathVariable("userId") Long userId,
                                                               @RequestBody UsersMinimalsInfoDTO usersMinimalsInfoDTO) {
         try {
