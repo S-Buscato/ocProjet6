@@ -1079,3 +1079,9 @@ INFO    2021-05-28 23:26:47,033 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy
 INFO    2021-05-28 23:26:47,074 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
 INFO    2021-05-28 23:26:56,801 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /findUsersFriends/{id}
 INFO    2021-05-28 23:26:56,803 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-05-28 23:34:37,368 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-28 23:34:37,453 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
+INFO    2021-05-28 23:34:58,201 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-28 23:34:58,240 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
+INFO    2021-05-28 23:36:18,809 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-28 23:36:18,851 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
