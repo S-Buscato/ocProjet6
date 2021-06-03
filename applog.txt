@@ -1085,3 +1085,282 @@ INFO    2021-05-28 23:34:58,201 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy
 INFO    2021-05-28 23:34:58,240 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
 INFO    2021-05-28 23:36:18,809 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
 INFO    2021-05-28 23:36:18,851 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
+INFO    2021-05-31 21:36:16,683 [main] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-31 21:38:03,651 [main] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-05-31 21:38:37,368 [main] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-05-31 21:44:47,575 [main] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-05-31 21:50:08,400 [main] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+INFO    2021-05-31 21:50:53,501 [main] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+INFO    2021-05-31 21:51:33,973 [main] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+INFO    2021-05-31 21:53:05,776 [main] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+INFO    2021-05-31 21:53:41,470 [main] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+INFO    2021-05-31 21:54:08,543 [main] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+INFO    2021-05-31 21:57:15,347 [main] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+INFO    2021-05-31 21:58:45,671 [main] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+INFO    2021-05-31 22:00:34,908 [main] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+INFO    2021-05-31 22:00:52,038 [main] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+INFO    2021-05-31 22:01:56,228 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-05-31 22:04:40,868 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-05-31 22:04:40,877 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-05-31 22:12:49,883 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-05-31 22:12:49,899 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-05-31 22:16:13,185 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-05-31 22:16:13,201 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-05-31 22:27:35,418 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-05-31 22:27:35,430 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-05-31 22:27:45,187 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-05-31 22:27:45,199 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-05-31 22:29:28,975 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-05-31 22:29:28,982 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-05-31 22:30:55,814 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-05-31 22:30:55,819 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-05-31 22:31:54,484 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-05-31 22:31:54,490 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-05-31 22:32:26,653 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-05-31 22:32:26,657 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-05-31 22:38:08,186 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-05-31 22:38:08,194 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-05-31 22:38:30,951 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-05-31 22:38:30,959 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 21:01:31,778 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - /subscribe
+ERROR   2021-06-01 21:01:31,850 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - /subscribe => inscription impossible : com.paymybuddy.paymybuddy.exception.ExistingEmailException: Cet email est déjà existant, veuillez le modifier
+INFO    2021-06-01 21:15:33,754 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - users findAll
+INFO    2021-06-01 21:15:33,924 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
+INFO    2021-06-01 21:15:49,649 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.UsersService  - users findAll
+INFO    2021-06-01 21:15:49,704 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
+INFO    2021-06-01 21:16:08,037 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UsersService  - users findAll
+INFO    2021-06-01 21:16:08,077 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
+INFO    2021-06-01 21:17:50,765 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - /subscribe
+ERROR   2021-06-01 21:17:50,767 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - /subscribe => inscription impossible : com.paymybuddy.paymybuddy.exception.ExistingEmailException: Cet email est déjà existant, veuillez le modifier
+INFO    2021-06-01 21:19:04,776 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.UsersController  - /subscribe
+ERROR   2021-06-01 21:19:04,778 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.UsersController  - /subscribe => inscription impossible : com.paymybuddy.paymybuddy.exception.ExistingEmailException: Cet email est déjà existant, veuillez le modifier
+INFO    2021-06-01 21:19:12,688 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /subscribe
+INFO    2021-06-01 21:20:07,603 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 21:20:07,615 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail toto5@email.com
+INFO    2021-06-01 21:20:18,293 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - find by id 1
+INFO    2021-06-01 21:20:18,301 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail toto5@email.com
+INFO    2021-06-01 21:20:43,274 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UsersService  - users findAll
+INFO    2021-06-01 21:20:43,339 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
+INFO    2021-06-01 21:20:53,639 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.UsersController  - /users/{id} getUsersInfo
+INFO    2021-06-01 21:20:53,644 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-01 21:20:59,085 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - /users/{id} getUsersInfo
+INFO    2021-06-01 21:20:59,087 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-01 21:32:55,389 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 21:32:55,395 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 21:38:19,320 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 21:38:19,324 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 21:40:55,462 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 21:40:55,464 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 21:42:48,748 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 21:42:48,749 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 21:42:48,750 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@e2f7506
+INFO    2021-06-01 21:43:18,122 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 21:43:18,124 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 21:43:18,124 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@21da8a08
+INFO    2021-06-01 21:43:57,540 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UsersService  - find by id 1
+INFO    2021-06-01 21:43:57,547 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail toto5@email.com
+INFO    2021-06-01 21:43:57,551 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UsersService  - user Friend allready exists com.paymybuddy.paymybuddy.models.Users@a82a0d01
+ERROR   2021-06-01 21:43:57,551 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /users/addfriends/{userId} => ajout impossible : com.paymybuddy.paymybuddy.exception.UserAllReadyExistException: L'utilisateur que vous tentez d'ajouter figure déjà dans vote liste d'amis
+INFO    2021-06-01 21:44:02,456 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 21:44:02,463 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail toto5@email.com
+INFO    2021-06-01 21:44:02,466 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UsersService  - user Friend allready exists com.paymybuddy.paymybuddy.models.Users@f2425f8b
+ERROR   2021-06-01 21:44:02,466 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - /users/addfriends/{userId} => ajout impossible : com.paymybuddy.paymybuddy.exception.UserAllReadyExistException: L'utilisateur que vous tentez d'ajouter figure déjà dans vote liste d'amis
+INFO    2021-06-01 21:44:26,631 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - find by id 1
+INFO    2021-06-01 21:44:26,671 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - /users/removefriends
+INFO    2021-06-01 21:44:48,200 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 21:44:48,230 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - /users/removefriends
+INFO    2021-06-01 21:45:02,178 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 21:45:02,180 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail toto6@email.com
+INFO    2021-06-01 21:45:02,186 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@44769ba9
+INFO    2021-06-01 21:45:02,188 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - /users/addfriends/{userId}
+INFO    2021-06-01 21:46:00,074 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 21:46:00,075 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 21:46:00,076 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@ac621fd9
+INFO    2021-06-01 22:01:40,991 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findAll
+INFO    2021-06-01 22:01:41,015 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 1
+INFO    2021-06-01 22:01:41,022 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 22:01:41,023 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 22:01:41,024 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@b06d6bd6
+INFO    2021-06-01 22:03:16,211 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findAll
+INFO    2021-06-01 22:03:16,234 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 1
+INFO    2021-06-01 22:03:16,242 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 22:03:16,242 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 22:03:16,243 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@5d9628d2
+INFO    2021-06-01 22:05:35,145 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findAll
+INFO    2021-06-01 22:05:35,167 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 1
+INFO    2021-06-01 22:05:35,173 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 22:05:35,173 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 22:05:35,174 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@7435c915
+INFO    2021-06-01 22:07:20,102 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findAll
+INFO    2021-06-01 22:07:20,128 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 1
+INFO    2021-06-01 22:07:20,136 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 22:07:20,137 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 22:07:20,138 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@2b7e8892
+INFO    2021-06-01 22:07:43,934 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findAll
+INFO    2021-06-01 22:07:43,962 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 1
+INFO    2021-06-01 22:07:43,970 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 22:07:43,971 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 22:07:43,972 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@c598ecbd
+INFO    2021-06-01 22:10:41,425 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findAll
+INFO    2021-06-01 22:10:41,448 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 1
+INFO    2021-06-01 22:10:41,456 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 22:10:41,457 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 22:10:41,457 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@c74a5176
+INFO    2021-06-01 22:11:01,940 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findAll
+INFO    2021-06-01 22:11:01,968 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 1
+INFO    2021-06-01 22:11:01,975 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 22:11:01,976 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 22:11:01,976 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@22fd8e1e
+INFO    2021-06-01 22:21:50,085 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UsersService  - users findAll
+INFO    2021-06-01 22:21:50,172 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
+INFO    2021-06-01 22:21:55,146 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.UsersController  - /users/{id} getUsersInfo
+INFO    2021-06-01 22:21:55,153 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-01 22:35:07,393 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 22:35:07,397 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 22:35:07,398 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@8a58241e
+INFO    2021-06-01 22:35:25,475 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 22:35:25,477 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 22:35:25,477 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@dbd7def6
+INFO    2021-06-01 22:36:24,395 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 22:36:24,398 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 22:36:27,739 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@9178f1d8
+INFO    2021-06-01 22:37:28,952 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 22:37:28,953 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 22:37:28,954 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@5cc1617b
+INFO    2021-06-01 22:38:34,795 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 22:38:34,796 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 22:38:47,266 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@c730996a
+INFO    2021-06-01 22:40:57,820 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 22:40:57,822 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 22:40:57,822 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@5c0eb6d1
+INFO    2021-06-01 22:41:23,909 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 22:41:23,911 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 22:41:23,911 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@dc7fe8e2
+INFO    2021-06-01 22:55:29,052 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 22:55:29,052 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 22:55:29,052 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@60a769a3
+INFO    2021-06-01 22:56:18,772 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 22:56:18,772 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 22:56:18,772 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@95143b17
+INFO    2021-06-01 22:57:35,315 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 22:57:35,315 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 22:57:35,315 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@cfd587a5
+INFO    2021-06-01 23:00:46,912 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 23:00:46,943 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 23:00:50,419 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@4c19154e
+INFO    2021-06-01 23:02:25,111 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 23:02:25,111 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 23:02:25,111 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@8d2cf3a8
+INFO    2021-06-01 23:02:55,103 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 23:02:55,103 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 23:02:55,103 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@91bf1548
+INFO    2021-06-01 23:03:23,795 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 23:03:23,811 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 23:03:23,811 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@787642f9
+INFO    2021-06-01 23:04:53,897 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findAll
+INFO    2021-06-01 23:04:53,928 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 1
+INFO    2021-06-01 23:04:53,944 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 23:04:53,944 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 23:04:53,944 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@2b595960
+INFO    2021-06-01 23:05:42,001 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findAll
+INFO    2021-06-01 23:05:42,032 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 1
+INFO    2021-06-01 23:05:42,048 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 23:05:42,048 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 23:05:42,048 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@7b7fcc7d
+INFO    2021-06-01 23:06:55,617 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findAll
+INFO    2021-06-01 23:06:55,649 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 1
+INFO    2021-06-01 23:06:55,649 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-01 23:06:55,649 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-01 23:06:55,649 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@d2e9d1fe
+INFO    2021-06-02 09:34:09,805 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-02 19:11:23,557 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findAll
+INFO    2021-06-02 19:11:23,573 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 1
+INFO    2021-06-02 19:11:23,584 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-02 19:11:23,595 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-02 19:11:23,595 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-02 19:11:23,596 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@291eb03e
+INFO    2021-06-02 19:17:06,530 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-02 21:27:43,664 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findAll
+INFO    2021-06-02 21:27:43,679 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 1
+INFO    2021-06-02 21:27:43,679 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-02 21:27:43,695 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-02 21:27:43,695 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-02 21:27:43,695 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-02 21:27:43,695 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@704fce1e
+INFO    2021-06-02 22:15:10,406 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findAll
+INFO    2021-06-02 22:15:10,415 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 1
+INFO    2021-06-02 22:15:10,424 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-02 22:15:10,442 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-02 22:15:10,452 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-02 22:15:10,453 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-02 22:15:10,454 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@c1f645bd
+INFO    2021-06-02 22:16:20,750 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findAll
+INFO    2021-06-02 22:16:20,761 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 1
+INFO    2021-06-02 22:16:20,772 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-02 22:16:20,789 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-02 22:16:20,799 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-02 22:16:20,800 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-02 22:16:20,801 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@ca531439
+INFO    2021-06-02 22:19:19,157 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findAll
+INFO    2021-06-02 22:19:19,172 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 1
+INFO    2021-06-02 22:19:19,188 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-02 22:19:19,203 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-02 22:19:19,203 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-02 22:19:19,219 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-02 22:19:19,219 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@6ed67fbe
+INFO    2021-06-02 22:20:41,729 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findAll
+INFO    2021-06-02 22:20:41,729 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 1
+INFO    2021-06-02 22:20:41,744 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-02 22:20:41,760 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-02 22:20:41,776 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-02 22:20:41,776 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-02 22:20:41,776 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@c923edd9
+INFO    2021-06-03 13:40:11,024 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findAll
+INFO    2021-06-03 13:40:11,036 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 1
+INFO    2021-06-03 13:40:11,046 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-03 13:40:11,072 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-03 13:40:11,083 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-03 13:40:11,086 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-03 13:40:11,086 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@8c6e5a4a
+INFO    2021-06-03 13:55:51,663 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findAll
+INFO    2021-06-03 13:55:51,673 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 1
+INFO    2021-06-03 13:55:51,678 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-03 13:55:51,693 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-03 13:55:51,703 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-03 13:55:51,704 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-03 13:55:51,704 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@d69a867b
+INFO    2021-06-03 21:41:38,504 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findAll
+INFO    2021-06-03 21:41:38,513 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 1
+INFO    2021-06-03 21:41:38,521 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-03 21:41:38,535 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-03 21:41:38,543 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-03 21:41:38,544 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-03 21:41:38,545 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@b5418f43
+INFO    2021-06-03 22:50:28,513 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findAll
+INFO    2021-06-03 22:50:28,521 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 1
+INFO    2021-06-03 22:50:28,527 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-03 22:50:28,540 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-03 22:50:28,546 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-03 22:50:28,548 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-03 22:50:28,549 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@421d9fb7
+INFO    2021-06-03 22:54:05,405 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findAll
+INFO    2021-06-03 22:54:05,416 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 1
+INFO    2021-06-03 22:54:05,425 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-03 22:54:05,446 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-03 22:54:05,455 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-03 22:54:05,456 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-03 22:54:05,457 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@e834cc9a
+INFO    2021-06-03 22:56:46,337 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findAll
+INFO    2021-06-03 22:56:46,344 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 1
+INFO    2021-06-03 22:56:46,350 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-03 22:56:46,372 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-03 22:56:46,379 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-03 22:56:46,380 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-03 22:56:46,381 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@4b932c8b
+INFO    2021-06-03 22:59:00,819 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findAll
+INFO    2021-06-03 22:59:00,826 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 1
+INFO    2021-06-03 22:59:00,834 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-03 22:59:00,849 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend
+INFO    2021-06-03 22:59:00,856 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
+INFO    2021-06-03 22:59:00,857 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
+INFO    2021-06-03 22:59:00,857 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@6470772b
