@@ -6,6 +6,7 @@ import com.paymybuddy.paymybuddy.dto.UsersMinimalsInfoDTO;
 import com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO;
 import com.paymybuddy.paymybuddy.exception.ExistingEmailException;
 import com.paymybuddy.paymybuddy.exception.UserAllReadyExistException;
+import com.paymybuddy.paymybuddy.exception.UsersNotInFriendsListException;
 import com.paymybuddy.paymybuddy.exception.UsersNotFoundException;
 import com.paymybuddy.paymybuddy.models.Users;
 
@@ -23,6 +24,6 @@ public interface IUsersService {
     UsersDTO update(UsersDTO usersDTO, Long id) throws UsersNotFoundException;
     UserSubscribeOkDTO subscribe(UsersSubscribeDTO usersSubscribeDTO) throws ExistingEmailException;
     UsersMinimalsInfoDTO addFriends(Long userId, UsersMinimalsInfoDTO usersMinimalsInfoDTO) throws UsersNotFoundException, UserAllReadyExistException;
-    UsersMinimalsInfoDTO removeFriends(Long userId, UsersMinimalsInfoDTO usersMinimalsInfoDTO) throws UsersNotFoundException;
+    UsersDTO removeFriends(Long userId, UsersMinimalsInfoDTO usersMinimalsInfoDTO) throws UsersNotFoundException, UsersNotInFriendsListException;
 
 }

@@ -10,9 +10,9 @@ import com.paymybuddy.paymybuddy.dto.mapper.UsersSubscribeMApper;
 import com.paymybuddy.paymybuddy.dto.mapper.UsersSubscribeOkMapper;
 import com.paymybuddy.paymybuddy.exception.ExistingEmailException;
 import com.paymybuddy.paymybuddy.exception.UserAllReadyExistException;
+import com.paymybuddy.paymybuddy.exception.UsersNotInFriendsListException;
 import com.paymybuddy.paymybuddy.exception.UsersNotFoundException;
 import com.paymybuddy.paymybuddy.models.Users;
-import com.paymybuddy.paymybuddy.repository.TransactionRepository;
 import com.paymybuddy.paymybuddy.repository.UsersRepository;
 import com.paymybuddy.paymybuddy.service.iservice.IUsersService;
 import org.apache.log4j.Logger;
@@ -33,8 +33,6 @@ public class UsersService implements IUsersService {
     @Autowired
     UsersRepository usersRepository;
 
-    @Autowired
-    TransactionRepository transactionRepository;
 
     @Override
     public List<UsersDTO> findall() {
@@ -91,10 +89,10 @@ public class UsersService implements IUsersService {
 
     @Override
     public UserSubscribeOkDTO subscribe(UsersSubscribeDTO usersSubscribeDTO) throws ExistingEmailException {
-        if(usersSubscribeDTO.getEmail() != null){
+        if(!usersRepository.findByEmail(usersSubscribeDTO.getEmail()).isPresent()){
             Users users = UsersSubscribeMApper.INSTANCE.convertUsersSubscribeDTOToUsers(usersSubscribeDTO);
             BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-            users.setEmail(encoder.encode(users.getEmail()));
+            users.setPassword(encoder.encode(users.getPassword()));
             return UsersSubscribeOkMapper.INSTANCE.convertUsersToUserSubscribeOkDTO(usersRepository.save(users));
         }else{
             throw new ExistingEmailException();
@@ -123,12 +121,16 @@ public class UsersService implements IUsersService {
 
 
     @Override
-    public UsersMinimalsInfoDTO removeFriends(Long userId, UsersMinimalsInfoDTO usersMinimalsInfoDTO) throws UsersNotFoundException {
+    public UsersDTO removeFriends(Long userId, UsersMinimalsInfoDTO usersMinimalsInfoDTO) throws UsersNotFoundException, UsersNotInFriendsListException {
         Users users = usersRepository.findById(userId).get();
         if(usersRepository.findByEmail(usersMinimalsInfoDTO.getEmail()).isPresent()){
             Users usersfriends = usersRepository.findByEmail(usersMinimalsInfoDTO.getEmail()).get();
+            if(users.getFriends().contains(usersfriends)){
                 users.getFriends().remove(usersfriends);
-                return UsersMapper.INSTANCE.convertUsersToUsersFriendsDTO(users);
+                return UsersMapper.INSTANCE.convertUsersToUsersDTO(usersRepository.save(users));
+            }else{
+                throw new UsersNotInFriendsListException();
+            }
         }else{
             throw new UsersNotFoundException();
         }
@@ -144,7 +146,7 @@ public class UsersService implements IUsersService {
     public UsersDTO update(UsersDTO usersDTO, Long id) throws UsersNotFoundException {
        if(usersRepository.findById(id).isPresent()){
            Users users = usersRepository.findById(id).get();
-           return UsersMapper.INSTANCE.convertUsersToUsersDTO(users);
+           return UsersMapper.INSTANCE.convertUsersToUsersDTO(usersRepository.save(users));
         }else{
            throw new UsersNotFoundException();
        }
