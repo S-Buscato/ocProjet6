@@ -30,6 +30,8 @@ public class BankAccountService implements IBankAccountService {
     }
 
     public BankAccountDTO toggleActiveBankAccount(BankAccountDTO bankAccountDTO) {
-        return null;
+        BankAccount bankAccount = bankAccountRepository.findByIban(bankAccountDTO.getIban());
+        bankAccount.setActif(!bankAccount.isActif());
+        return BankAccountMapper.INSTANCE.convertBankAccountToBankAccountDTO(bankAccountRepository.save(bankAccount));
     }
 }
