@@ -55,7 +55,7 @@ public class TransfertService implements ITransfertService {
     }
 
     @Override
-    public TransfertDTO sendMoneyFromBankAccount(BankTransfertDTO bankTransfertDTO)
+    public TransfertDTO sendMoneyToBankAccount(BankTransfertDTO bankTransfertDTO)
             throws NotActiveBankAccountException, InsuffisientBalanceException, BadTransfertTypeException {
         if(!bankTransfertDTO.getTransfertType().equals((TransfertType.VIR_TO_BANK_ACCOUNT).toString())){
             throw  new BadTransfertTypeException();

@@ -37,34 +37,6 @@ public class UsersService implements IUsersService {
     TransactionRepository transactionRepository;
 
     @Override
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-    public List<Users> findall() {
-        List<Users> ret = StreamSupport.stream(usersRepository.findAll().spliterator(),
-                false).collect(Collectors.toList());
-        logger.info("users findAll");
-        return ret;
-=======
-    public List<UsersDTO> findall() {
-        List<Users> ret = StreamSupport.stream(usersRepository.findAll().spliterator(),
-                false).collect(Collectors.toList());
-        logger.info("users findAll");
-
-        return UsersMapper.INSTANCE.convertUsersToUsersDTOList(ret);
-    }
-
-    @Override
-    public UsersMinimalsInfoDTO findUsersFriends(Long id) throws UsersNotFoundException {
-        UsersMinimalsInfoDTO usersFriendsDTO = new UsersMinimalsInfoDTO();
-        if(usersRepository.findById(id).isPresent()){
-            usersFriendsDTO = UsersMapper.INSTANCE.convertUsersToUsersFriendsDTO(usersRepository.findById(id).get());
-            logger.info("users findAllFriends");
-        }else{
-            throw  new UsersNotFoundException();
-        }
-        return usersFriendsDTO;
->>>>>>> Stashed changes
-=======
     public List<UsersDTO> findall() {
         List<Users> usersList = StreamSupport.stream(usersRepository.findAll().spliterator(),
                 false).collect(Collectors.toList());
@@ -74,12 +46,6 @@ public class UsersService implements IUsersService {
     }
 
     @Override
-    public Optional<Users> findByEmail(String email){
-        return usersRepository.findByEmail(email);
-    };
-
-
-    @Override
     public UsersMinimalsInfoDTO findUsersFriends(Long id) throws UsersNotFoundException {
         if(usersRepository.findById(id).isPresent()){
             logger.info("Find user Friend");
@@ -87,29 +53,17 @@ public class UsersService implements IUsersService {
         }{
             throw new UsersNotFoundException();
         }
->>>>>>> cdf3b60668139198638b728d256ba8860567095d
     }
 
     @Override
     public UsersDTO findUserInfo(Long id) throws UsersNotFoundException {
         if(usersRepository.findById(id).isPresent()){
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-            usersFriendsDTO = UsersMapper.INSTANCE.convertUsersToUsersFriendsDTO(usersRepository.findById(id).get());
-           // usersFriendsDTO.setFriendsList(UsersMapper.INSTANCE.convertUsersToUsersDTOList(usersRepository.findById(id).get().getFriends()));
+            UsersMinimalsInfoDTO usersMinimalsInfoDTO = UsersMapper.INSTANCE.convertUsersToUsersFriendsDTO(usersRepository.findById(id).get());
             logger.info("users findAllFriends");
-=======
             return UsersMapper.INSTANCE.convertUsersToUsersDTO(usersRepository.findById(id).get());
         }
         else{
             throw new UsersNotFoundException();
->>>>>>> Stashed changes
-=======
-            logger.info("Find user Friend");
-            return UsersMapper.INSTANCE.convertUsersToUsersDTO(usersRepository.findById(id).get());
-        }{
-            throw new UsersNotFoundException();
->>>>>>> cdf3b60668139198638b728d256ba8860567095d
         }
     }
 
@@ -136,15 +90,6 @@ public class UsersService implements IUsersService {
     }
 
     @Override
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-    public Users addFriends(Long userId, Long usersFriendId){
-        Users users = findById(userId).get();
-        Users userFriends = findById(usersFriendId).get();
-        List<Users> usersList = new ArrayList<>();
-        if(users.getFriends().size() != 0){
-            usersList = users.getFriends();
-=======
     public UserSubscribeOkDTO subscribe(UsersSubscribeDTO usersSubscribeDTO) throws ExistingEmailException {
         if(usersSubscribeDTO.getEmail() != null){
             Users users = UsersSubscribeMApper.INSTANCE.convertUsersSubscribeDTOToUsers(usersSubscribeDTO);
@@ -153,32 +98,12 @@ public class UsersService implements IUsersService {
             return UsersSubscribeOkMapper.INSTANCE.convertUsersToUserSubscribeOkDTO(usersRepository.save(users));
         }else{
             throw new ExistingEmailException();
->>>>>>> Stashed changes
-=======
-    public UserSubscribeOkDTO subscribe(UsersSubscribeDTO usersSubscribeDTO) throws ExistingEmailException {
-        if(!usersRepository.findByEmail(usersSubscribeDTO.getEmail()).isPresent()){
-            Users users = UsersSubscribeMApper.INSTANCE.convertUsersSubscribeDTOToUsers(usersSubscribeDTO);
-            BCryptPasswordEncoder b = new BCryptPasswordEncoder();
-            users.setPassword(b.encode(users.getPassword()));
-            System.out.println(users.getEmail());
-            return UsersSubscribeOkMapper.INSTANCE.convertUsersToUserSubscribeOkDTO(usersRepository.save(users));
-        }else{
-            throw new ExistingEmailException();
->>>>>>> cdf3b60668139198638b728d256ba8860567095d
         }
     }
 
 
+
     @Override
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-    public Users removeFriends(Long userId, Long usersFriendId) {
-        Users users = findById(userId).get();
-        Users userFriends = findById(usersFriendId).get();
-        List<Users> usersList = new ArrayList<>();
-        if(users.getFriends().size() != 0){
-            usersList=users.getFriends();
-=======
     public UsersMinimalsInfoDTO addFriends(Long userId, UsersMinimalsInfoDTO usersMinimalsInfoDTO) throws UserAllReadyExistException, UsersNotFoundException {
         Users users = findById(userId);
         if (usersRepository.findByEmail(usersMinimalsInfoDTO.getEmail()).isPresent()) {
@@ -193,52 +118,13 @@ public class UsersService implements IUsersService {
             }
         } else {
             throw new UsersNotFoundException();
->>>>>>> cdf3b60668139198638b728d256ba8860567095d
         }
-    }
-
-
-    @Override
-    public Object removeFriends(Long userId, UsersMinimalsInfoDTO usersMinimalsInfoDTO) {
-        Object resp;
-       try{
-            Users users = findById(userId);
-            Users userFriends = usersRepository.findByEmail(usersMinimalsInfoDTO.getEmail()).get();
-            users.getFriends().remove(userFriends);
-            userFriends.getFriends().remove(users);
-            usersRepository.save(userFriends);
-<<<<<<< HEAD
-        }
-        return usersRepository.save(users);
-=======
-    public UsersMinimalsInfoDTO addFriends(Long userId, UsersMinimalsInfoDTO usersMinimalsInfoDTO) throws UsersNotFoundException, UserAllReadyExistException {
-        Users users = findById(userId).get();
-        if(usersRepository.findByEmail(usersMinimalsInfoDTO.getEmail()).isPresent()){
-            Users usersfriends = usersRepository.findByEmail(usersMinimalsInfoDTO.getEmail()).get();
-            if(!users.getFriends().contains(usersfriends)){
-                users.getFriends().add(usersfriends);
-                return UsersMapper.INSTANCE.convertUsersToUsersFriendsDTO(users);
-            }else{
-                throw new UserAllReadyExistException();
-            }
-        }else{
-            throw new UsersNotFoundException();
-        }
-
->>>>>>> Stashed changes
-=======
-            resp = UsersMapper.INSTANCE.convertUsersToUsersDTO(usersRepository.save(users));
-       }catch (Exception e){
-           resp = e.getMessage() + " ** " + e.getCause().getMessage() ;
-       }
-    return resp;
->>>>>>> cdf3b60668139198638b728d256ba8860567095d
     }
 
 
     @Override
     public UsersMinimalsInfoDTO removeFriends(Long userId, UsersMinimalsInfoDTO usersMinimalsInfoDTO) throws UsersNotFoundException {
-        Users users = findById(userId).get();
+        Users users = usersRepository.findById(userId).get();
         if(usersRepository.findByEmail(usersMinimalsInfoDTO.getEmail()).isPresent()){
             Users usersfriends = usersRepository.findByEmail(usersMinimalsInfoDTO.getEmail()).get();
                 users.getFriends().remove(usersfriends);
@@ -248,10 +134,11 @@ public class UsersService implements IUsersService {
         }
     }
 
+
     @Override
-    public Optional<Users> findByEmail(String s) {
-        return Optional.empty();
-    }
+    public Optional<Users> findByEmail(String email){
+        return usersRepository.findByEmail(email);
+    };
 
     @Override
     public UsersDTO update(UsersDTO usersDTO, Long id) throws UsersNotFoundException {
