@@ -8,6 +8,7 @@ import com.paymybuddy.paymybuddy.exception.ExistingEmailException;
 import com.paymybuddy.paymybuddy.exception.UserAllReadyExistException;
 import com.paymybuddy.paymybuddy.exception.UsersNotFoundException;
 import com.paymybuddy.paymybuddy.models.BankAccount;
+
 import com.paymybuddy.paymybuddy.models.Users;
 import com.paymybuddy.paymybuddy.repository.UsersRepository;
 import com.paymybuddy.paymybuddy.service.UsersService;
@@ -103,8 +104,14 @@ public class UsersServiceTest {
 
         when(usersRepository.findAll()).thenReturn(usersList);
 
+
         List<UsersDTO> usersDTOList = usersService.findall();
         Assertions.assertEquals(users.getEmail(), usersDTOList.get(0).getEmail());
+
+        Iterable<UsersDTO> usersList = usersService.findall();
+        Iterator<UsersDTO> i = usersList.iterator();
+        Assertions.assertEquals(users2, i.next());
+
 
         verify(usersRepository, times(1)).findAll();
     }
@@ -126,15 +133,24 @@ public class UsersServiceTest {
     void testUsersFindByEmail(){
         when(usersRepository.findByEmail(anyString())).thenReturn(Optional.ofNullable(users));
 
+
         Optional<Users> usersResult = usersService.findByEmail("JohnDoe@email.com");
 
+        List<UsersMinimalsInfoDTO> usersList = new ArrayList<>();
+
+
         Assertions.assertEquals(users.getEmail(), usersResult.get().getEmail() );
+
 
         verify(usersRepository, times(1)).findByEmail(anyString());
     }
     @Test
     @DisplayName("test usersAddUserFriends Succes")
     void testUsersAddUserFriends() throws UserAllReadyExistException, UsersNotFoundException {
+
+        when(usersRepository.findById(1L)).thenReturn(java.util.Optional.ofNullable(users));
+        when(usersRepository.findById(2L)).thenReturn(java.util.Optional.ofNullable(users2));
+
 
         usersMinimalsInfoDTO.setEmail(users.getEmail());
         usersMinimalsInfoDTO.setFirstName(users.getFirstName());
@@ -147,6 +163,7 @@ public class UsersServiceTest {
         UsersMinimalsInfoDTO usersMinimalsInfoDTO2 = usersService.addFriends(2L,usersMinimalsInfoDTO);
 
         Assertions.assertEquals(usersMinimalsInfoDTO2.getEmail(), usersMinimalsInfoDTO.getEmail());
+
 
         verify(usersRepository, times(1)).findById(2L);
         verify(usersRepository, times(2)).findByEmail("john@doe.mail");
@@ -181,6 +198,10 @@ public class UsersServiceTest {
         usersSubscribeDTO.setFirstName("John");
         usersSubscribeDTO.setLastName("Doe");
         usersSubscribeDTO.setPassword("toto");
+
+        verify(usersRepository, times(1)).findById(1L);
+        verify(usersRepository, times(1)).findById(2L);
+
 
         when(usersRepository.findByEmail("john@doe.mail")).thenReturn(Optional.empty());
         when(usersRepository.save(any(Users.class))).thenReturn(users);

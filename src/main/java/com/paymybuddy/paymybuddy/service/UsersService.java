@@ -1,18 +1,25 @@
 package com.paymybuddy.paymybuddy.service;
 
-import com.paymybuddy.paymybuddy.constant.FeeRate;
 import com.paymybuddy.paymybuddy.controller.UsersController;
+import com.paymybuddy.paymybuddy.dto.UserSubscribeOkDTO;
 import com.paymybuddy.paymybuddy.dto.UsersDTO;
-import com.paymybuddy.paymybuddy.dto.UsersFriendsDTO;
+import com.paymybuddy.paymybuddy.dto.UsersMinimalsInfoDTO;
+import com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO;
 import com.paymybuddy.paymybuddy.dto.mapper.UsersMapper;
+import com.paymybuddy.paymybuddy.dto.mapper.UsersSubscribeMApper;
+import com.paymybuddy.paymybuddy.dto.mapper.UsersSubscribeOkMapper;
+import com.paymybuddy.paymybuddy.exception.ExistingEmailException;
+import com.paymybuddy.paymybuddy.exception.UserAllReadyExistException;
+import com.paymybuddy.paymybuddy.exception.UsersNotFoundException;
 import com.paymybuddy.paymybuddy.models.Users;
+import com.paymybuddy.paymybuddy.repository.TransactionRepository;
 import com.paymybuddy.paymybuddy.repository.UsersRepository;
 import com.paymybuddy.paymybuddy.service.iservice.IUsersService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -23,36 +30,52 @@ public class UsersService implements IUsersService {
 
     static Logger logger = Logger.getLogger(UsersController.class);
 
-   /* @Autowired
-    UsersMapper usersMapper;
-*/
     @Autowired
     UsersRepository usersRepository;
 
+    @Autowired
+    TransactionRepository transactionRepository;
+
     @Override
-    public List<Users> findall() {
-        List<Users> ret = StreamSupport.stream(usersRepository.findAll().spliterator(),
+    public List<UsersDTO> findall() {
+        List<Users> usersList = StreamSupport.stream(usersRepository.findAll().spliterator(),
                 false).collect(Collectors.toList());
         logger.info("users findAll");
-        return ret;
+        List<UsersDTO> usersDTOList = UsersMapper.INSTANCE.convertUsersToUsersDTOList(usersList);
+        return usersDTOList;
     }
 
     @Override
-    public UsersFriendsDTO findUsersFriends(Long id) {
-        UsersFriendsDTO usersFriendsDTO = new UsersFriendsDTO();
+    public Optional<Users> findByEmail(String email){
+        return usersRepository.findByEmail(email);
+    };
+
+
+    @Override
+    public UsersMinimalsInfoDTO findUsersFriends(Long id) throws UsersNotFoundException {
         if(usersRepository.findById(id).isPresent()){
-            usersFriendsDTO = UsersMapper.INSTANCE.convertUsersToUsersFriendsDTO(usersRepository.findById(id).get());
-           // usersFriendsDTO.setFriendsList(UsersMapper.INSTANCE.convertUsersToUsersDTOList(usersRepository.findById(id).get().getFriends()));
-            logger.info("users findAllFriends");
+            logger.info("Find user Friend");
+            return UsersMapper.INSTANCE.convertUsersToUsersFriendsDTO(usersRepository.findById(id).get());
+        }{
+            throw new UsersNotFoundException();
         }
-        return usersFriendsDTO;
+    }
+
+    @Override
+    public UsersDTO findUserInfo(Long id) throws UsersNotFoundException {
+        if(usersRepository.findById(id).isPresent()){
+            logger.info("Find user Friend");
+            return UsersMapper.INSTANCE.convertUsersToUsersDTO(usersRepository.findById(id).get());
+        }{
+            throw new UsersNotFoundException();
+        }
     }
 
 
     @Override
-    public Optional<Users> findById(Long id) {
+    public Users findById(Long id) {
         logger.info("find by id " + id);
-        return usersRepository.findById(id);
+        return usersRepository.findById(id).get();
     }
 
     @Override
@@ -61,52 +84,58 @@ public class UsersService implements IUsersService {
     }
 
     @Override
-    public Users save(UsersDTO usersDTO) {
-        Users users = UsersMapper.INSTANCE.convertUsersDTOToUsers(usersDTO);
+    public Users save(Users users) {
         return usersRepository.save(users);
     }
 
     @Override
-    public Users addFriends(Long userId, Long usersFriendId){
-        Users users = findById(userId).get();
-        Users userFriends = findById(usersFriendId).get();
-        List<Users> usersList = new ArrayList<>();
-        if(users.getFriends().size() != 0){
-            usersList = users.getFriends();
+    public UserSubscribeOkDTO subscribe(UsersSubscribeDTO usersSubscribeDTO) throws ExistingEmailException {
+        if(!usersRepository.findByEmail(usersSubscribeDTO.getEmail()).isPresent()){
+            Users users = UsersSubscribeMApper.INSTANCE.convertUsersSubscribeDTOToUsers(usersSubscribeDTO);
+            BCryptPasswordEncoder b = new BCryptPasswordEncoder();
+            users.setPassword(b.encode(users.getPassword()));
+            System.out.println(users.getEmail());
+            return UsersSubscribeOkMapper.INSTANCE.convertUsersToUserSubscribeOkDTO(usersRepository.save(users));
+        }else{
+            throw new ExistingEmailException();
         }
-        usersList.add(userFriends);
-        users.setFriends(usersList);
-        return usersRepository.save(users);
     }
 
     @Override
-    public Users removeFriends(Long userId, Long usersFriendId) {
-        Users users = findById(userId).get();
-        Users userFriends = findById(usersFriendId).get();
-        List<Users> usersList = new ArrayList<>();
-        if(users.getFriends().size() != 0){
-            usersList=users.getFriends();
+    public UsersMinimalsInfoDTO addFriends(Long userId, UsersMinimalsInfoDTO usersMinimalsInfoDTO) throws UserAllReadyExistException, UsersNotFoundException {
+        Users users = findById(userId);
+        if (usersRepository.findByEmail(usersMinimalsInfoDTO.getEmail()).isPresent()) {
+            Users userFriends = usersRepository.findByEmail(usersMinimalsInfoDTO.getEmail()).get();
+            if (!users.getFriends().contains(userFriends)) {
+                users.getFriends().add(userFriends);
+                userFriends.getFriends().add(users);
+                usersRepository.save(userFriends);
+                return UsersMapper.INSTANCE.convertUsersToUsersFriendsDTO(usersRepository.save(users));
+            } else {
+                throw new UserAllReadyExistException();
+            }
+        } else {
+            throw new UsersNotFoundException();
         }
-        usersList.remove(userFriends);
-        users.setFriends(usersList);
-        return usersRepository.save(users);
     }
 
+
     @Override
-    public Users sendMoneyToFriends(Long userId, Long usersFriendId, double amount) {
-        Users users = findById(userId).get();
-        Users userFriends = findById(usersFriendId).get();
-        Double fee = amount * FeeRate.FEE_RATE;
-        Double totalAmountTransfert = amount + fee;
-        Boolean friends = users.getFriends().contains(userFriends);
-        Boolean amountOk = users.getTotalAmount() >= totalAmountTransfert;
-        if(friends && amountOk){
-            users.setTotalAmount(users.getTotalAmount() - totalAmountTransfert);
-            userFriends.setTotalAmount(userFriends.getTotalAmount() + amount);
+    public Object removeFriends(Long userId, UsersMinimalsInfoDTO usersMinimalsInfoDTO) {
+        Object resp;
+       try{
+            Users users = findById(userId);
+            Users userFriends = usersRepository.findByEmail(usersMinimalsInfoDTO.getEmail()).get();
+            users.getFriends().remove(userFriends);
+            userFriends.getFriends().remove(users);
             usersRepository.save(userFriends);
-        }
-        return usersRepository.save(users);
+            resp = UsersMapper.INSTANCE.convertUsersToUsersDTO(usersRepository.save(users));
+       }catch (Exception e){
+           resp = e.getMessage() + " ** " + e.getCause().getMessage() ;
+       }
+    return resp;
     }
+
 
     @Override
     public Users update(Users users, Long id) {
