@@ -28,4 +28,8 @@ public class BankAccountService implements IBankAccountService {
         bankAccount.setUsers(usersRepository.findById(usersId).get());
         return BankAccountMapper.INSTANCE.convertBankAccountToBankAccountDTO(bankAccountRepository.save(bankAccount));
     }
+
+    public BankAccountDTO toggleActiveBankAccount(BankAccountDTO bankAccountDTO) {
+        return null;
+    }
 }

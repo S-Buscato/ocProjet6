@@ -8,7 +8,6 @@ import com.paymybuddy.paymybuddy.exception.ExistingEmailException;
 import com.paymybuddy.paymybuddy.exception.UserAllReadyExistException;
 import com.paymybuddy.paymybuddy.exception.UsersNotFoundException;
 import com.paymybuddy.paymybuddy.models.BankAccount;
-
 import com.paymybuddy.paymybuddy.models.Users;
 import com.paymybuddy.paymybuddy.repository.UsersRepository;
 import com.paymybuddy.paymybuddy.service.UsersService;
@@ -104,14 +103,8 @@ public class UsersServiceTest {
 
         when(usersRepository.findAll()).thenReturn(usersList);
 
-
         List<UsersDTO> usersDTOList = usersService.findall();
         Assertions.assertEquals(users.getEmail(), usersDTOList.get(0).getEmail());
-
-        Iterable<UsersDTO> usersList = usersService.findall();
-        Iterator<UsersDTO> i = usersList.iterator();
-        Assertions.assertEquals(users2, i.next());
-
 
         verify(usersRepository, times(1)).findAll();
     }
@@ -137,7 +130,6 @@ public class UsersServiceTest {
         Optional<Users> usersResult = usersService.findByEmail("JohnDoe@email.com");
 
         List<UsersMinimalsInfoDTO> usersList = new ArrayList<>();
-
 
         Assertions.assertEquals(users.getEmail(), usersResult.get().getEmail() );
 
@@ -180,9 +172,9 @@ public class UsersServiceTest {
         when(usersRepository.findByEmail("john@doe.mail")).thenReturn(Optional.ofNullable(users));
         when(usersRepository.save(any(Users.class))).thenReturn(users);
 
-        UsersDTO userResponse = usersService.removeFriends(2L,usersMinimalsInfoDTO);
+        UsersMinimalsInfoDTO userResponse = usersService.removeFriends(2L,usersMinimalsInfoDTO);
 
-        Assertions.assertTrue(userResponse.getFriends().size() == 0);
+        Assertions.assertTrue(userResponse.getEmail() == "john@doe.mail");
 
         verify(usersRepository, times(2)).findById(2L);
         verify(usersRepository, times(2)).findByEmail("john@doe.mail");
@@ -240,8 +232,10 @@ public class UsersServiceTest {
 
     @Test
     @DisplayName("test FindUserFriends Succes")
-    void testDeleteUsers() {
+    void testDeleteUsers() throws UsersNotFoundException {
+        when(usersRepository.findById(anyLong())).thenReturn(Optional.ofNullable(users));
         usersService.deleteById(1L);
+        verify(usersRepository, times(2)).findById(anyLong());
         verify(usersRepository, times(1)).deleteById(anyLong());
     }
 

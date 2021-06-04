@@ -11,5 +11,5 @@ public interface ITransfertService {
 
     TransfertDTO receiveMoneyFromBankAccount(BankTransfertDTO bankTransfertDTO) throws NotActiveBankAccountException, BadTransfertTypeException;
 
-    TransfertDTO sendMoneyFromBankAccount(BankTransfertDTO bankTransfertDTO) throws NotActiveBankAccountException, InsuffisientBalanceException, BadTransfertTypeException;
+    TransfertDTO sendMoneyToBankAccount(BankTransfertDTO bankTransfertDTO) throws NotActiveBankAccountException, InsuffisientBalanceException, BadTransfertTypeException;
 }

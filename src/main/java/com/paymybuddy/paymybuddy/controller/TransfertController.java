@@ -48,7 +48,7 @@ public class TransfertController {
     @PostMapping("/transfertToBank")
     public ResponseEntity<TransfertDTO> sendMoneyToBankAccount(@RequestBody BankTransfertDTO bankTransfertDTO){
         try {
-            ResponseEntity response = ResponseEntity.status(HttpStatus.ACCEPTED).body(transfertService.sendMoneyFromBankAccount(bankTransfertDTO));
+            ResponseEntity response = ResponseEntity.status(HttpStatus.ACCEPTED).body(transfertService.sendMoneyToBankAccount(bankTransfertDTO));
             logger.info("/transfertToBank ");
             return response;
         }
