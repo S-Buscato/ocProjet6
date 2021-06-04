@@ -1364,3 +1364,38 @@ INFO    2021-06-03 22:59:00,849 [main] com.paymybuddy.paymybuddy.service.UsersSe
 INFO    2021-06-03 22:59:00,856 [main] com.paymybuddy.paymybuddy.service.UsersService  - find by id 2
 INFO    2021-06-03 22:59:00,857 [main] com.paymybuddy.paymybuddy.service.UsersService  - Find user Friend getbyEmail john@doe.mail
 INFO    2021-06-03 22:59:00,857 [main] com.paymybuddy.paymybuddy.service.UsersService  - add Friend com.paymybuddy.paymybuddy.models.Users@6470772b
+INFO    2021-06-04 23:02:56,517 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - /subscribe
+INFO    2021-06-04 23:03:00,285 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - /subscribe
+INFO    2021-06-04 23:06:28,226 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /subscribe
+INFO    2021-06-04 23:06:30,936 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - /subscribe
+INFO    2021-06-04 23:06:32,383 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - /subscribe
+INFO    2021-06-04 23:06:33,638 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - /subscribe
+INFO    2021-06-04 23:07:32,126 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - /subscribe
+INFO    2021-06-04 23:10:27,835 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - /subscribe
+ERROR   2021-06-04 23:10:27,880 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - /subscribe => inscription impossible : com.paymybuddy.paymybuddy.exception.ExistingEmailException: Cet email est déjà existant, veuillez le modifier
+INFO    2021-06-04 23:13:32,604 [main] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-06-04 23:13:32,613 [main] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-06-04 23:13:32,619 [main] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-06-04 23:13:32,641 [main] com.paymybuddy.paymybuddy.controller.UsersController  - users findAllFriends
+INFO    2021-06-04 23:13:32,654 [main] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+INFO    2021-06-04 23:30:17,446 [main] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-06-04 23:30:17,464 [main] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-06-04 23:30:17,481 [main] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-06-04 23:30:17,521 [main] com.paymybuddy.paymybuddy.controller.UsersController  - users findAllFriends
+INFO    2021-06-04 23:30:17,547 [main] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+INFO    2021-06-04 23:31:06,417 [main] com.paymybuddy.paymybuddy.controller.UsersController  - users findAllFriends
+INFO    2021-06-04 23:38:31,221 [main] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-06-04 23:38:31,227 [main] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-06-04 23:38:31,235 [main] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-06-04 23:38:31,248 [main] com.paymybuddy.paymybuddy.controller.UsersController  - users findAllFriends
+INFO    2021-06-04 23:38:31,257 [main] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+INFO    2021-06-04 23:52:06,662 [main] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-06-04 23:52:06,675 [main] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-06-04 23:52:06,688 [main] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-06-04 23:52:06,713 [main] com.paymybuddy.paymybuddy.controller.UsersController  - users findAllFriends
+INFO    2021-06-04 23:52:06,728 [main] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+INFO    2021-06-04 23:52:21,976 [main] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-06-04 23:52:21,996 [main] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-06-04 23:52:22,016 [main] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-06-04 23:52:22,063 [main] com.paymybuddy.paymybuddy.controller.UsersController  - users findAllFriends
+INFO    2021-06-04 23:52:22,095 [main] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2

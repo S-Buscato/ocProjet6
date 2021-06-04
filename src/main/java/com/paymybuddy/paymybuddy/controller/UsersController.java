@@ -113,7 +113,7 @@ public class UsersController {
     }
 
     @PostMapping("/paymybody/users/removefriends/{userId}")
-    public ResponseEntity<UsersMinimalsInfoDTO> removeFriends(@PathVariable("userId") Long userId,
+    public ResponseEntity<UsersDTO> removeFriends(@PathVariable("userId") Long userId,
                                                               @RequestBody UsersMinimalsInfoDTO usersMinimalsInfoDTO) {
         try {
             ResponseEntity response = ResponseEntity.status(HttpStatus.CREATED).body(usersService.removeFriends(userId, usersMinimalsInfoDTO));

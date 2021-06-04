@@ -5,7 +5,7 @@ import com.paymybuddy.paymybuddy.dto.EmmetedTransactionDTO;
 import com.paymybuddy.paymybuddy.dto.RequestTransactionDTO;
 import com.paymybuddy.paymybuddy.dto.UsersMinimalsInfoDTO;
 import com.paymybuddy.paymybuddy.exception.InsuffisientBalanceException;
-import com.paymybuddy.paymybuddy.exception.UserNotInFriendsListException;
+import com.paymybuddy.paymybuddy.exception.UsersNotInFriendsListException;
 import com.paymybuddy.paymybuddy.models.Transaction;
 import com.paymybuddy.paymybuddy.models.Users;
 import com.paymybuddy.paymybuddy.repository.TransactionRepository;
@@ -73,7 +73,7 @@ public class TransactionServiceTest {
 
     @Test
     @DisplayName("test sendMoneyToFriends Succes")
-    void testSendMoneyToFriends() throws UserNotInFriendsListException, InsuffisientBalanceException {
+    void testSendMoneyToFriends() throws UsersNotInFriendsListException, InsuffisientBalanceException {
 
 
         Double fee = DoubleRounder.round(requestTransactionDTO.getAmount() * Fee.FEE_RATE,2);
