@@ -114,7 +114,7 @@ public class UsersServiceTest {
     void testUsersFindById(){
         when(usersRepository.findById(1L)).thenReturn(Optional.ofNullable(users));
 
-        Users usersResult = usersService.findById(1L);
+        Optional<Users> usersResult = usersService.findById(1L);
 
         Assertions.assertEquals(users, usersResult );
 
@@ -163,9 +163,15 @@ public class UsersServiceTest {
         when(usersRepository.findByEmail("john@doe.mail")).thenReturn(Optional.ofNullable(users));
         when(usersRepository.save(any(Users.class))).thenReturn(users);
 
+<<<<<<< Updated upstream
         UsersDTO userResponse = usersService.removeFriends(2L,usersMinimalsInfoDTO);
 
         Assertions.assertTrue(userResponse.getFriends().size() == 0);
+=======
+        UsersMinimalsInfoDTO userResponse = usersService.removeFriends(2L,usersMinimalsInfoDTO);
+
+        Assertions.assertTrue(userResponse.getEmail() == "john@doe.mail");
+>>>>>>> Stashed changes
 
         verify(usersRepository, times(2)).findById(2L);
         verify(usersRepository, times(2)).findByEmail("john@doe.mail");
@@ -210,7 +216,11 @@ public class UsersServiceTest {
         users.getFriends().add(users2);
         when(usersRepository.findById(anyLong())).thenReturn(Optional.ofNullable(users));
 
+<<<<<<< Updated upstream
         UsersMinimalsInfoDTO usersMinimalsInfoDTO= usersService.findUsersFriends(1L);
+=======
+        UsersMinimalsInfoDTO usersMinimalsInfoDTO = usersService.findUsersFriends(1L);
+>>>>>>> Stashed changes
 
         Assertions.assertEquals(users.getEmail(), usersMinimalsInfoDTO.getEmail());
 
@@ -219,8 +229,15 @@ public class UsersServiceTest {
 
     @Test
     @DisplayName("test FindUserFriends Succes")
+<<<<<<< Updated upstream
     void testDeleteUsers() {
         usersService.deleteById(1L);
+=======
+    void testDeleteUsers() throws UsersNotFoundException {
+        when(usersRepository.findById(anyLong())).thenReturn(Optional.ofNullable(users));
+        usersService.deleteById(1L);
+        verify(usersRepository, times(2)).findById(anyLong());
+>>>>>>> Stashed changes
         verify(usersRepository, times(1)).deleteById(anyLong());
     }
 

@@ -1,8 +1,18 @@
 package com.paymybuddy.paymybuddy.controller;
 
+<<<<<<< Updated upstream
 import com.paymybuddy.paymybuddy.dto.mapper.UsersMapper;
 import com.paymybuddy.paymybuddy.dto.UsersDTO;
 import com.paymybuddy.paymybuddy.models.Users;
+=======
+import com.paymybuddy.paymybuddy.dto.UserSubscribeOkDTO;
+import com.paymybuddy.paymybuddy.dto.UsersDTO;
+import com.paymybuddy.paymybuddy.dto.UsersMinimalsInfoDTO;
+import com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO;
+import com.paymybuddy.paymybuddy.exception.ExistingEmailException;
+import com.paymybuddy.paymybuddy.exception.UserAllReadyExistException;
+import com.paymybuddy.paymybuddy.exception.UsersNotFoundException;
+>>>>>>> Stashed changes
 import com.paymybuddy.paymybuddy.service.UsersService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
