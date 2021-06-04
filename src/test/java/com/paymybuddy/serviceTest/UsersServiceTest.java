@@ -6,6 +6,7 @@ import com.paymybuddy.paymybuddy.dto.UsersMinimalsInfoDTO;
 import com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO;
 import com.paymybuddy.paymybuddy.exception.ExistingEmailException;
 import com.paymybuddy.paymybuddy.exception.UserAllReadyExistException;
+import com.paymybuddy.paymybuddy.exception.UsersNotInFriendsListException;
 import com.paymybuddy.paymybuddy.exception.UsersNotFoundException;
 import com.paymybuddy.paymybuddy.models.BankAccount;
 import com.paymybuddy.paymybuddy.models.Users;
@@ -126,13 +127,11 @@ public class UsersServiceTest {
     void testUsersFindByEmail(){
         when(usersRepository.findByEmail(anyString())).thenReturn(Optional.ofNullable(users));
 
-
         Optional<Users> usersResult = usersService.findByEmail("JohnDoe@email.com");
 
         List<UsersMinimalsInfoDTO> usersList = new ArrayList<>();
 
         Assertions.assertEquals(users.getEmail(), usersResult.get().getEmail() );
-
 
         verify(usersRepository, times(1)).findByEmail(anyString());
     }
@@ -164,7 +163,7 @@ public class UsersServiceTest {
 
     @Test
     @DisplayName("test usersRemoveUserFriends Succes")
-    void testUsersRemoveUserFriends() throws UsersNotFoundException {
+    void testUsersRemoveUserFriends() throws UsersNotFoundException, UsersNotInFriendsListException {
 
         users2.getFriends().add(users);
 
@@ -172,13 +171,13 @@ public class UsersServiceTest {
         when(usersRepository.findByEmail("john@doe.mail")).thenReturn(Optional.ofNullable(users));
         when(usersRepository.save(any(Users.class))).thenReturn(users);
 
-        UsersMinimalsInfoDTO userResponse = usersService.removeFriends(2L,usersMinimalsInfoDTO);
+        UsersDTO  userResponse = usersService.removeFriends(2L,usersMinimalsInfoDTO);
 
-        Assertions.assertTrue(userResponse.getEmail() == "john@doe.mail");
+        Assertions.assertTrue(userResponse.getFriends().size() == 0);
 
-        verify(usersRepository, times(2)).findById(2L);
+        verify(usersRepository, times(1)).findById(2L);
         verify(usersRepository, times(2)).findByEmail("john@doe.mail");
-        verify(usersRepository, times(2)).save(any(Users.class));
+        verify(usersRepository, times(1)).save(any(Users.class));
     }
 
     @Test
@@ -190,10 +189,6 @@ public class UsersServiceTest {
         usersSubscribeDTO.setFirstName("John");
         usersSubscribeDTO.setLastName("Doe");
         usersSubscribeDTO.setPassword("toto");
-
-        verify(usersRepository, times(1)).findById(1L);
-        verify(usersRepository, times(1)).findById(2L);
-
 
         when(usersRepository.findByEmail("john@doe.mail")).thenReturn(Optional.empty());
         when(usersRepository.save(any(Users.class))).thenReturn(users);
@@ -214,7 +209,7 @@ public class UsersServiceTest {
 
         Assertions.assertEquals("John", usersDTOResponse.getFirstName());
 
-        verify(usersRepository, times(2)).findById(anyLong());
+        verify(usersRepository, times(3)).findById(anyLong());
     }
 
     @Test
@@ -231,11 +226,11 @@ public class UsersServiceTest {
     }
 
     @Test
-    @DisplayName("test FindUserFriends Succes")
+    @DisplayName("test deleteUsers Succes")
     void testDeleteUsers() throws UsersNotFoundException {
         when(usersRepository.findById(anyLong())).thenReturn(Optional.ofNullable(users));
         usersService.deleteById(1L);
-        verify(usersRepository, times(2)).findById(anyLong());
+        verify(usersRepository, times(1)).findById(anyLong());
         verify(usersRepository, times(1)).deleteById(anyLong());
     }
 
@@ -250,7 +245,7 @@ public class UsersServiceTest {
 
         Assertions.assertEquals(usersDTO2.getEmail(), usersResponse.getEmail());
 
-        verify(usersRepository, times(1)).findById(anyLong());
+        verify(usersRepository, times(2)).findById(anyLong());
         verify(usersRepository, times(1)).save(any(Users.class));
 
     }

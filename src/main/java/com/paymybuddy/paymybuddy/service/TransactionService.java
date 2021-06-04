@@ -6,7 +6,7 @@ import com.paymybuddy.paymybuddy.dto.RequestTransactionDTO;
 import com.paymybuddy.paymybuddy.dto.mapper.EmmetedTransactionMapper;
 import com.paymybuddy.paymybuddy.dto.mapper.RequestTransactionDTOMapper;
 import com.paymybuddy.paymybuddy.exception.InsuffisientBalanceException;
-import com.paymybuddy.paymybuddy.exception.UserNotInFriendsListException;
+import com.paymybuddy.paymybuddy.exception.UsersNotInFriendsListException;
 import com.paymybuddy.paymybuddy.models.Transaction;
 import com.paymybuddy.paymybuddy.models.Users;
 import com.paymybuddy.paymybuddy.repository.TransactionRepository;
@@ -28,7 +28,7 @@ public class TransactionService implements ITransactionService {
 
     @Override
     public EmmetedTransactionDTO sendMoneyToFriends(Long userId, RequestTransactionDTO requestTransactionDTO)
-            throws InsuffisientBalanceException, UserNotInFriendsListException {
+            throws InsuffisientBalanceException, UsersNotInFriendsListException {
 
         Double fee = DoubleRounder.round(requestTransactionDTO.getAmount() * Fee.FEE_RATE,2);
         Double amount = DoubleRounder.round(requestTransactionDTO.getAmount(), 2);
@@ -44,7 +44,7 @@ public class TransactionService implements ITransactionService {
             throw new InsuffisientBalanceException();
         }
         if(!isAfriend){
-            throw  new UserNotInFriendsListException();
+            throw  new UsersNotInFriendsListException();
         }
 
         Transaction transaction = RequestTransactionDTOMapper.INSTANCE.convertTransactionDTOToTransaction(requestTransactionDTO);

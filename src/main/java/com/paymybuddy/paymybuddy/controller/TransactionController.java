@@ -3,7 +3,7 @@ package com.paymybuddy.paymybuddy.controller;
 import com.paymybuddy.paymybuddy.dto.EmmetedTransactionDTO;
 import com.paymybuddy.paymybuddy.dto.RequestTransactionDTO;
 import com.paymybuddy.paymybuddy.exception.InsuffisientBalanceException;
-import com.paymybuddy.paymybuddy.exception.UserNotInFriendsListException;
+import com.paymybuddy.paymybuddy.exception.UsersNotInFriendsListException;
 import com.paymybuddy.paymybuddy.service.TransactionService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +29,7 @@ public class TransactionController {
             logger.info("/users/sendMoney => ok");
             return resp;
         }
-        catch (UserNotInFriendsListException e) {
+        catch (UsersNotInFriendsListException e) {
             logger.error("users/sendMoney/ => Transaction impossible : " + e);
             return new ResponseEntity(e.getMessage(), HttpStatus.FORBIDDEN);
         }
