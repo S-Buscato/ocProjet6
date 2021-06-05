@@ -1399,3 +1399,37 @@ INFO    2021-06-04 23:52:21,996 [main] com.paymybuddy.paymybuddy.controller.User
 INFO    2021-06-04 23:52:22,016 [main] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
 INFO    2021-06-04 23:52:22,063 [main] com.paymybuddy.paymybuddy.controller.UsersController  - users findAllFriends
 INFO    2021-06-04 23:52:22,095 [main] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+INFO    2021-06-05 00:21:56,799 [main] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-06-05 00:21:56,806 [main] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 1
+INFO    2021-06-05 00:21:56,815 [main] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-06-05 00:21:56,830 [main] com.paymybuddy.paymybuddy.controller.UsersController  - users findAllFriends
+INFO    2021-06-05 00:21:56,841 [main] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+INFO    2021-06-05 00:25:53,134 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /subscribe
+ERROR   2021-06-05 00:25:53,136 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /subscribe => inscription impossible : com.paymybuddy.paymybuddy.exception.ExistingEmailException: Cet email est déjà existant, veuillez le modifier
+INFO    2021-06-05 00:32:56,516 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-06-05 00:32:56,601 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
+INFO    2021-06-05 00:36:31,609 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - /subscribe
+ERROR   2021-06-05 00:36:31,613 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - /subscribe => inscription impossible : com.paymybuddy.paymybuddy.exception.ExistingEmailException: Cet email est déjà existant, veuillez le modifier
+INFO    2021-06-05 00:36:34,895 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-06-05 00:36:34,977 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
+INFO    2021-06-05 00:36:38,458 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - /users/{id} getUsersInfo
+INFO    2021-06-05 00:36:38,464 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - users findAllFriends
+INFO    2021-06-05 00:36:42,351 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.UsersController  - /findUsersFriends/{id}
+INFO    2021-06-05 00:36:42,353 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.UsersController  - Find user Friend
+INFO    2021-06-05 00:36:49,949 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - find by id 2
+ERROR   2021-06-05 00:36:49,958 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - /users/addfriends/{userId} => ajout impossible : com.paymybuddy.paymybuddy.exception.UserAllReadyExistException: L'utilisateur que vous tentez d'ajouter figure déjà dans vote liste d'amis
+INFO    2021-06-05 00:36:55,622 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - /users/removefriends
+ERROR   2021-06-05 00:36:57,624 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - /users/removefriends => error : com.paymybuddy.paymybuddy.exception.UsersNotInFriendsListException: Cet utilisateur ne figure pas dans votre liste d'amis
+INFO    2021-06-05 00:37:32,750 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.TransactionController  - /users/sendMoney => ok
+ERROR   2021-06-05 00:37:47,220 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.BankAccountController  - /bank/add/{id} => ajout impossible : com.paymybuddy.paymybuddy.exception.BankAccountExistsException: Ce compte existe déjà
+ERROR   2021-06-05 00:38:01,498 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.TransfertController  - /transfertToBank => error : com.paymybuddy.paymybuddy.exception.InsuffisientBalanceException: Le montant à tranférer est supérieur à votre solde
+INFO    2021-06-05 00:38:38,447 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-06-05 00:38:38,492 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
+INFO    2021-06-05 00:39:00,880 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-06-05 00:39:00,922 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
+INFO    2021-06-05 22:21:43,152 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-06-05 22:21:43,217 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
+INFO    2021-06-05 22:21:47,782 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-06-05 22:21:47,844 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
+INFO    2021-06-05 22:22:21,751 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.UsersController  - users findAll
+INFO    2021-06-05 22:22:21,797 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.UsersController  - /users findAllUsers
