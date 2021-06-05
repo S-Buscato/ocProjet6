@@ -8,6 +8,8 @@ import org.mapstruct.NullValuePropertyMappingStrategy;
 import org.mapstruct.factory.Mappers;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Mapper(componentModel="spring")
 @Service
 public interface BankAccountMapper {
@@ -15,6 +17,9 @@ public interface BankAccountMapper {
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     BankAccountDTO convertBankAccountToBankAccountDTO(BankAccount entity);
+
+    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
+    List<BankAccountDTO> convertBankAccounListtToBankAccountDTOList(List<BankAccount> entity);
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     BankAccount convertBankAccountDTOToBankAccount(BankAccountDTO usersDTO);

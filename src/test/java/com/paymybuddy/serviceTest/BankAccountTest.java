@@ -50,6 +50,8 @@ public class BankAccountTest {
         users.setEmail("john@doe.mail");
         users.setTotalAmount(100.0);
         users.setFriends(new ArrayList<>());
+        users.setBankAccounts(new ArrayList<>());
+
 
         bankAccount.setId(1);
         bankAccount.setUsers(users);
@@ -57,8 +59,7 @@ public class BankAccountTest {
         bankAccount.setBankName("DoeBank");
         bankAccount.setIban("01234");
         bankAccount.setDescription("leCompteDeJohn");
-        bankAccountList.add(bankAccount);
-        users.setBankAccounts(bankAccountList);
+        users.getBankAccounts().add(bankAccount);
 
         bankAccountDTO.setBankName(bankAccount.getBankName());
         bankAccountDTO.setIban(bankAccount.getIban());
@@ -97,5 +98,86 @@ public class BankAccountTest {
 
         verify(bankAccountRepository, times(1)).findByIban(anyString());
         verify(bankAccountRepository, times(1)).save(any(BankAccount.class));
+    }
+
+    @Test
+    @DisplayName("test getAllBankAccount Succes")
+    void testFindAllBankAccount(){
+
+        BankAccount bankAccount2 = new BankAccount();
+        bankAccount2.setId(2);
+        bankAccount2.setUsers(users);
+        bankAccount2.setActif(true);
+        bankAccount2.setBankName("DoeBank2");
+        bankAccount2.setIban("56789");
+        bankAccount2.setDescription("leCompteDeJohn2");
+        users.getBankAccounts().add(bankAccount2);
+
+        when(bankAccountRepository.findAll()).thenReturn(bankAccountList);
+        when(usersRepository.findById(anyLong())).thenReturn(Optional.ofNullable(users));
+
+        List<BankAccountDTO> bankAccountResponse = bankAccountService.findAll(1L);
+
+        Assertions.assertEquals(bankAccount2.getBankName(), bankAccountResponse.get(1).getBankName());
+
+        verify(usersRepository, times(1)).findById(anyLong());
+    }
+
+    @Test
+    @DisplayName("test getBankAccountById Succes")
+    void testFindBankAccountById(){
+
+        when(bankAccountRepository.findById(anyLong())).thenReturn(Optional.ofNullable(bankAccount));
+
+        BankAccountDTO bankAccountResponse = bankAccountService.findById(1L);
+
+        Assertions.assertEquals(bankAccount.getIban(), bankAccountResponse.getIban());
+
+        verify(bankAccountRepository, times(1)).findById(anyLong());
+    }
+
+    @Test
+    @DisplayName("test getBankAccountByIban Succes")
+    void testFindBankAccountByIban(){
+
+        when(bankAccountRepository.findByIban(anyString())).thenReturn(bankAccount);
+
+        BankAccountDTO bankAccountResponse = bankAccountService.findByIban("01234");
+
+        Assertions.assertEquals(bankAccount.getIban(), bankAccountResponse.getIban());
+
+        verify(bankAccountRepository, times(1)).findByIban(anyString());
+    }
+
+    @Test
+    @DisplayName("test updateBankAccount Succes")
+    void testUpdateBankAccount(){
+
+        when(bankAccountRepository.findById(anyLong())).thenReturn(Optional.ofNullable(bankAccount));
+        when(bankAccountRepository.save(any(BankAccount.class))).thenReturn(bankAccount);
+
+        BankAccountDTO bankAccount2 = new BankAccountDTO();
+        bankAccount2.setActif(true);
+        bankAccount2.setBankName("DoeBank2");
+        bankAccount2.setIban("56789");
+        bankAccount2.setDescription("leCompteDeJohn2");
+
+        BankAccountDTO bankAccountResponse = bankAccountService.update(1L, bankAccount2);
+
+        Assertions.assertEquals(bankAccount2.getIban(), bankAccountResponse.getIban());
+
+        verify(bankAccountRepository, times(1)).findById(anyLong());
+        verify(bankAccountRepository, times(1)).save(any(BankAccount.class));
+
+    }
+
+    @Test
+    @DisplayName("test deleteBankAccount Succes")
+    void testDeleteBankAccount(){
+
+        bankAccountService.deleteById(1L);
+
+        verify(bankAccountRepository, times(1)).deleteById(anyLong());
+
     }
 }
