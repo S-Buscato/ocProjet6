@@ -113,12 +113,14 @@ public class BankAccountTest {
         bankAccount2.setDescription("leCompteDeJohn2");
         users.getBankAccounts().add(bankAccount2);
 
+        //TODO : peut etre passer direct par le repo de bankAccount ?
         when(bankAccountRepository.findAll()).thenReturn(bankAccountList);
         when(usersRepository.findById(anyLong())).thenReturn(Optional.ofNullable(users));
 
         List<BankAccountDTO> bankAccountResponse = bankAccountService.findAll(1L);
 
         Assertions.assertEquals(bankAccount2.getBankName(), bankAccountResponse.get(1).getBankName());
+        Assertions.assertTrue(bankAccountResponse.size() == 2);
 
         verify(usersRepository, times(1)).findById(anyLong());
     }

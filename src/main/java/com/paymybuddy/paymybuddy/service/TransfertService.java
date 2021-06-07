@@ -18,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class TransfertService implements ITransfertService {
@@ -80,6 +81,16 @@ public class TransfertService implements ITransfertService {
             throw new InsuffisientBalanceException();
         }
         return TransfertMapper.INSTANCE.convertTransfertToTransfertDTO(transfert);
+    }
+
+    @Override
+    public List<Transfert> findAllByUsersId(long usersId) {
+        return transfertRepository.findAllByUsersId(usersId);
+    }
+
+    @Override
+    public TransfertDTO findById(long id) {
+        return TransfertMapper.INSTANCE.convertTransfertToTransfertDTO(transfertRepository.findById(id).get());
     }
 
     private void setTransfert(BankTransfertDTO bankTransfertDTO, Transfert transfert, Users users, BankAccount bankAccount) {
