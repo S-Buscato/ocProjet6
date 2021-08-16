@@ -34,21 +34,26 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/subscribe")
-                .permitAll()
-                .anyRequest()
-                .authenticated()
-                    .and()
-                    .formLogin()
+                    .antMatchers("/subscribe").permitAll()
+                    .antMatchers("/paymybuddy/**").permitAll()//.hasAnyRole("USER")
+                    .anyRequest().authenticated()
+                .and()
+                .formLogin()
                     .loginProcessingUrl("/login")
-                    .defaultSuccessUrl("/paymybody/users/")
+                    .defaultSuccessUrl("/paymybuddy/myprofil")
                     .failureUrl("/login?error=true")
                     .permitAll()
-                        .and()
-                        .logout()
-                        .deleteCookies("JSESSIONID")
-                        .logoutUrl("/logout")
-                        .logoutSuccessUrl("/login");
+                .and()
+                .logout()
+                    .deleteCookies("JSESSIONID")
+                    .logoutUrl("/logout")
+                    .logoutSuccessUrl("/login");
+    }
+
+    @Autowired
+    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+        auth.inMemoryAuthentication()
+                .withUser("user").password("password").roles("USER");
     }
 
     private class AuthentificationLoginSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {

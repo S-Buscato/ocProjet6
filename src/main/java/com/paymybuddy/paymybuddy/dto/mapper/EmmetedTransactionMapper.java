@@ -9,6 +9,8 @@ import org.mapstruct.NullValuePropertyMappingStrategy;
 import org.mapstruct.factory.Mappers;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Mapper(componentModel="spring")
 @Service
 public interface EmmetedTransactionMapper {
@@ -16,6 +18,9 @@ public interface EmmetedTransactionMapper {
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     EmmetedTransactionDTO convertTransactionToTransactionDTO(Transaction entity);
+
+    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
+    List<EmmetedTransactionDTO> convertTransactionListToTransactionDTOList(List<Transaction> entity);
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     Transaction convertTransactionDTOToTransaction(EmmetedTransactionDTO emmetedTransactionDTO);

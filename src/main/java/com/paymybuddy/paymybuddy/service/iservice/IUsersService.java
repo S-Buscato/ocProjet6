@@ -18,12 +18,13 @@ public interface IUsersService {
     Optional<Users> findByEmail(String email);
     Iterable<UsersDTO> findall() throws UsersNotFoundException;
     Long deleteById(Long id) throws UsersNotFoundException;
-    UsersDTO findUserInfo(Long id) throws UsersNotFoundException;
+    UsersDTO findUserInfo(String email) throws UsersNotFoundException;
+    UsersDTO findCurrentUserInfo(Long id) throws UsersNotFoundException;
     UsersMinimalsInfoDTO findUsersFriends(Long id) throws UsersNotFoundException;
     Users save(Users users);
     UsersDTO update(UsersDTO usersDTO, Long id) throws UsersNotFoundException;
     UserSubscribeOkDTO subscribe(UsersSubscribeDTO usersSubscribeDTO) throws ExistingEmailException;
-    UsersMinimalsInfoDTO addFriends(Long userId, UsersMinimalsInfoDTO usersMinimalsInfoDTO) throws UsersNotFoundException, UserAllReadyExistException;
-    UsersDTO removeFriends(Long userId, UsersMinimalsInfoDTO usersMinimalsInfoDTO) throws UsersNotFoundException, UsersNotInFriendsListException;
+    UsersMinimalsInfoDTO addFriends(Long userId, String email) throws UsersNotFoundException, UserAllReadyExistException;
+    UsersDTO removeFriends(Long userId, String email) throws UsersNotFoundException, UsersNotInFriendsListException;
 
 }

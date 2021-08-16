@@ -1,7 +1,6 @@
-package com.paymybuddy.serviceTest;
+package com.paymybuddy.paymybuddy.serviceTest;
 
 import com.paymybuddy.paymybuddy.dto.BankAccountDTO;
-import com.paymybuddy.paymybuddy.dto.UsersDTO;
 import com.paymybuddy.paymybuddy.exception.BankAccountExistsException;
 import com.paymybuddy.paymybuddy.models.BankAccount;
 import com.paymybuddy.paymybuddy.models.Users;
@@ -113,12 +112,14 @@ public class BankAccountTest {
         bankAccount2.setDescription("leCompteDeJohn2");
         users.getBankAccounts().add(bankAccount2);
 
+        //TODO : peut etre passer direct par le repo de bankAccount ?
         when(bankAccountRepository.findAll()).thenReturn(bankAccountList);
         when(usersRepository.findById(anyLong())).thenReturn(Optional.ofNullable(users));
 
         List<BankAccountDTO> bankAccountResponse = bankAccountService.findAll(1L);
 
         Assertions.assertEquals(bankAccount2.getBankName(), bankAccountResponse.get(1).getBankName());
+        Assertions.assertTrue(bankAccountResponse.size() == 2);
 
         verify(usersRepository, times(1)).findById(anyLong());
     }

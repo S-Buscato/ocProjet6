@@ -2,8 +2,10 @@ package com.paymybuddy.paymybuddy.service;
 
 import com.paymybuddy.paymybuddy.constant.Fee;
 import com.paymybuddy.paymybuddy.dto.EmmetedTransactionDTO;
+import com.paymybuddy.paymybuddy.dto.ReceivedTransactionDTO;
 import com.paymybuddy.paymybuddy.dto.RequestTransactionDTO;
 import com.paymybuddy.paymybuddy.dto.mapper.EmmetedTransactionMapper;
+import com.paymybuddy.paymybuddy.dto.mapper.ReceivedTransactionMapper;
 import com.paymybuddy.paymybuddy.dto.mapper.RequestTransactionDTOMapper;
 import com.paymybuddy.paymybuddy.exception.InsuffisientBalanceException;
 import com.paymybuddy.paymybuddy.exception.UsersNotInFriendsListException;
@@ -15,6 +17,8 @@ import com.paymybuddy.paymybuddy.service.iservice.ITransactionService;
 import org.decimal4j.util.DoubleRounder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class TransactionService implements ITransactionService {
@@ -30,12 +34,17 @@ public class TransactionService implements ITransactionService {
     public EmmetedTransactionDTO sendMoneyToFriends(Long userId, RequestTransactionDTO requestTransactionDTO)
             throws InsuffisientBalanceException, UsersNotInFriendsListException {
 
+
         Double fee = DoubleRounder.round(requestTransactionDTO.getAmount() * Fee.FEE_RATE,2);
         Double amount = DoubleRounder.round(requestTransactionDTO.getAmount(), 2);
         Double totalAmountTransfert =  DoubleRounder.round(amount + fee,2);
 
         Users users = usersRepository.findById(userId).get();
         Users userFriends = usersRepository.findByEmail(requestTransactionDTO.getReceiver().getEmail()).get();
+
+        if(users.getTotalAmount() == null || users.getTotalAmount() == 0.0 ){
+            throw new InsuffisientBalanceException();
+        }
 
         Boolean isAfriend = users.getFriends().contains(userFriends);
         Boolean isSuffisientBalance = users.getTotalAmount() >= totalAmountTransfert;
@@ -65,5 +74,16 @@ public class TransactionService implements ITransactionService {
             throw e;
         }
         return emmetedTransactionDTO;
+    }
+
+    @Override
+    public List<EmmetedTransactionDTO> findByEmmeter(long emmeterId) {
+        return EmmetedTransactionMapper.INSTANCE.convertTransactionListToTransactionDTOList(transactionRepository.findTransactionByEmmeter(emmeterId));
+    }
+
+    @Override
+    public List<ReceivedTransactionDTO> findbyReceiver(long receiverId) {
+        return ReceivedTransactionMapper.INSTANCE.convertTransactionListToTransactionDTOList(transactionRepository.findTransactionByReceiver(receiverId));
+
     }
 }

@@ -1,9 +1,8 @@
-package com.paymybuddy.serviceTest;
+package com.paymybuddy.paymybuddy.serviceTest;
 
 import com.paymybuddy.paymybuddy.constant.TransfertType;
 import com.paymybuddy.paymybuddy.dto.BankTransfertDTO;
 import com.paymybuddy.paymybuddy.dto.TransfertDTO;
-import com.paymybuddy.paymybuddy.dto.UsersDTO;
 import com.paymybuddy.paymybuddy.exception.BadTransfertTypeException;
 import com.paymybuddy.paymybuddy.exception.InsuffisientBalanceException;
 import com.paymybuddy.paymybuddy.exception.NotActiveBankAccountException;
@@ -49,6 +48,8 @@ public class TransfertServiceTest {
     List<BankAccount> bankAccountList = new ArrayList();
     BankTransfertDTO bankTransfertDTO = new BankTransfertDTO();
     Transfert transfert = new Transfert();
+    List<Transfert> transfertList = new ArrayList();
+
 
     @BeforeEach
     public void setUp() {
@@ -69,7 +70,14 @@ public class TransfertServiceTest {
         bankAccountList.add(bankAccount);
         users.setBankAccounts(bankAccountList);
 
+        transfert.setBankAccount(bankAccount);
+        transfert.setTransfertType(TransfertType.VIR_FROM_BANK_ACCOUNT.toString());
+        transfert.setDate(new Date());
+        transfert.setAmount(100.00);
+        transfert.setUsers(users);
+        transfert.setId(1);
 
+        transfertList.add(transfert);
        }
 
     @Test
@@ -125,4 +133,33 @@ public class TransfertServiceTest {
         verify(bankAccountRepository, times(1)).findByIban(anyString());
         verify(transfertRepository, times(1)).save(any(Transfert.class));
     }
+
+    @Test
+    @DisplayName("test findAllTransfert Succes")
+    void testFindAllTransfert()  {
+
+        when(transfertRepository.findAllByUsersId(anyLong())).thenReturn(transfertList);
+
+        List<Transfert> transferts = transfertService.findAllByUsersId(1L);
+
+        Assertions.assertEquals(1, transferts.size());
+        Assertions.assertEquals(100.00, transferts.get(0).getAmount());
+
+        verify(transfertRepository, times(1)).findAllByUsersId(anyLong());
+    }
+
+    @Test
+    @DisplayName("test transfertFindById Succes")
+    void testTransfertFindById()  {
+
+        when(transfertRepository.findById(anyLong())).thenReturn(Optional.ofNullable(transfert));
+
+        TransfertDTO transfertDTO = transfertService.findById(1L);
+
+        Assertions.assertEquals(100.00, transfertDTO.getAmount());
+
+        verify(transfertRepository, times(1)).findById(anyLong());
+    }
+
+
 }

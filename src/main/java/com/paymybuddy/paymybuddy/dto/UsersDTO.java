@@ -3,6 +3,7 @@ package com.paymybuddy.paymybuddy.dto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -11,6 +12,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 public class UsersDTO {
+    private Long id;
     private String firstName;
     private String lastName;
     private String email;
@@ -20,6 +22,4 @@ public class UsersDTO {
     private List<EmmetedTransactionDTO> EmmetedTransactions;
     private List<BankAccountDTO> bankAccounts;
     private List<TransfertDTO> transferts;
-    //private List<TransfertFromBankDTO> transfertFromBankDTOS;
-
 }
