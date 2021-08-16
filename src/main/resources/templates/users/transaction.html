@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+	<meta charset="utf-8"/>
+	<title>transaction</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+</head>
+<body>
+<div  sec:authorize="isAuthenticated()" class="container">
+	<div class="row">
+		<div class="col-12 text-center">
+			<h3> <a href="/paymybuddy/myprofil">Home</a>  | <a href="/logout">Logout</a></h3>
+		</div>
+	</div>
+	<div class="row">
+		<h2>Welcome
+			<span th:text = "${currentUser.firstName}"></span>
+		</h2>
+	</div>
+	<div class="row">
+		<h2 >Your total amount is :
+			<span th:text ="${currentUser.getTotalAmount()}"></span>
+		</h2>
+	</div>
+	<div class="row">
+		<h3 class="mr-2">Transaction</h3>
+	</div>
+	<div class="row">
+		<h5>You want send some money to :
+			<span th:text = "${receiver.firstName}"></span>
+		</h5>
+	</div>
+			<form method="post" th:action="@{'/paymybuddy/users/sendMoney'}" th:object="${requestTransactionDTO}">
+				<input type="hidden" name="receiver.email" id="mail" th:value='${receiver.getEmail()}'/>
+				<input placeholder="Enter an amount to send" required type="text" name="amount"/>
+				<input placeholder="Entry a description" required type="text" name="description"/>
+				<input class="btn btn-primary btn-sm" type="submit" value="Send Money !" >
+			</form>
+		<div class="row mt-2 col-10 alert alert-danger" th:if="${error}" th:text="${error}"></div>
+
+
+
+</div>
+</body>
+</html>

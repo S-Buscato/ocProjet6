@@ -1,9 +1,8 @@
-package com.paymybuddy.serviceTest;
+package com.paymybuddy.paymybuddy.serviceTest;
 
 import com.paymybuddy.paymybuddy.constant.TransfertType;
 import com.paymybuddy.paymybuddy.dto.BankTransfertDTO;
 import com.paymybuddy.paymybuddy.dto.TransfertDTO;
-import com.paymybuddy.paymybuddy.dto.UsersDTO;
 import com.paymybuddy.paymybuddy.exception.BadTransfertTypeException;
 import com.paymybuddy.paymybuddy.exception.InsuffisientBalanceException;
 import com.paymybuddy.paymybuddy.exception.NotActiveBankAccountException;

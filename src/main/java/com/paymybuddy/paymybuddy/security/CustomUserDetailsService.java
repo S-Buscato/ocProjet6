@@ -32,7 +32,22 @@ public class CustomUserDetailsService implements UserDetailsService {
             throw new UsernameNotFoundException("User " + email + " not found");
         }
 
-        return new org.springframework.security.core.userdetails.User(user.getFirstName(), user.getPassword(), getGrantedAuthorities(user));
+        return UserDetailsImpl.build(user);
+        //return new org.springframework.security.core.userdetails.User(user.getFirstName(), user.getPassword(), getGrantedAuthorities(user));
+    }
+
+    public UserDetails getCurrentUser(String email) throws UsernameNotFoundException {
+        if (email.trim().isEmpty()) {
+            throw new UsernameNotFoundException("username is empty");
+        }
+
+        Users user = userService.findByEmail(email).get();
+
+        if (user == null) {
+            throw new UsernameNotFoundException("User " + email + " not found");
+        }
+
+        return UserDetailsImpl.build(user);
     }
 
     private List<GrantedAuthority> getGrantedAuthorities(Users user) {

@@ -10,6 +10,7 @@ import com.paymybuddy.paymybuddy.repository.UsersRepository;
 import com.paymybuddy.paymybuddy.service.iservice.IBankAccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -23,6 +24,7 @@ public class BankAccountService implements IBankAccountService {
 
 
     @Override
+    @Transactional
     public BankAccountDTO save(BankAccountDTO bankAccountDTO, Long usersId) throws BankAccountExistsException {
         if(bankAccountRepository.findByIban(bankAccountDTO.getIban()) != null){
             throw new BankAccountExistsException();
@@ -33,22 +35,26 @@ public class BankAccountService implements IBankAccountService {
     }
 
     @Override
+    @Transactional
     public List<BankAccountDTO> findAll(Long id) {
         Users users = usersRepository.findById(id).get();
         return BankAccountMapper.INSTANCE.convertBankAccounListtToBankAccountDTOList(users.getBankAccounts());
     }
 
     @Override
+    @Transactional
     public BankAccountDTO findById(long id) {
         return BankAccountMapper.INSTANCE.convertBankAccountToBankAccountDTO(bankAccountRepository.findById(id).get());
     }
 
     @Override
+    @Transactional
     public BankAccountDTO findByIban(String iban) {
         return BankAccountMapper.INSTANCE.convertBankAccountToBankAccountDTO(bankAccountRepository.findByIban(iban));
     }
 
     @Override
+    @Transactional
     public BankAccountDTO update(Long id, BankAccountDTO bankAccountDTO) {
         BankAccount bankAccount = bankAccountRepository.findById(id).get();
         bankAccount.setBankName(bankAccount.getBankName());
@@ -59,6 +65,7 @@ public class BankAccountService implements IBankAccountService {
     }
 
     @Override
+    @Transactional
     public Long deleteById(long id) {
         try{
             bankAccountRepository.deleteById(id);

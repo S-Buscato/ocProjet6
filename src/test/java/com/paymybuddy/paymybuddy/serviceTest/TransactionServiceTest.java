@@ -1,7 +1,8 @@
-package com.paymybuddy.serviceTest;
+package com.paymybuddy.paymybuddy.serviceTest;
 
 import com.paymybuddy.paymybuddy.constant.Fee;
 import com.paymybuddy.paymybuddy.dto.EmmetedTransactionDTO;
+import com.paymybuddy.paymybuddy.dto.ReceivedTransactionDTO;
 import com.paymybuddy.paymybuddy.dto.RequestTransactionDTO;
 import com.paymybuddy.paymybuddy.dto.UsersMinimalsInfoDTO;
 import com.paymybuddy.paymybuddy.exception.InsuffisientBalanceException;
@@ -21,6 +22,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import static org.mockito.ArgumentMatchers.*;
@@ -44,6 +46,7 @@ public class TransactionServiceTest {
     RequestTransactionDTO requestTransactionDTO = new RequestTransactionDTO();
     UsersMinimalsInfoDTO usersMinimalsInfoDTO = new UsersMinimalsInfoDTO();
     Transaction transaction = new Transaction();
+    List<Transaction> transactionList = new ArrayList();
 
 
     @BeforeEach
@@ -69,6 +72,13 @@ public class TransactionServiceTest {
         requestTransactionDTO.setAmount(50);
         requestTransactionDTO.setDescription("sous-sous");
         requestTransactionDTO.setReceiver(usersMinimalsInfoDTO);
+
+        transaction.setId(1);
+        transaction.setEmmeter(users);
+        transaction.setReceiver(users2);
+        transaction.setFee(10);
+        transaction.setDescription("super ce test");
+        transaction.setAmount(100);
     }
 
     @Test
@@ -101,5 +111,38 @@ public class TransactionServiceTest {
         verify(usersRepository, times(1)).findByEmail(anyString());
         verify(usersRepository, times(2)).save(any(Users.class));
     }
+
+    @Test
+    @DisplayName("test FindAllEmmetedtransactions Succes")
+    void testFindAllEmmetedtransactions() {
+
+        transactionList.add(transaction);
+
+        when(transactionRepository.findTransactionByEmmeter(anyLong())).thenReturn(transactionList);
+
+        List<EmmetedTransactionDTO> emmetedTransactionDTOList = transactionService.findByEmmeter(1L);
+
+        Assertions.assertEquals(transaction.getDescription(), emmetedTransactionDTOList.get(0).getDescription());
+        Assertions.assertEquals(1, emmetedTransactionDTOList.size());
+
+        verify(transactionRepository, times(1)).findTransactionByEmmeter(anyLong());
+    }
+
+    @Test
+    @DisplayName("test FindAllReceivedtransactions Succes")
+    void testFindAllReceivedtransactions() {
+
+        transactionList.add(transaction);
+
+        when(transactionRepository.findTransactionByReceiver(anyLong())).thenReturn(transactionList);
+
+        List<ReceivedTransactionDTO> receivedTransactionDTOList = transactionService.findbyReceiver(1L);
+
+        Assertions.assertEquals(transaction.getDescription(), receivedTransactionDTOList.get(0).getDescription());
+        Assertions.assertEquals(1, receivedTransactionDTOList.size());
+
+        verify(transactionRepository, times(1)).findTransactionByReceiver(anyLong());
+    }
 }
+
 

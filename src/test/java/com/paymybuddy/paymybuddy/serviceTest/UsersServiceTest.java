@@ -1,13 +1,12 @@
-package com.paymybuddy.serviceTest;
+package com.paymybuddy.paymybuddy.serviceTest;
 
-import com.paymybuddy.paymybuddy.dto.UserSubscribeOkDTO;
-import com.paymybuddy.paymybuddy.dto.UsersDTO;
-import com.paymybuddy.paymybuddy.dto.UsersMinimalsInfoDTO;
-import com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO;
+import com.paymybuddy.paymybuddy.constant.Messages;
+import com.paymybuddy.paymybuddy.constant.TransfertType;
+import com.paymybuddy.paymybuddy.dto.*;
 import com.paymybuddy.paymybuddy.exception.ExistingEmailException;
 import com.paymybuddy.paymybuddy.exception.UserAllReadyExistException;
-import com.paymybuddy.paymybuddy.exception.UsersNotInFriendsListException;
 import com.paymybuddy.paymybuddy.exception.UsersNotFoundException;
+import com.paymybuddy.paymybuddy.exception.UsersNotInFriendsListException;
 import com.paymybuddy.paymybuddy.models.BankAccount;
 import com.paymybuddy.paymybuddy.models.Users;
 import com.paymybuddy.paymybuddy.repository.UsersRepository;
@@ -21,6 +20,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -44,19 +44,18 @@ public class UsersServiceTest {
     BankAccount bankAccount = new BankAccount();
     List<BankAccount> bankAccountList = new ArrayList();
 
+    BankAccountDTO bankAccountDTO = new BankAccountDTO();
+    EmmetedTransactionDTO emmetedTransactionDTO = new EmmetedTransactionDTO();
+    ReceivedTransactionDTO receivedTransactionDTO = new ReceivedTransactionDTO();
+    TransfertDTO transfertDTO = new TransfertDTO();
+
     UsersMinimalsInfoDTO usersMinimalsInfoDTO = new UsersMinimalsInfoDTO();
     Users users = new Users();
     Users users2 = new Users();
 
     @BeforeEach
     public void setUp() {
-        usersDTO.setFirstName("John");
-        usersDTO.setLastName("Doe");
-        usersDTO.setEmail("john@doe.mail");
-        usersDTO.setTotalAmount(100.0);
-        usersDTO.setFriends(new ArrayList<>());
-
-        usersMinimalsInfoDTOList.add(usersMinimalsInfoDTO);
+        bankAccountDTO.setIban("1234");
 
         usersDTO2.setFirstName("Jack");
         usersDTO2.setLastName("Sparrow");
@@ -93,6 +92,40 @@ public class UsersServiceTest {
         usersMinimalsInfoDTO.setEmail(users.getEmail());
         usersMinimalsInfoDTO.setFirstName(users.getFirstName());
         usersMinimalsInfoDTO.setLastName(users.getLastName());
+
+        bankAccountDTO.setBankName("DoeBank");
+        bankAccountDTO.setActif(true);
+        bankAccountDTO.setDescription("mon compte");
+
+        emmetedTransactionDTO.setReceiver(usersMinimalsInfoDTO);
+        emmetedTransactionDTO.setAmount(100.00);
+        emmetedTransactionDTO.setDescription("ZeTest");
+        emmetedTransactionDTO.setFee(0.5);
+
+        receivedTransactionDTO.setAmount(50.00);
+        receivedTransactionDTO.setDescription("merci");
+        receivedTransactionDTO.setEmmeter(usersMinimalsInfoDTO);
+
+        transfertDTO.setTransfertType(TransfertType.VIR_FROM_BANK_ACCOUNT.toString());
+        transfertDTO.setAmount(100.00);
+        transfertDTO.setDate(new Date());
+        transfertDTO.setBankAccount(bankAccountDTO);
+
+        usersDTO.setFirstName("John");
+        usersDTO.setLastName("Doe");
+        usersDTO.setEmail("john@doe.mail");
+        usersDTO.setTotalAmount(100.0);
+        usersDTO.setFriends(new ArrayList<>());
+        usersDTO.setBankAccounts(new ArrayList<>());
+        usersDTO.getBankAccounts().add(bankAccountDTO);
+        usersDTO.setEmmetedTransactions(new ArrayList<>());
+        usersDTO.getEmmetedTransactions().add(emmetedTransactionDTO);
+        usersDTO.setReceivedTransactions(new ArrayList<>());
+        usersDTO.getReceivedTransactions().add(receivedTransactionDTO);
+        usersDTO.setTransferts(new ArrayList<>());
+        usersDTO.getTransferts().add(transfertDTO);
+
+        usersMinimalsInfoDTOList.add(usersMinimalsInfoDTO);
     }
 
     @Test
@@ -151,7 +184,7 @@ public class UsersServiceTest {
         when(usersRepository.findByEmail("john@doe.mail")).thenReturn(Optional.ofNullable(users));
         when(usersRepository.save(any(Users.class))).thenReturn(users);
 
-        UsersMinimalsInfoDTO usersMinimalsInfoDTO2 = usersService.addFriends(2L,usersMinimalsInfoDTO);
+        UsersMinimalsInfoDTO usersMinimalsInfoDTO2 = usersService.addFriends(2L,users.getEmail());
 
         Assertions.assertEquals(usersMinimalsInfoDTO2.getEmail(), usersMinimalsInfoDTO.getEmail());
 
@@ -171,7 +204,7 @@ public class UsersServiceTest {
         when(usersRepository.findByEmail("john@doe.mail")).thenReturn(Optional.ofNullable(users));
         when(usersRepository.save(any(Users.class))).thenReturn(users);
 
-        UsersDTO  userResponse = usersService.removeFriends(2L,usersMinimalsInfoDTO);
+        UsersDTO  userResponse = usersService.removeFriends(2L,usersMinimalsInfoDTO.getEmail());
 
         Assertions.assertTrue(userResponse.getFriends().size() == 0);
 
@@ -201,28 +234,61 @@ public class UsersServiceTest {
     }
 
     @Test
+    @DisplayName("test ExistingUserSubscribe Succes")
+    void existingUserSubscribe() {
+
+        UsersSubscribeDTO usersSubscribeDTO = new UsersSubscribeDTO();
+        usersSubscribeDTO.setEmail("john@doe.mail");
+        usersSubscribeDTO.setFirstName("John");
+        usersSubscribeDTO.setLastName("Doe");
+        usersSubscribeDTO.setPassword("toto");
+
+        when(usersRepository.findByEmail("john@doe.mail")).thenReturn(Optional.ofNullable(users));
+
+        ExistingEmailException exception = Assertions.assertThrows(ExistingEmailException.class, () -> {
+            usersService.subscribe(usersSubscribeDTO);
+        });
+        Assertions.assertEquals(Messages.EMAIL_EXIST,exception.getMessage() );
+
+        verify(usersRepository, times(1)).findByEmail(anyString()   );
+    }
+
+    @Test
     @DisplayName("test findUserInfo Succes")
     void testFindUserInfo() throws UsersNotFoundException {
         when(usersRepository.findById(anyLong())).thenReturn(Optional.ofNullable(users));
 
-        UsersDTO usersDTOResponse= usersService.findUserInfo(1L);
+        UsersDTO usersDTOResponse= usersService.findUserInfo("john@doe.mail");
 
         Assertions.assertEquals("John", usersDTOResponse.getFirstName());
 
-        verify(usersRepository, times(3)).findById(anyLong());
+        verify(usersRepository, times(2)).findById(anyLong());
     }
+
 
     @Test
     @DisplayName("test FindUserFriends Succes")
     void testFindUserFriends() throws UsersNotFoundException {
-        users.getFriends().add(users2);
         when(usersRepository.findById(anyLong())).thenReturn(Optional.ofNullable(users));
 
         UsersMinimalsInfoDTO usersMinimalsInfoDTO= usersService.findUsersFriends(1L);
 
-        Assertions.assertEquals(users.getEmail(), usersMinimalsInfoDTO.getEmail());
+        Assertions.assertEquals("John", usersMinimalsInfoDTO.getFirstName());
 
         verify(usersRepository, times(2)).findById(anyLong());
+    }
+
+    @Test
+    @DisplayName("test FindUserFriendsNotFound Succes")
+    void testFindUserFriendsNotFound() {
+        when(usersRepository.findById(anyLong())).thenReturn(Optional.ofNullable(null));
+
+        UsersNotFoundException exception = Assertions.assertThrows(UsersNotFoundException.class, () -> {
+            usersService.findUsersFriends(1L);
+        });
+        Assertions.assertEquals(Messages.USER_NOT_FOUND,exception.getMessage() );
+
+        verify(usersRepository, times(1)).findById(anyLong());
     }
 
     @Test
@@ -252,7 +318,7 @@ public class UsersServiceTest {
 
     @Test
     @DisplayName("test saveUsers Succes")
-    void testSaveUsers() throws UsersNotFoundException {
+    void testSaveUsers(){
         when(usersRepository.save(any(Users.class))).thenReturn(users);
 
         Users usersResponse = usersService.save(users);
@@ -262,6 +328,8 @@ public class UsersServiceTest {
         verify(usersRepository, times(1)).save(any(Users.class));
 
     }
+
+
 
 
 }

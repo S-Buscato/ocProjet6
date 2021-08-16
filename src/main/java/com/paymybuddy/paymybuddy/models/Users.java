@@ -5,15 +5,20 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.List;
 
 @NoArgsConstructor
 @Entity
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Table(name="users")
-public class Users {
+public class Users{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,6 +31,9 @@ public class Users {
     private String lastName;
     private String password;
     private String email;
+
+    @Column(name="role")
+    private String role;
 
     @Column(name="total_amount")
     private Double totalAmount;
@@ -42,16 +50,16 @@ public class Users {
 
 
     @JsonIgnore
-    @OneToMany(mappedBy = "users")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "users")
     private List<Transfert> transferts;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(fetch = FetchType.EAGER,mappedBy = "id")
     private List<BankAccount> bankAccounts;
 
-    @OneToMany(mappedBy = "receiver")
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "receiver")
     private List<Transaction> ReceivedTransactions;
 
-    @OneToMany(mappedBy = "emmeter")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "emmeter")
     private List<Transaction> EmmetedTransactions;
 
     public long getId() {
@@ -81,6 +89,7 @@ public class Users {
     public String getPassword() {
         return password;
     }
+
 
     public void setPassword(String password) {
         this.password = password;
@@ -118,6 +127,7 @@ public class Users {
         this.transferts = transferts;
     }
 
+    @Transactional
     public List<BankAccount> getBankAccounts() {
         return bankAccounts;
     }
@@ -140,5 +150,13 @@ public class Users {
 
     public void setEmmetedTransactions(List<Transaction> emmetedTransactions) {
         EmmetedTransactions = emmetedTransactions;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }

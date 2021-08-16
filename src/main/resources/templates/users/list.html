@@ -1,43 +1,41 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" 
-	  xmlns:th="http://www.thymeleaf.org">
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
 <meta charset="utf-8"/>
 <title>Home</title>
 <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
 </head>
 <body>
-<div class="container">
+<div  sec:authorize="isAuthenticated()" class="container">
 	<div class="row">
-		<div class="col-6">
-
-		</div>
-		<div class="col-6 text-right">
-			<a href="/">Home</a>&nbsp;|&nbsp;<a href="/login">Login</a>
+		<div class="col-12 text-center">
+			<h3> <a href="/paymybuddy/myprofil">Home</a> | <a href="/logout">Logout</a></h3>
 		</div>
 	</div>
 	<div class="row"><h2>User List</h2></div>
 	<div class="row">
-		<a href="/user/add" class="btn btn-primary btn-sm">Add New</a>
+
 		<table class="table table-bordered">
 			<thead>
 				<tr>
-					<th>Id</th>
 					<th>Full Name</th>
 					<th>User Name</th>
-					<th>Role</th>
-					<th>Action</th>
+					<th>email</th>
+					<th>add to friend list</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr th:each="user : ${users}">
-					<td style="width: 10%" th:text="${user.id}"></td>
 					<td th:text="${user.firstName}"></td>
 					<td th:text="${user.lastName}"></td>
-					<td style="width: 25%" th:text="${user.email}"></td>
-					<td style="width: 15%" class="text-center">
-						<a th:href="@{/templates/users/update/{id}(id=${user.id})}">Edit</a>&nbsp;|&nbsp;
-						<a th:href="@{/templates/users/delete/{id}(id=${user.id})}">Delete</a>
+					<td th:text="${user.email}"></td>
+					<td >
+						<form th:action="@{'/paymybuddy/users/addfriends/'+${currentUser.id}}" th:method="post">
+							<input type="hidden" name="email" id="email" th:value='${user.email}'/>
+							<button type="submit" class="btn btn-primary btn-sm" >Add</button>
+						</form>
 					</td>
 				</tr>
 			</tbody>

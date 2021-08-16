@@ -1,7 +1,6 @@
-package com.paymybuddy.serviceTest;
+package com.paymybuddy.paymybuddy.serviceTest;
 
 import com.paymybuddy.paymybuddy.dto.BankAccountDTO;
-import com.paymybuddy.paymybuddy.dto.UsersDTO;
 import com.paymybuddy.paymybuddy.exception.BankAccountExistsException;
 import com.paymybuddy.paymybuddy.models.BankAccount;
 import com.paymybuddy.paymybuddy.models.Users;
