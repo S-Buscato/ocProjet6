@@ -2,6 +2,7 @@ package com.paymybuddy.paymybuddy.security;
 
 import com.paymybuddy.paymybuddy.models.Users;
 import com.paymybuddy.paymybuddy.service.UsersService;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -19,24 +20,29 @@ public class CustomUserDetailsService implements UserDetailsService {
     @Autowired
     private UsersService userService;
 
+    static Logger logger = Logger.getLogger(CustomUserDetailsService.class);
+
+
     @Override
     @Transactional(readOnly = true)
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         if (email.trim().isEmpty()) {
+            logger.error("loadUserByUsername ");
             throw new UsernameNotFoundException("username is empty");
+
         }
 
         Users user = userService.findByEmail(email).get();
 
         if (user == null) {
+            logger.error("loadUserByUsername : " + email);
             throw new UsernameNotFoundException("User " + email + " not found");
         }
-
+        logger.info("loadUserByUsername : " + email);
         return UserDetailsImpl.build(user);
-        //return new org.springframework.security.core.userdetails.User(user.getFirstName(), user.getPassword(), getGrantedAuthorities(user));
     }
 
-    public UserDetails getCurrentUser(String email) throws UsernameNotFoundException {
+/*    public UserDetails getCurrentUser(String email) throws UsernameNotFoundException {
         if (email.trim().isEmpty()) {
             throw new UsernameNotFoundException("username is empty");
         }
@@ -48,10 +54,10 @@ public class CustomUserDetailsService implements UserDetailsService {
         }
 
         return UserDetailsImpl.build(user);
-    }
+    }*/
 
-    private List<GrantedAuthority> getGrantedAuthorities(Users user) {
+/*    private List<GrantedAuthority> getGrantedAuthorities(Users user) {
         List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
         return Collections.emptyList();
-    }
+    }*/
 }

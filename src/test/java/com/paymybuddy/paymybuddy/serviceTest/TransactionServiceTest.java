@@ -5,6 +5,7 @@ import com.paymybuddy.paymybuddy.dto.EmmetedTransactionDTO;
 import com.paymybuddy.paymybuddy.dto.ReceivedTransactionDTO;
 import com.paymybuddy.paymybuddy.dto.RequestTransactionDTO;
 import com.paymybuddy.paymybuddy.dto.UsersMinimalsInfoDTO;
+import com.paymybuddy.paymybuddy.exception.BalanceException;
 import com.paymybuddy.paymybuddy.exception.InsuffisientBalanceException;
 import com.paymybuddy.paymybuddy.exception.UsersNotInFriendsListException;
 import com.paymybuddy.paymybuddy.models.Transaction;
@@ -25,7 +26,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.*;
 
 @SpringBootTest(classes = TransactionService.class)
@@ -83,7 +83,7 @@ public class TransactionServiceTest {
 
     @Test
     @DisplayName("test sendMoneyToFriends Succes")
-    void testSendMoneyToFriends() throws UsersNotInFriendsListException, InsuffisientBalanceException {
+    void testSendMoneyToFriends() throws UsersNotInFriendsListException, InsuffisientBalanceException, BalanceException {
 
 
         Double fee = DoubleRounder.round(requestTransactionDTO.getAmount() * Fee.FEE_RATE,2);

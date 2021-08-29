@@ -24,6 +24,7 @@ public class BankAccount {
     private boolean actif;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name="users_id")
     private Users users;
 
     public long getId() {

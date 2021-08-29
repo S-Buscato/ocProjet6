@@ -1,7 +1,6 @@
-package com.paymybuddy.paymybuddy.dto.mapper;
+package com.paymybuddy.paymybuddy.mapper;
 
 
-import com.paymybuddy.paymybuddy.dto.EmmetedTransactionDTO;
 import com.paymybuddy.paymybuddy.dto.ReceivedTransactionDTO;
 import com.paymybuddy.paymybuddy.models.Transaction;
 import org.mapstruct.BeanMapping;
@@ -25,6 +24,4 @@ public interface ReceivedTransactionMapper {
     List<ReceivedTransactionDTO> convertTransactionListToTransactionDTOList(List<Transaction> entity);
 
 
-    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    Transaction convertTransactionDTOToTransaction(ReceivedTransactionDTO receivedTransactionDTO);
 }

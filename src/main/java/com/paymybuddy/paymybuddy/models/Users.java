@@ -3,15 +3,10 @@ package com.paymybuddy.paymybuddy.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
-import java.util.Collection;
 import java.util.List;
 
 @NoArgsConstructor
@@ -53,7 +48,7 @@ public class Users{
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "users")
     private List<Transfert> transferts;
 
-    @OneToMany(fetch = FetchType.EAGER,mappedBy = "id")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "users")
     private List<BankAccount> bankAccounts;
 
     @OneToMany(fetch = FetchType.LAZY,mappedBy = "receiver")
@@ -150,10 +145,6 @@ public class Users{
 
     public void setEmmetedTransactions(List<Transaction> emmetedTransactions) {
         EmmetedTransactions = emmetedTransactions;
-    }
-
-    public String getRole() {
-        return role;
     }
 
     public void setRole(String role) {

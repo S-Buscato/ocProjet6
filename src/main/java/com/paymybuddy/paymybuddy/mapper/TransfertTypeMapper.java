@@ -1,4 +1,4 @@
-package com.paymybuddy.paymybuddy.dto.mapper;
+package com.paymybuddy.paymybuddy.mapper;
 
 import org.mapstruct.*;
 import org.springframework.stereotype.Service;

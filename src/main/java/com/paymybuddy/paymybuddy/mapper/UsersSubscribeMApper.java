@@ -1,4 +1,4 @@
-package com.paymybuddy.paymybuddy.dto.mapper;
+package com.paymybuddy.paymybuddy.mapper;
 
 import com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO;
 import com.paymybuddy.paymybuddy.models.Users;
@@ -13,9 +13,6 @@ import org.springframework.stereotype.Service;
 public interface UsersSubscribeMApper {
 
     UsersSubscribeMApper INSTANCE = Mappers.getMapper(UsersSubscribeMApper.class);
-
-    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    UsersSubscribeDTO convertUsersToUsersSubscribeDTO(Users entity);
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     Users convertUsersSubscribeDTOToUsers(UsersSubscribeDTO usersSubscribeDTO);

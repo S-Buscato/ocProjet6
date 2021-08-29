@@ -1,6 +1,5 @@
 package com.paymybuddy.paymybuddy.repository;
 
-import com.paymybuddy.paymybuddy.models.BankAccount;
 import com.paymybuddy.paymybuddy.models.Transfert;
 import org.springframework.data.repository.CrudRepository;
 

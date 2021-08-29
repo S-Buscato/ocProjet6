@@ -1,7 +1,6 @@
-package com.paymybuddy.paymybuddy.dto.mapper;
+package com.paymybuddy.paymybuddy.mapper;
 
 import com.paymybuddy.paymybuddy.dto.UserSubscribeOkDTO;
-import com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO;
 import com.paymybuddy.paymybuddy.models.Users;
 import org.mapstruct.BeanMapping;
 import org.mapstruct.Mapper;
@@ -17,8 +16,5 @@ public interface UsersSubscribeOkMapper {
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     UserSubscribeOkDTO convertUsersToUserSubscribeOkDTO(Users entity);
-
-    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    Users convertUsersSubscribeDTOToUsers(UserSubscribeOkDTO usersSubscribeDTO);
 
 }

@@ -24,7 +24,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
-import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.*;
 
 @SpringBootTest(classes = UsersService.class)
@@ -199,6 +198,7 @@ public class UsersServiceTest {
     void testUsersRemoveUserFriends() throws UsersNotFoundException, UsersNotInFriendsListException {
 
         users2.getFriends().add(users);
+        users.getFriends().add(users2);
 
         when(usersRepository.findById(2L)).thenReturn(Optional.ofNullable(users2));
         when(usersRepository.findByEmail("john@doe.mail")).thenReturn(Optional.ofNullable(users));
@@ -256,13 +256,13 @@ public class UsersServiceTest {
     @Test
     @DisplayName("test findUserInfo Succes")
     void testFindUserInfo() throws UsersNotFoundException {
-        when(usersRepository.findById(anyLong())).thenReturn(Optional.ofNullable(users));
+        when(usersRepository.findByEmail(anyString())).thenReturn(Optional.ofNullable(users));
 
         UsersDTO usersDTOResponse= usersService.findUserInfo("john@doe.mail");
 
         Assertions.assertEquals("John", usersDTOResponse.getFirstName());
 
-        verify(usersRepository, times(2)).findById(anyLong());
+        verify(usersRepository, times(2)).findByEmail(anyString());
     }
 
 
@@ -271,7 +271,7 @@ public class UsersServiceTest {
     void testFindUserFriends() throws UsersNotFoundException {
         when(usersRepository.findById(anyLong())).thenReturn(Optional.ofNullable(users));
 
-        UsersMinimalsInfoDTO usersMinimalsInfoDTO= usersService.findUsersFriends(1L);
+        UsersDTO usersMinimalsInfoDTO= usersService.findUsersFriends(1L);
 
         Assertions.assertEquals("John", usersMinimalsInfoDTO.getFirstName());
 

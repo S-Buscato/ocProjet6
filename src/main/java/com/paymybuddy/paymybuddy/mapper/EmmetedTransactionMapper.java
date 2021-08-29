@@ -1,4 +1,4 @@
-package com.paymybuddy.paymybuddy.dto.mapper;
+package com.paymybuddy.paymybuddy.mapper;
 
 
 import com.paymybuddy.paymybuddy.dto.EmmetedTransactionDTO;
@@ -22,6 +22,4 @@ public interface EmmetedTransactionMapper {
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     List<EmmetedTransactionDTO> convertTransactionListToTransactionDTOList(List<Transaction> entity);
 
-    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    Transaction convertTransactionDTOToTransaction(EmmetedTransactionDTO emmetedTransactionDTO);
 }

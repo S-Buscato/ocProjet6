@@ -5,6 +5,14 @@ import org.springframework.boot.actuate.trace.http.InMemoryHttpTraceRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.lang.annotation.Documented;
+import java.lang.annotation.Retention;
+import java.lang.annotation.Target;
+
+import static java.lang.annotation.ElementType.METHOD;
+import static java.lang.annotation.ElementType.TYPE;
+import static java.lang.annotation.RetentionPolicy.RUNTIME;
+
 @Configuration
 public class Config {
 
@@ -12,5 +20,11 @@ public class Config {
     public HttpTraceRepository htttpTraceRepository()
     {
         return new InMemoryHttpTraceRepository();
+    }
+
+    @Documented
+    @Retention(RUNTIME)
+    @Target({TYPE, METHOD})
+    public @interface Generated {
     }
 }

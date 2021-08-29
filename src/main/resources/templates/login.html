@@ -1,39 +1,61 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" 
+<html xmlns="http://www.w3.org/1999/xhtml"
 	  xmlns:th="http://www.thymeleaf.org"
-xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
-<head>
-<meta charset="utf-8"/>
-<title>Home</title>
-<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
-</head>
-<body>
-<!-- show notification on error -->
-<div th:if="${param.error}">
-	Invalid username or password.
-</div>
+	  xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Home</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+			  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+			  crossorigin="anonymous" />
+	</head>
 
-<!-- show notification of logout -->
-<div th:if="${param.logout}">
-	You have been logged out.
-</div>
+	<body class="bg-light">
+		<div class="container-fluid text-center">
+			<div class="col-12 text-center mt-5">
 
-<!-- login form -->
-<div>
-	<form th:action="@{/login}" method="post">
-		<h2 >Please sign in</h2>
-		<label >User Name</label>
-		<input type="text" name="username" th:required="required" th:autofocus="autofocus"/>
-		<br/>
+					<h3 class ="font-weight-bold col-12 mt-5">
+						<a href="/home">Home</a>
+					</h3>
 
-		<label>Password</label>
-		<input type="password" name="password" th:required="required" />
-		<br/>
+				<div class="card mx-auto" style="width: 18rem;">
+					<h5 class="card-header bg-info text-white font-italic">Paymybuddy</h5>
 
-		<input type="submit" value="Sign In"/>
-	</form>
-</div>
-</body>
-</html>
-</html>
+					<div class="card-body">
+						<form th:action="@{/login}" method="post">
+							<h2 >Please sign in</h2>
+							<label class="font-weight-bold">Your Email</label>
+							<input type="text" name="email" th:required="required" th:autofocus="autofocus"/>
+							<br/>
+
+							<label class="font-weight-bold">Password</label>
+							<input type="password" name="password" th:required="required" />
+							<br/>
+
+							<input type="submit" value="Sign In" class="btn btn-primary text-center mt-2"/>
+							<div class="row mt-3">
+								<!-- show notification on error -->
+								<div class="badge text-wrap mx-auto bg-danger text-white" th:if="${param.error}">
+									Invalid username or password
+								</div>
+
+								<!-- show notification of logout -->
+								<div class="badge text-wrap mx-auto bg-warning"th:if="${param.logout}">
+									You have been logged out
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+
+
+
+
+			</div>
+		</div>
+
+
+
+
+	</body>
 </html>

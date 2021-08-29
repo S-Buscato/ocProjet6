@@ -1,9 +1,10 @@
 package com.paymybuddy.paymybuddy.service;
 
 import com.paymybuddy.paymybuddy.constant.TransfertType;
+import com.paymybuddy.paymybuddy.controller.TransfertController;
 import com.paymybuddy.paymybuddy.dto.BankTransfertDTO;
 import com.paymybuddy.paymybuddy.dto.TransfertDTO;
-import com.paymybuddy.paymybuddy.dto.mapper.TransfertMapper;
+import com.paymybuddy.paymybuddy.mapper.TransfertMapper;
 import com.paymybuddy.paymybuddy.exception.BadTransfertTypeException;
 import com.paymybuddy.paymybuddy.exception.InsuffisientBalanceException;
 import com.paymybuddy.paymybuddy.exception.NotActiveBankAccountException;
@@ -14,6 +15,7 @@ import com.paymybuddy.paymybuddy.repository.BankAccountRepository;
 import com.paymybuddy.paymybuddy.repository.TransfertRepository;
 import com.paymybuddy.paymybuddy.repository.UsersRepository;
 import com.paymybuddy.paymybuddy.service.iservice.ITransfertService;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,9 +34,13 @@ public class TransfertService implements ITransfertService {
     @Autowired
     BankAccountRepository bankAccountRepository;
 
+    static Logger logger = Logger.getLogger(TransfertService.class);
+
+
     @Override
     public TransfertDTO receiveMoneyFromBankAccount(BankTransfertDTO bankTransfertDTO) throws NotActiveBankAccountException, BadTransfertTypeException {
         if(!bankTransfertDTO.getTransfertType().equals((TransfertType.VIR_FROM_BANK_ACCOUNT).toString())){
+            logger.error("receiveMoneyFromBankAccount");
             throw  new BadTransfertTypeException();
         }
         Transfert transfert = new Transfert();
@@ -45,11 +51,14 @@ public class TransfertService implements ITransfertService {
             try{
                 transfertRepository.save(transfert);
                 users.setTotalAmount(users.getTotalAmount() + transfert.getAmount());
+                logger.info("receiveMoneyFromBankAccount : " + bankTransfertDTO.getAmount());
                 usersRepository.save(users);
             }catch (Exception e){
+                logger.error("receiveMoneyFromBankAccount " );
                 throw e;
             }
         }else{
+            logger.error("receiveMoneyFromBankAccount " );
             throw new NotActiveBankAccountException();
         }
         return TransfertMapper.INSTANCE.convertTransfertToTransfertDTO(transfert);
@@ -57,8 +66,10 @@ public class TransfertService implements ITransfertService {
 
     @Override
     public TransfertDTO sendMoneyToBankAccount(BankTransfertDTO bankTransfertDTO)
-            throws NotActiveBankAccountException, InsuffisientBalanceException, BadTransfertTypeException {
+        throws NotActiveBankAccountException, InsuffisientBalanceException, BadTransfertTypeException {
+        logger.info("sendMoneyToBankAccount : " + bankTransfertDTO.getAmount());
         if(!bankTransfertDTO.getTransfertType().equals((TransfertType.VIR_TO_BANK_ACCOUNT).toString())){
+            logger.error("receiveMoneyFromBankAccount " );
             throw  new BadTransfertTypeException();
         }
         Transfert transfert = new Transfert();
@@ -72,28 +83,31 @@ public class TransfertService implements ITransfertService {
                     users.setTotalAmount(users.getTotalAmount() - transfert.getAmount());
                     usersRepository.save(users);
                 }catch (Exception e){
+                    logger.error("receiveMoneyFromBankAccount " );
                     throw e;
                 }
             }else{
+                logger.error("receiveMoneyFromBankAccount " );
                 throw new NotActiveBankAccountException();
             }
-        }else{
-            throw new InsuffisientBalanceException();
         }
         return TransfertMapper.INSTANCE.convertTransfertToTransfertDTO(transfert);
     }
 
     @Override
     public List<Transfert> findAllByUsersId(long usersId) {
+        logger.info("findAllByUsersId : " + usersId);
         return transfertRepository.findAllByUsersId(usersId);
     }
 
     @Override
     public TransfertDTO findById(long id) {
+        logger.info("findById : " + id);
         return TransfertMapper.INSTANCE.convertTransfertToTransfertDTO(transfertRepository.findById(id).get());
     }
 
     private void setTransfert(BankTransfertDTO bankTransfertDTO, Transfert transfert, Users users, BankAccount bankAccount) {
+        logger.info("setTransfert");
         transfert.setDate(new Date());
         transfert.setUsers(users);
         transfert.setBankAccount(bankAccount);
