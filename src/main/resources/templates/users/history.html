@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="utf-8"/>
+<title>history</title>
+<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+<div  sec:authorize="isAuthenticated()" class="container">
+	<div class="row">
+		<div class="col-12 text-center">
+			<h3>
+				<a href="/paymybuddy/myprofil">Home</a> |
+				<a href="/paymybuddy/bank/account">My bank account</a> |
+				<a href="/logout">Logout</a></h3>
+		</div>
+	</div>
+	<div class="row text-white badge bg-primary text-wrap"><h2>History</h2></div>
+	<div class="row m-0" th:if="${currentUser.ReceivedTransactions}" >
+
+		<div class="row m-0"><h3>Received operations </h3></div>
+		<table class="table table-bordered">
+			<thead>
+				<tr class="bg-light">
+					<th>Full Name</th>
+					<th>User Name</th>
+					<th>description</th>
+					<th>amount</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="opIn : ${currentUser.ReceivedTransactions}">
+					<td th:text="${opIn.emmeter.firstName}"></td>
+					<td th:text="${opIn.emmeter.firstName}"></td>
+					<td th:text="${opIn.description}"></td>
+					<td th:text="${opIn.amount}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="row m-0" th:if="${currentUser.EmmetedTransactions}">
+		<div class="row m-0"><h3>Emmeted operations </h3></div>
+		<table class="table table-bordered">
+			<thead>
+			<tr class="bg-light">
+				<th>Full Name</th>
+				<th>User Name</th>
+				<th>description</th>
+				<th>amount</th>
+				<th>fees</th>
+
+			</tr>
+			</thead>
+			<tbody>
+			<tr th:each="opOut : ${currentUser.EmmetedTransactions}">
+				<td th:text="${opOut.receiver.firstName}"></td>
+				<td th:text="${opOut.receiver.firstName}"></td>
+				<td th:text="${opOut.description}"></td>
+				<td th:text="${opOut.amount}"></td>
+				<td th:text="${opOut.fee}"></td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="row m-0" th:if="${currentUser.transferts}">
+		<div class="row m-0"><h3>Transfert operations </h3></div>
+		<table class="table table-bordered">
+			<thead>
+			<tr class="bg-light">
+				<th>Date</th>
+				<th>amount</th>
+				<th>Bank name</th>
+				<th>Transfert type</th>
+
+			</tr>
+			</thead>
+			<tbody>
+			<tr th:class="${transfert.transfertType} == 'VIR_TO_BANK_ACCOUNT'? 'bg-warning' : 'bg-info'" th:each="transfert : ${currentUser.transferts}">
+				<td th:text="${transfert.date}"></td>
+				<td th:text="${transfert.amount}"></td>
+				<td th:text="${transfert.bankAccount.bankName}"></td>
+				<td class="font-weight-bold" th:if="${transfert.transfertType} == VIR_TO_BANK_ACCOUNT">Emmeted</td>
+				<td class="font-weight-bold" th:if="${transfert.transfertType} == VIR_FROM_BANK_ACCOUNT">Received</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+</body>
+</html>

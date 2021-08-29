@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title> Spring Boot </title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
-</head>
-<body>
-<h3> HOME PAGE </h3>
-<p>
-    <a href="/login">Login</a> or create one <a href="/users/list">User management</a>
-</p>
-</body>
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+    <head>
+        <title> Spring Boot </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+              integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+              crossorigin="anonymous" />
+    </head>
+
+    <body class="bg-light">
+        <div class="container-fluid text-center mt-5" style="margin-top:10%!important">
+            <div class="text-wrap badge badge-warning font-weight-bold"><h1> Welcome on <span class="font-italic font-weight-bolder badge text-wrap bg-info text-white">Paymybuddy</span> </h1></div>
+            <div class="mt-5 col-12 text-center">
+                <h3>
+                    <a class="font-weight-bold" href="/login">Login</a> or create one <a  class="font-weight-bold" href="/subscribe">Register</a>
+                </h3>
+            </div>
+        </div>
+    </body>
 </html>

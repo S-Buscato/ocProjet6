@@ -1,5 +1,7 @@
 package com.paymybuddy.paymybuddy.security;
 
+import com.paymybuddy.paymybuddy.service.UsersService;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -34,12 +36,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeRequests()
-                    .antMatchers("/subscribe").permitAll()
+                .antMatchers("/home").permitAll()
+                .antMatchers("/login").permitAll()
+                .antMatchers("/subscribe").permitAll()
                     .antMatchers("/paymybuddy/**").permitAll()//.hasAnyRole("USER")
                     .anyRequest().authenticated()
                 .and()
                 .formLogin()
-                    .loginProcessingUrl("/login")
+                    .loginPage("/login")
+                    .usernameParameter("email")
                     .defaultSuccessUrl("/paymybuddy/myprofil")
                     .failureUrl("/login?error=true")
                     .permitAll()
@@ -47,7 +52,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .logout()
                     .deleteCookies("JSESSIONID")
                     .logoutUrl("/logout")
-                    .logoutSuccessUrl("/login");
+                    .logoutSuccessUrl("/login?logout=true");
     }
 
     @Autowired

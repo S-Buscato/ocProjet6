@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+	<meta charset="utf-8"/>
+	<title>bankAccount</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+	<div  sec:authorize="isAuthenticated()" class="container">
+		<div class="row">
+			<div class="col-12 text-center">
+				<h3>
+					<a href="/paymybuddy/myprofil">Home</a>  |
+					<a href="/paymybuddy/history">History</a> |
+					<a href="/logout">Logout</a></h3>
+			</div>
+		</div>
+		<div class="row text-white badge bg-primary text-wrap">
+			<h2>Welcome
+				<span th:text = "${currentUser.firstName}"></span>
+			</h2>
+		</div>
+		<div class="row">
+			<h2 >Your total amount is :
+				<span th:text ="${currentUser.getTotalAmount()}"></span>
+			</h2>
+		</div>
+		<div class="row mt-4">
+			<h3 class="mr-5">Add a bank account </h3>
+			<form method="post" th:action="@{'/paymybuddy/bank/add'}" th:object="${bankAccountDTO}">
+				<input id="description" placeholder="Enter a description" required type="text" name="description"/>
+				<input id="iban" placeholder="Enter a iban" required type="text" name="iban"/>
+				<input id="bankName" placeholder="Enter a bankName" required type="text" name="bankName"/>
+				<input id="actif" hidden required type="text" name="actif" th:value="true"/>
+				<input class="btn btn-primary btn-sm" type="submit" value="add this bank account">
+			</form>
+			<div class="row mt-2 col-10 alert alert-danger" th:if="${error}" th:text="${error}"></div>
+		</div>
+
+		<div class="row mt-5">
+			<h4 class="mr-2">Your bank accounts : </h4>
+
+			<table class="table table-bordered">
+				<thead>
+				<tr class="bg-light">
+					<th>Description</th>
+					<th>Iban</th>
+					<th>Bank name</th>
+					<th>State</th>
+					<th>Receive</th>
+					<th>Send</th>
+
+				</tr>
+				</thead>
+				<tbody >
+				<tr th:each = "banckInfo : ${usersInfo.bankAccounts}">
+					<td th:text="${banckInfo.description}"></td>
+					<td th:text="${banckInfo.iban}"></td>
+					<td th:text="${banckInfo.bankName}"></td>
+					<td >
+						<form th:action="@{'/paymybuddy/bank/toggleActif'}" th:object="${bankAccountDTO}" th:method="post">
+							<input type="hidden" name="iban"  th:value='${banckInfo.iban}'/>
+							<button th:if="${banckInfo.actif}" type="submit" class="btn btn-success btn-sm">Active</button>
+							<button th:unless="${banckInfo.actif}" type="submit" class="btn btn-danger btn-sm">Not Active</button>
+						</form>
+					</td>
+					<td th:if="${banckInfo.actif}" >
+						<form th:action="@{'/paymybuddy/transfertFromBank'}" th:object="${bankTransfertDTO}" th:method="post">
+							<input type="hidden" name="iban"  th:value='${banckInfo.iban}'/>
+							<input type="hidden" name="userEmail"  th:value='${currentUser.email}'/>
+							<input name="amount" placeholder="Entry an amount"/>
+							<button type="submit" class="btn btn-success btn-sm">Receive</button>
+						</form>
+					</td>
+					<td th:if="${banckInfo.actif}" >
+						<form th:action="@{'/paymybuddy/transfertToBank'}" th:object="${bankTransfertDTO}" th:method="post">
+							<input type="hidden" name="iban"  th:value='${banckInfo.iban}'/>
+							<input type="hidden" name="userEmail"  th:value='${currentUser.email}'/>
+							<input name="amount" placeholder="Entry an amount"/>
+							<button type="submit" class="btn btn-primary btn-sm">Send</button>
+						</form>
+					</td>
+
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

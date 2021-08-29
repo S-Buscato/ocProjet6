@@ -20,7 +20,7 @@ public interface IUsersService {
     Long deleteById(Long id) throws UsersNotFoundException;
     UsersDTO findUserInfo(String email) throws UsersNotFoundException;
     UsersDTO findCurrentUserInfo(Long id) throws UsersNotFoundException;
-    UsersMinimalsInfoDTO findUsersFriends(Long id) throws UsersNotFoundException;
+    UsersDTO findUsersFriends(Long id) throws UsersNotFoundException;
     Users save(Users users);
     UsersDTO update(UsersDTO usersDTO, Long id) throws UsersNotFoundException;
     UserSubscribeOkDTO subscribe(UsersSubscribeDTO usersSubscribeDTO) throws ExistingEmailException;

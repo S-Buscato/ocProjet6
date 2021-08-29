@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+	<head>
+		<meta charset="utf-8"/>
+		<title>subscribe</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+			  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+			  crossorigin="anonymous" />
+	</head>
+
+	<body>
+		<div class="container-fluid text-center">
+			<div class="col-12 text-center mt-5">
+
+					<h3 class ="col-12 mt-5">
+						<a href="/home">Home</a>
+					</h3>
+
+				<div class="card mx-auto" style="width: 18rem;" >
+					<h5 class="card-header">Paymybuddy</h5>
+
+					<div class="card-body">
+						<form th:action="@{'/subscribe'}" th:method="post" th:object="${usersMinimalsInfoDTO}">
+							<h2 >Please subscribe</h2>
+							<label class="text-xl-center">Your Firstname</label>
+							<input type="text" name="firstName" th:required="required" th:autofocus="autofocus"/>
+							<br/>
+
+							<label class="text-xl-center">Your Lastname</label>
+							<input type="text" name="lastName" th:required="required"/>
+
+							<label class="text-xl-center">Your Email</label>
+							<input type="text" name="email" th:required="required"/>
+
+
+							<label class="text-xl-center">Password</label>
+							<input type="password" name="password" placeholder="Password" th:required="required" />
+							<br/>
+
+							<input type="submit" value="Subscribe" class="btn btn-primary text-center mt-2"/>
+						</form>
+						<div class="row mt-2 alert alert-danger" th:if="${error}" th:text="${error}"></div>
+						<div class="row mt-2 alert alert-success" th:if="${userSubscribeOkDTO}" th:text="Succes"></div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+
+
+
+	</body>
+</html>

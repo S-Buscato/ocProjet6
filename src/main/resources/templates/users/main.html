@@ -7,14 +7,19 @@
 	<title>Main</title>
 	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
 </head>
-<body>
+<body class="bg-light">
 <div  sec:authorize="isAuthenticated()" class="container">
 	<div class="row">
 		<div class="col-12 text-center">
-			<h3> <a href="/paymybuddy/users">Users list</a> | <a href="/logout">Logout</a> | <a href="/logout">my bank account</a>| <a href="/logout">transfert money</a></h3>
+			<h3>
+				<a href="/paymybuddy/users">Users list</a> |
+				<a href="/paymybuddy/bank/account">My bank account</a> |
+				<a href="/paymybuddy/history">History</a> |
+				<a href="/logout">Logout</a> </a>
+			</h3>
 		</div>
 	</div>
-	<div class="row">
+	<div class="row text-white badge bg-primary text-wrap">
 		<h2>Welcome
 			<span th:text = "${currentUser.firstName}"></span>
 		</h2>
@@ -24,7 +29,7 @@
 			<span th:text ="${currentUser.getTotalAmount()}"></span>
 		</h2>
 	</div>
-	<div class="row">
+	<div class="row mt-4">
 		<h3 class="mr-2">Search an User : </h3>
 			<form method="get" th:action="@{'/paymybuddy/search'}" th:object="${usersMinimalsInfoDTO}">
 				<input id="email" placeholder="Enter an email" required type="text" name="email"/>
@@ -37,7 +42,7 @@
 
 		<table th:if="${foundedUser}" class="table table-bordered">
 				<thead>
-				<tr>
+				<tr class="bg-light">
 					<th>Full Name</th>
 					<th>User Name</th>
 					<th>email</th>
@@ -45,7 +50,7 @@
 				</tr>
 				</thead>
 			<tbody >
-				<tr >
+				<tr>
 					<td  th:text="${foundedUser.firstName}"></td>
 					<td  th:text="${foundedUser.lastName}"></td>
 					<td  th:text="${foundedUser.email}"></td>
@@ -61,20 +66,21 @@
 	</div>
 
 
-		<div class="row mt-5">
+		<div th:if="${usersFriendsList}" class="row mt-5">
 			<h4 >Your Friends list :</h4>
 
 		<table class="table table-bordered">
 			<thead>
-				<tr>
+				<tr class="bg-light">
 					<th>Full Name</th>
 					<th>User Name</th>
 					<th>email</th>
+					<th>send money</th>
+					<th>remove</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr th:each="user : ${currentUser.getFriends()}">
-					<!--					<td style="width: 10%" th:text="${user.id}"></td>-->
+				<tr th:each="user : ${usersFriendsList.getFriends()}">
 					<td th:text="${user.firstName}"  ></td>
 					<td th:text="${user.lastName}"></td>
 					<td style="width: 25%" th:text="${user.email}"></td>
@@ -90,11 +96,6 @@
 							<button type="submit" class="btn btn-danger btn-sm" >Remove</button>
 						</form>
 					</td>
-
-					<!--<td style="width: 15%" class="text-center">
-						<a th:href="@{/templates/users/update/{id}(id=${user.id})}">Edit</a>&nbsp;|&nbsp;
-						<a th:href="@{/templates/users/delete/{id}(id=${user.id})}">Delete</a>
-					</td>-->
 				</tr>
 			</tbody>
 		</table>
