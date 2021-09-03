@@ -22,14 +22,6 @@ public class SecurityController {
     @Autowired
     UsersService usersService;
 
-    @RequestMapping(value = "/username", method = RequestMethod.GET)
-    @ResponseBody
-    public String currentUserNameSimple(HttpServletRequest request) {
-        Principal principal = request.getUserPrincipal();
-        return principal.getName();
-    }
-
-
     @RequestMapping("/home")
     public ModelAndView home() {
         ModelAndView modelAndView = new ModelAndView();
@@ -37,7 +29,6 @@ public class SecurityController {
         return modelAndView;
     }
 
-    // Login form
     @RequestMapping("/login")
     public ModelAndView login() {
         ModelAndView modelAndView = new ModelAndView();
@@ -45,28 +36,27 @@ public class SecurityController {
         return modelAndView;
     }
 
-    @RequestMapping("/subscribe")
-    public ModelAndView subscribe(@ModelAttribute("usersMinimalsInfoDTO") UsersSubscribeDTO usersSubscribeDTO) {
+    @RequestMapping("/register")
+    public ModelAndView register(@ModelAttribute("usersMinimalsInfoDTO") UsersSubscribeDTO usersSubscribeDTO) {
         try {
-            ModelAndView modelAndView = new ModelAndView(new RedirectView("/login", true));
-            modelAndView.setViewName("subscribe");
-
+            ModelAndView modelAndView = new ModelAndView(new RedirectView("/login.html", true));
+            modelAndView.setViewName("login");
             UserSubscribeOkDTO userSubscribeOkDTO = usersService.subscribe(usersSubscribeDTO);
             modelAndView.addObject("userSubscribeOkDTO", userSubscribeOkDTO);
-            logger.info("subscribe succes : " + usersSubscribeDTO);
+            logger.info("resgister succes : " + usersSubscribeDTO);
             return modelAndView;
         }
         catch (ExistingEmailException e) {
             ModelAndView modelAndView = new ModelAndView();
-            modelAndView.setViewName("subscribe");
-            logger.error("subscribe => email existant : " + usersSubscribeDTO.getEmail());
+            modelAndView.setViewName("register");
+            logger.error("register => email existant : " + usersSubscribeDTO.getEmail());
             modelAndView.addObject("error", e.getMessage());
             return modelAndView;
         }
         catch (Exception e) {
             ModelAndView modelAndView = new ModelAndView();
-            modelAndView.setViewName("subscribe");
-            logger.error("subscribe => error : " + e);
+            modelAndView.setViewName("register");
+            logger.error("register => error : " + e);
             modelAndView.addObject("error", e.getMessage());
             return modelAndView;
         }

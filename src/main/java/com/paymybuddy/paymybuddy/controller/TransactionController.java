@@ -48,7 +48,7 @@ public class TransactionController {
     }
 
 
-    @PostMapping("/users/sendMoney")
+    @PostMapping(path = "/users/sendMoney" ,  consumes = {MediaType.APPLICATION_FORM_URLENCODED_VALUE})
     public ModelAndView sendMoney(@ModelAttribute("requestTransactionDTO") RequestTransactionDTO requestTransactionDTO) throws UsersNotFoundException {
         Users currentUser = utilsService.findCurrentUser();
         Users receiverUser = usersService.findByEmail(requestTransactionDTO.getReceiver().getEmail()).get();
