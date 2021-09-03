@@ -5486,3 +5486,970 @@ INFO    2021-08-29 19:56:41,025 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy
 DEBUG   2021-08-29 19:56:41,025 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
 DEBUG   2021-08-29 19:56:41,034 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
 INFO    2021-08-29 19:56:41,035 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.BankAccountController  - banckAccount => OK
+INFO    2021-08-31 21:12:14,009 [main] com.paymybuddy.paymybuddy.controller.UsersController  - findAllUsers => OK
+INFO    2021-08-31 21:12:53,295 [main] com.paymybuddy.paymybuddy.controller.UsersController  - findAllUsers => OK
+ERROR   2021-08-31 21:14:25,375 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.SecurityController  - subscribe => error : java.lang.IllegalArgumentException: rawPassword cannot be null
+DEBUG   2021-08-31 21:14:32,458 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+INFO    2021-08-31 21:14:32,501 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.security.CustomUserDetailsService  - loadUserByUsername : sb@email.com
+INFO    2021-08-31 21:14:32,618 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-08-31 21:14:32,619 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-08-31 21:14:32,661 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-08-31 21:14:32,694 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 35
+INFO    2021-08-31 21:14:32,696 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - myProfil SUCCES : Sylvain Bus
+INFO    2021-08-31 21:14:35,317 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-08-31 21:14:35,317 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-08-31 21:14:35,320 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-08-31 21:14:35,326 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - findUsersInfo : Bus Sylvain
+INFO    2021-08-31 21:15:40,677 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-08-31 21:15:40,678 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-08-31 21:15:40,681 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-08-31 21:15:40,687 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 35
+INFO    2021-08-31 21:15:40,689 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - myProfil SUCCES : Sylvain Bus
+INFO    2021-08-31 21:15:43,498 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-08-31 21:15:43,498 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+ERROR   2021-08-31 21:15:43,511 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : jp@jpp.com
+DEBUG   2021-08-31 21:15:43,517 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : jp@jpp.com
+DEBUG   2021-08-31 21:15:43,562 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-08-31 21:15:43,564 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 35
+INFO    2021-08-31 21:15:43,565 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - removeFriends : jp@jpp.com
+INFO    2021-08-31 21:15:44,150 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-08-31 21:15:44,151 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+ERROR   2021-08-31 21:15:44,160 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : jdoe@mail.com
+DEBUG   2021-08-31 21:15:44,167 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : jdoe@mail.com
+DEBUG   2021-08-31 21:15:44,179 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-08-31 21:15:44,181 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 35
+INFO    2021-08-31 21:15:44,182 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.UsersController  - removeFriends : jdoe@mail.com
+INFO    2021-08-31 21:15:48,406 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-08-31 21:15:48,407 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-08-31 21:15:48,411 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-08-31 21:15:48,434 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.UsersService  - users findUserInfo : jp@jpp.com
+DEBUG   2021-08-31 21:15:48,448 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 35
+ERROR   2021-08-31 21:15:48,452 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.UsersController  - getUsersInfo => jp@jpp.com
+INFO    2021-08-31 21:15:49,417 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-08-31 21:15:49,417 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-08-31 21:15:49,421 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-08-31 21:15:49,430 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UsersService  - findById 35
+DEBUG   2021-08-31 21:15:49,437 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UsersService  - addFriends : jp@jpp.com
+DEBUG   2021-08-31 21:15:49,447 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 35
+INFO    2021-08-31 21:15:49,450 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - addFriends : jp@jpp.com
+INFO    2021-08-31 21:15:50,756 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-08-31 21:15:50,756 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-08-31 21:15:50,760 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-08-31 21:15:50,769 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : jp@jpp.com
+INFO    2021-08-31 21:15:50,773 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.TransactionController  - toSendMoney jp@jpp.com
+INFO    2021-08-31 21:15:52,585 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-08-31 21:15:52,585 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-08-31 21:15:52,596 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-08-31 21:15:52,597 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.BankAccountController  - banckAccount()
+INFO    2021-08-31 21:15:54,567 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-08-31 21:15:54,568 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-08-31 21:15:54,572 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-08-31 21:15:54,577 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 35
+INFO    2021-08-31 21:15:54,578 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.UsersController  - myProfil SUCCES : Sylvain Bus
+INFO    2021-08-31 21:15:55,635 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-08-31 21:15:55,636 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-08-31 21:15:55,644 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-08-31 21:15:55,644 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.BankAccountController  - banckAccount()
+INFO    2021-08-31 21:15:59,724 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-08-31 21:15:59,724 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+INFO    2021-08-31 21:15:59,755 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-08-31 21:15:59,793 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.TransfertService  - receiveMoneyFromBankAccount : 500.0
+INFO    2021-08-31 21:15:59,798 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.TransfertController  - receiveMoneyFromBankAccount : 500.0
+INFO    2021-08-31 21:16:04,695 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-08-31 21:16:04,695 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-08-31 21:16:04,705 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-08-31 21:16:04,706 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.BankAccountController  - banckAccount()
+INFO    2021-08-31 21:16:05,647 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-08-31 21:16:05,647 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-08-31 21:16:05,651 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-08-31 21:16:05,655 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 35
+INFO    2021-08-31 21:16:05,657 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - myProfil SUCCES : Sylvain Bus
+INFO    2021-08-31 21:16:07,796 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-08-31 21:16:07,796 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-08-31 21:16:07,800 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-08-31 21:16:07,806 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : jp@jpp.com
+INFO    2021-08-31 21:16:07,810 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.TransactionController  - toSendMoney jp@jpp.com
+INFO    2021-08-31 21:16:15,883 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-08-31 21:16:15,883 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-08-31 21:16:15,890 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : jp@jpp.com
+DEBUG   2021-08-31 21:16:15,898 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-08-31 21:16:16,013 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.TransactionService  - EmmetedTransactionDTO
+DEBUG   2021-08-31 21:16:16,024 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-08-31 21:16:16,026 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-08-31 21:16:16,026 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.TransactionController  - sendMoney to Jack Sparrow
+INFO    2021-08-31 21:16:22,925 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-08-31 21:16:22,925 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-08-31 21:16:22,928 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-08-31 21:16:22,932 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+ERROR   2021-08-31 21:16:22,942 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.TransactionService  - EmmetedTransactionDTO
+DEBUG   2021-08-31 21:16:22,943 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+ERROR   2021-08-31 21:16:22,943 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.TransactionController  - sendMoney to Sylvain Bus : Le montant Ã  transfÃ©rer est supÃ©rieur Ã  votre solde. 
+INFO    2021-08-31 21:16:31,536 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-08-31 21:16:31,536 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-08-31 21:16:31,539 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-08-31 21:16:31,542 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - findUsersInfo : Bus Sylvain
+INFO    2021-08-31 21:16:45,152 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-08-31 21:16:45,152 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-08-31 21:16:45,157 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-08-31 21:16:45,158 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.BankAccountController  - banckAccount()
+INFO    2021-08-31 21:16:53,833 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-08-31 21:16:53,833 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+ERROR   2021-08-31 21:16:53,844 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.BankAccountService  - save
+ERROR   2021-08-31 21:16:53,847 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.BankAccountController  - addBankAccount() Ce compte existe dÃ©jÃ  ! 1
+INFO    2021-08-31 21:16:57,496 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-08-31 21:16:57,496 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-08-31 21:16:57,499 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-08-31 21:16:57,502 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 35
+INFO    2021-08-31 21:16:57,503 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - myProfil SUCCES : Sylvain Bus
+DEBUG   2021-08-31 21:17:10,986 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : zzz
+INFO    2021-08-31 21:22:40,241 [main] com.paymybuddy.paymybuddy.controller.UsersController  - findAllUsers => OK
+INFO    2021-08-31 21:24:30,132 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - toggleActiveBankAccount : 01234
+INFO    2021-08-31 21:24:30,171 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findById
+INFO    2021-08-31 21:24:30,183 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - update
+INFO    2021-08-31 21:24:30,193 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - save
+INFO    2021-08-31 21:24:30,203 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - deleteById : 1
+INFO    2021-08-31 21:24:30,211 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findByIban
+INFO    2021-08-31 21:24:30,220 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findAll
+INFO    2021-08-31 21:24:33,906 [main] com.paymybuddy.paymybuddy.controller.UsersController  - findAllUsers => OK
+INFO    2021-08-31 21:24:34,498 [main] com.paymybuddy.paymybuddy.service.TransactionService  - EmmetedTransactionDTO
+INFO    2021-08-31 21:24:34,507 [main] com.paymybuddy.paymybuddy.service.TransactionService  - findbyReceiver : 1
+INFO    2021-08-31 21:24:34,518 [main] com.paymybuddy.paymybuddy.service.TransactionService  - findByEmmeter : 1
+INFO    2021-08-31 21:24:34,619 [main] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-08-31 21:24:34,620 [main] com.paymybuddy.paymybuddy.service.TransfertService  - receiveMoneyFromBankAccount : 100.0
+INFO    2021-08-31 21:24:34,632 [main] com.paymybuddy.paymybuddy.service.TransfertService  - findAllByUsersId : 1
+INFO    2021-08-31 21:24:34,642 [main] com.paymybuddy.paymybuddy.service.TransfertService  - sendMoneyToBankAccount : 100.0
+INFO    2021-08-31 21:24:34,642 [main] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-08-31 21:24:34,657 [main] com.paymybuddy.paymybuddy.service.TransfertService  - findById : 1
+ERROR   2021-08-31 21:24:34,731 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe error : john@doe.mail
+DEBUG   2021-08-31 21:24:34,739 [main] com.paymybuddy.paymybuddy.service.UsersService  - findDeleteId 1
+ERROR   2021-08-31 21:24:34,747 [main] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : john@doe.mail
+DEBUG   2021-08-31 21:24:34,748 [main] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : john@doe.mail
+DEBUG   2021-08-31 21:24:34,756 [main] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : JohnDoe@email.com
+DEBUG   2021-08-31 21:24:34,764 [main] com.paymybuddy.paymybuddy.service.UsersService  - update : 1
+DEBUG   2021-08-31 21:24:34,774 [main] com.paymybuddy.paymybuddy.service.UsersService  - findAll
+ERROR   2021-08-31 21:24:34,781 [main] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends error not found : 1
+DEBUG   2021-08-31 21:24:34,790 [main] com.paymybuddy.paymybuddy.service.UsersService  - findById 1
+DEBUG   2021-08-31 21:24:34,797 [main] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 1
+DEBUG   2021-08-31 21:24:34,803 [main] com.paymybuddy.paymybuddy.service.UsersService  - save : com.paymybuddy.paymybuddy.models.Users@f6327d55
+DEBUG   2021-08-31 21:24:34,810 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findUserInfo : john@doe.mail
+DEBUG   2021-08-31 21:24:34,820 [main] com.paymybuddy.paymybuddy.service.UsersService  - findById 2
+DEBUG   2021-08-31 21:24:34,822 [main] com.paymybuddy.paymybuddy.service.UsersService  - addFriends : john@doe.mail
+DEBUG   2021-08-31 21:24:34,955 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe success : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@f0cb53bd
+INFO    2021-08-31 21:41:38,370 [main] com.paymybuddy.paymybuddy.controller.UsersController  - findAllUsers => OK
+INFO    2021-09-01 21:27:08,376 [main] com.paymybuddy.paymybuddy.controller.UsersController  - findUsersInfo : null null
+ERROR   2021-09-01 21:29:42,878 [main] com.paymybuddy.paymybuddy.controller.UsersController  - getUsersInfo => null
+INFO    2021-09-01 21:30:52,823 [main] com.paymybuddy.paymybuddy.controller.UsersController  - myProfil SUCCES : null null
+INFO    2021-09-01 21:32:18,009 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - toggleActiveBankAccount : 01234
+INFO    2021-09-01 21:32:18,037 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findById
+INFO    2021-09-01 21:32:18,046 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - update
+INFO    2021-09-01 21:32:18,057 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - save
+INFO    2021-09-01 21:32:18,065 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - deleteById : 1
+INFO    2021-09-01 21:32:18,074 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findByIban
+INFO    2021-09-01 21:32:18,081 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findAll
+INFO    2021-09-01 21:32:21,323 [main] com.paymybuddy.paymybuddy.controller.UsersController  - findUsersInfo : null null
+INFO    2021-09-01 21:32:21,726 [main] com.paymybuddy.paymybuddy.controller.UsersController  - findAllUsers => OK
+INFO    2021-09-01 21:32:21,750 [main] com.paymybuddy.paymybuddy.controller.UsersController  - myProfil SUCCES : null null
+ERROR   2021-09-01 21:32:21,783 [main] com.paymybuddy.paymybuddy.controller.UsersController  - getUsersInfo => null
+INFO    2021-09-01 21:32:21,937 [main] com.paymybuddy.paymybuddy.service.TransactionService  - EmmetedTransactionDTO
+INFO    2021-09-01 21:32:21,947 [main] com.paymybuddy.paymybuddy.service.TransactionService  - findbyReceiver : 1
+INFO    2021-09-01 21:32:21,955 [main] com.paymybuddy.paymybuddy.service.TransactionService  - findByEmmeter : 1
+INFO    2021-09-01 21:32:22,062 [main] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-09-01 21:32:22,063 [main] com.paymybuddy.paymybuddy.service.TransfertService  - receiveMoneyFromBankAccount : 100.0
+INFO    2021-09-01 21:32:22,074 [main] com.paymybuddy.paymybuddy.service.TransfertService  - findAllByUsersId : 1
+INFO    2021-09-01 21:32:22,083 [main] com.paymybuddy.paymybuddy.service.TransfertService  - sendMoneyToBankAccount : 100.0
+INFO    2021-09-01 21:32:22,085 [main] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-09-01 21:32:22,094 [main] com.paymybuddy.paymybuddy.service.TransfertService  - findById : 1
+ERROR   2021-09-01 21:32:22,172 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe error : john@doe.mail
+DEBUG   2021-09-01 21:32:22,178 [main] com.paymybuddy.paymybuddy.service.UsersService  - findDeleteId 1
+ERROR   2021-09-01 21:32:22,188 [main] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : john@doe.mail
+DEBUG   2021-09-01 21:32:22,189 [main] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : john@doe.mail
+DEBUG   2021-09-01 21:32:22,197 [main] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : JohnDoe@email.com
+DEBUG   2021-09-01 21:32:22,207 [main] com.paymybuddy.paymybuddy.service.UsersService  - update : 1
+DEBUG   2021-09-01 21:32:22,214 [main] com.paymybuddy.paymybuddy.service.UsersService  - findAll
+ERROR   2021-09-01 21:32:22,222 [main] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends error not found : 1
+DEBUG   2021-09-01 21:32:22,228 [main] com.paymybuddy.paymybuddy.service.UsersService  - findById 1
+DEBUG   2021-09-01 21:32:22,237 [main] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 1
+DEBUG   2021-09-01 21:32:22,244 [main] com.paymybuddy.paymybuddy.service.UsersService  - save : com.paymybuddy.paymybuddy.models.Users@3cc5fd4f
+DEBUG   2021-09-01 21:32:22,254 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findUserInfo : john@doe.mail
+DEBUG   2021-09-01 21:32:22,262 [main] com.paymybuddy.paymybuddy.service.UsersService  - findById 2
+DEBUG   2021-09-01 21:32:22,263 [main] com.paymybuddy.paymybuddy.service.UsersService  - addFriends : john@doe.mail
+DEBUG   2021-09-01 21:32:22,405 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe success : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@c0153c0a
+INFO    2021-09-01 22:04:59,860 [main] com.paymybuddy.paymybuddy.controller.UsersController  - addFriends : test
+INFO    2021-09-01 22:06:49,512 [main] com.paymybuddy.paymybuddy.controller.UsersController  - removeFriends : test
+INFO    2021-09-01 22:07:26,889 [main] com.paymybuddy.paymybuddy.controller.UsersController  - removeFriends : test
+INFO    2021-09-01 22:08:27,247 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - toggleActiveBankAccount : 01234
+INFO    2021-09-01 22:08:27,279 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findById
+INFO    2021-09-01 22:08:27,293 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - update
+INFO    2021-09-01 22:08:27,305 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - save
+INFO    2021-09-01 22:08:27,314 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - deleteById : 1
+INFO    2021-09-01 22:08:27,324 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findByIban
+INFO    2021-09-01 22:08:27,334 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findAll
+INFO    2021-09-01 22:08:31,444 [main] com.paymybuddy.paymybuddy.controller.UsersController  - removeFriends : test
+INFO    2021-09-01 22:08:31,908 [main] com.paymybuddy.paymybuddy.controller.UsersController  - findUsersInfo : null null
+INFO    2021-09-01 22:08:31,936 [main] com.paymybuddy.paymybuddy.controller.UsersController  - findAllUsers => OK
+INFO    2021-09-01 22:08:31,961 [main] com.paymybuddy.paymybuddy.controller.UsersController  - myProfil SUCCES : null null
+INFO    2021-09-01 22:08:31,988 [main] com.paymybuddy.paymybuddy.controller.UsersController  - addFriends : test
+ERROR   2021-09-01 22:08:32,025 [main] com.paymybuddy.paymybuddy.controller.UsersController  - getUsersInfo => null
+INFO    2021-09-01 22:08:32,213 [main] com.paymybuddy.paymybuddy.service.TransactionService  - EmmetedTransactionDTO
+INFO    2021-09-01 22:08:32,225 [main] com.paymybuddy.paymybuddy.service.TransactionService  - findbyReceiver : 1
+INFO    2021-09-01 22:08:32,233 [main] com.paymybuddy.paymybuddy.service.TransactionService  - findByEmmeter : 1
+INFO    2021-09-01 22:08:32,329 [main] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-09-01 22:08:32,330 [main] com.paymybuddy.paymybuddy.service.TransfertService  - receiveMoneyFromBankAccount : 100.0
+INFO    2021-09-01 22:08:32,343 [main] com.paymybuddy.paymybuddy.service.TransfertService  - findAllByUsersId : 1
+INFO    2021-09-01 22:08:32,355 [main] com.paymybuddy.paymybuddy.service.TransfertService  - sendMoneyToBankAccount : 100.0
+INFO    2021-09-01 22:08:32,355 [main] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-09-01 22:08:32,366 [main] com.paymybuddy.paymybuddy.service.TransfertService  - findById : 1
+ERROR   2021-09-01 22:08:32,438 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe error : john@doe.mail
+DEBUG   2021-09-01 22:08:32,444 [main] com.paymybuddy.paymybuddy.service.UsersService  - findDeleteId 1
+ERROR   2021-09-01 22:08:32,456 [main] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : john@doe.mail
+DEBUG   2021-09-01 22:08:32,456 [main] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : john@doe.mail
+DEBUG   2021-09-01 22:08:32,464 [main] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : JohnDoe@email.com
+DEBUG   2021-09-01 22:08:32,473 [main] com.paymybuddy.paymybuddy.service.UsersService  - update : 1
+DEBUG   2021-09-01 22:08:32,481 [main] com.paymybuddy.paymybuddy.service.UsersService  - findAll
+ERROR   2021-09-01 22:08:32,488 [main] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends error not found : 1
+DEBUG   2021-09-01 22:08:32,494 [main] com.paymybuddy.paymybuddy.service.UsersService  - findById 1
+DEBUG   2021-09-01 22:08:32,501 [main] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 1
+DEBUG   2021-09-01 22:08:32,511 [main] com.paymybuddy.paymybuddy.service.UsersService  - save : com.paymybuddy.paymybuddy.models.Users@231fc66b
+DEBUG   2021-09-01 22:08:32,519 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findUserInfo : john@doe.mail
+DEBUG   2021-09-01 22:08:32,527 [main] com.paymybuddy.paymybuddy.service.UsersService  - findById 2
+DEBUG   2021-09-01 22:08:32,528 [main] com.paymybuddy.paymybuddy.service.UsersService  - addFriends : john@doe.mail
+DEBUG   2021-09-01 22:08:32,740 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe success : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@d37ccb8f
+ERROR   2021-09-01 22:16:51,129 [main] com.paymybuddy.paymybuddy.controller.UsersController  - getUsersInfo => users not found : null
+ERROR   2021-09-01 22:17:36,664 [main] com.paymybuddy.paymybuddy.controller.UsersController  - getUsersInfo => users not found : null
+INFO    2021-09-01 22:18:37,644 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - toggleActiveBankAccount : 01234
+INFO    2021-09-01 22:18:37,678 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findById
+INFO    2021-09-01 22:18:37,693 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - update
+INFO    2021-09-01 22:18:37,707 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - save
+INFO    2021-09-01 22:18:37,722 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - deleteById : 1
+INFO    2021-09-01 22:18:37,729 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findByIban
+INFO    2021-09-01 22:18:37,744 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findAll
+INFO    2021-09-01 22:18:41,655 [main] com.paymybuddy.paymybuddy.controller.UsersController  - removeFriends : test
+INFO    2021-09-01 22:18:42,181 [main] com.paymybuddy.paymybuddy.controller.UsersController  - findUsersInfo : null null
+ERROR   2021-09-01 22:18:42,222 [main] com.paymybuddy.paymybuddy.controller.UsersController  - getUsersInfo => users not found : null
+INFO    2021-09-01 22:18:42,260 [main] com.paymybuddy.paymybuddy.controller.UsersController  - findAllUsers => OK
+INFO    2021-09-01 22:18:42,286 [main] com.paymybuddy.paymybuddy.controller.UsersController  - myProfil SUCCES : null null
+INFO    2021-09-01 22:18:42,321 [main] com.paymybuddy.paymybuddy.controller.UsersController  - addFriends : test
+ERROR   2021-09-01 22:18:42,352 [main] com.paymybuddy.paymybuddy.controller.UsersController  - getUsersInfo => null
+INFO    2021-09-01 22:18:42,528 [main] com.paymybuddy.paymybuddy.service.TransactionService  - EmmetedTransactionDTO
+INFO    2021-09-01 22:18:42,540 [main] com.paymybuddy.paymybuddy.service.TransactionService  - findbyReceiver : 1
+INFO    2021-09-01 22:18:42,549 [main] com.paymybuddy.paymybuddy.service.TransactionService  - findByEmmeter : 1
+INFO    2021-09-01 22:18:42,648 [main] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-09-01 22:18:42,649 [main] com.paymybuddy.paymybuddy.service.TransfertService  - receiveMoneyFromBankAccount : 100.0
+INFO    2021-09-01 22:18:42,661 [main] com.paymybuddy.paymybuddy.service.TransfertService  - findAllByUsersId : 1
+INFO    2021-09-01 22:18:42,670 [main] com.paymybuddy.paymybuddy.service.TransfertService  - sendMoneyToBankAccount : 100.0
+INFO    2021-09-01 22:18:42,671 [main] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-09-01 22:18:42,680 [main] com.paymybuddy.paymybuddy.service.TransfertService  - findById : 1
+ERROR   2021-09-01 22:18:42,754 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe error : john@doe.mail
+DEBUG   2021-09-01 22:18:42,760 [main] com.paymybuddy.paymybuddy.service.UsersService  - findDeleteId 1
+ERROR   2021-09-01 22:18:42,771 [main] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : john@doe.mail
+DEBUG   2021-09-01 22:18:42,771 [main] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : john@doe.mail
+DEBUG   2021-09-01 22:18:42,779 [main] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : JohnDoe@email.com
+DEBUG   2021-09-01 22:18:42,787 [main] com.paymybuddy.paymybuddy.service.UsersService  - update : 1
+DEBUG   2021-09-01 22:18:42,794 [main] com.paymybuddy.paymybuddy.service.UsersService  - findAll
+ERROR   2021-09-01 22:18:42,803 [main] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends error not found : 1
+DEBUG   2021-09-01 22:18:42,809 [main] com.paymybuddy.paymybuddy.service.UsersService  - findById 1
+DEBUG   2021-09-01 22:18:42,817 [main] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 1
+DEBUG   2021-09-01 22:18:42,824 [main] com.paymybuddy.paymybuddy.service.UsersService  - save : com.paymybuddy.paymybuddy.models.Users@c1999d4
+DEBUG   2021-09-01 22:18:42,831 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findUserInfo : john@doe.mail
+DEBUG   2021-09-01 22:18:42,841 [main] com.paymybuddy.paymybuddy.service.UsersService  - findById 2
+DEBUG   2021-09-01 22:18:42,842 [main] com.paymybuddy.paymybuddy.service.UsersService  - addFriends : john@doe.mail
+DEBUG   2021-09-01 22:18:43,019 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe success : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@af71ec6c
+INFO    2021-09-01 22:20:01,426 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - toggleActiveBankAccount : 01234
+INFO    2021-09-01 22:20:01,466 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findById
+INFO    2021-09-01 22:20:01,477 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - update
+INFO    2021-09-01 22:20:01,488 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - save
+INFO    2021-09-01 22:20:01,500 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - deleteById : 1
+INFO    2021-09-01 22:20:01,510 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findByIban
+INFO    2021-09-01 22:20:01,518 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findAll
+INFO    2021-09-01 22:20:05,726 [main] com.paymybuddy.paymybuddy.controller.UsersController  - removeFriends : test
+INFO    2021-09-01 22:20:06,316 [main] com.paymybuddy.paymybuddy.controller.UsersController  - findUsersInfo : null null
+ERROR   2021-09-01 22:20:06,366 [main] com.paymybuddy.paymybuddy.controller.UsersController  - getUsersInfo => users not found : null
+INFO    2021-09-01 22:20:06,406 [main] com.paymybuddy.paymybuddy.controller.UsersController  - findAllUsers => OK
+INFO    2021-09-01 22:20:06,432 [main] com.paymybuddy.paymybuddy.controller.UsersController  - myProfil SUCCES : null null
+INFO    2021-09-01 22:20:06,462 [main] com.paymybuddy.paymybuddy.controller.UsersController  - addFriends : test
+ERROR   2021-09-01 22:20:06,499 [main] com.paymybuddy.paymybuddy.controller.UsersController  - getUsersInfo => null
+INFO    2021-09-01 22:20:06,729 [main] com.paymybuddy.paymybuddy.service.TransactionService  - EmmetedTransactionDTO
+INFO    2021-09-01 22:20:06,743 [main] com.paymybuddy.paymybuddy.service.TransactionService  - findbyReceiver : 1
+INFO    2021-09-01 22:20:06,750 [main] com.paymybuddy.paymybuddy.service.TransactionService  - findByEmmeter : 1
+INFO    2021-09-01 22:20:06,861 [main] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-09-01 22:20:06,861 [main] com.paymybuddy.paymybuddy.service.TransfertService  - receiveMoneyFromBankAccount : 100.0
+INFO    2021-09-01 22:20:06,873 [main] com.paymybuddy.paymybuddy.service.TransfertService  - findAllByUsersId : 1
+INFO    2021-09-01 22:20:06,882 [main] com.paymybuddy.paymybuddy.service.TransfertService  - sendMoneyToBankAccount : 100.0
+INFO    2021-09-01 22:20:06,883 [main] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-09-01 22:20:06,895 [main] com.paymybuddy.paymybuddy.service.TransfertService  - findById : 1
+ERROR   2021-09-01 22:20:06,975 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe error : john@doe.mail
+DEBUG   2021-09-01 22:20:06,982 [main] com.paymybuddy.paymybuddy.service.UsersService  - findDeleteId 1
+ERROR   2021-09-01 22:20:06,994 [main] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : john@doe.mail
+DEBUG   2021-09-01 22:20:06,994 [main] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : john@doe.mail
+DEBUG   2021-09-01 22:20:07,005 [main] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : JohnDoe@email.com
+DEBUG   2021-09-01 22:20:07,014 [main] com.paymybuddy.paymybuddy.service.UsersService  - update : 1
+DEBUG   2021-09-01 22:20:07,025 [main] com.paymybuddy.paymybuddy.service.UsersService  - findAll
+ERROR   2021-09-01 22:20:07,031 [main] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends error not found : 1
+DEBUG   2021-09-01 22:20:07,040 [main] com.paymybuddy.paymybuddy.service.UsersService  - findById 1
+DEBUG   2021-09-01 22:20:07,047 [main] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 1
+DEBUG   2021-09-01 22:20:07,057 [main] com.paymybuddy.paymybuddy.service.UsersService  - save : com.paymybuddy.paymybuddy.models.Users@f40afe71
+DEBUG   2021-09-01 22:20:07,063 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findUserInfo : john@doe.mail
+DEBUG   2021-09-01 22:20:07,075 [main] com.paymybuddy.paymybuddy.service.UsersService  - findById 2
+DEBUG   2021-09-01 22:20:07,076 [main] com.paymybuddy.paymybuddy.service.UsersService  - addFriends : john@doe.mail
+DEBUG   2021-09-01 22:20:07,238 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe success : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@63756ee3
+INFO    2021-09-02 21:30:40,906 [main] com.paymybuddy.paymybuddy.controller.TransactionController  - toSendMoney test
+INFO    2021-09-02 21:31:24,401 [main] com.paymybuddy.paymybuddy.controller.TransactionController  - toSendMoney test
+INFO    2021-09-02 22:25:58,142 [main] com.paymybuddy.paymybuddy.controller.UsersController  - removeFriends : test
+INFO    2021-09-02 22:27:30,779 [main] com.paymybuddy.paymybuddy.controller.UsersController  - removeFriends : test
+INFO    2021-09-02 22:28:27,213 [main] com.paymybuddy.paymybuddy.controller.UsersController  - removeFriends : test
+INFO    2021-09-02 22:51:45,821 [main] com.paymybuddy.paymybuddy.controller.TransactionController  - sendMoney to null null
+INFO    2021-09-02 22:52:38,589 [main] com.paymybuddy.paymybuddy.controller.TransactionController  - sendMoney to null null
+INFO    2021-09-02 22:53:48,591 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - toggleActiveBankAccount : 01234
+INFO    2021-09-02 22:53:48,607 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findById
+INFO    2021-09-02 22:53:48,623 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - update
+INFO    2021-09-02 22:53:48,623 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - save
+INFO    2021-09-02 22:53:48,638 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - deleteById : 1
+INFO    2021-09-02 22:53:48,638 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findByIban
+INFO    2021-09-02 22:53:48,654 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findAll
+INFO    2021-09-02 22:53:51,280 [main] com.paymybuddy.paymybuddy.controller.TransactionController  - toSendMoney test
+INFO    2021-09-02 22:53:51,624 [main] com.paymybuddy.paymybuddy.controller.TransactionController  - sendMoney to null null
+INFO    2021-09-02 22:53:53,538 [main] com.paymybuddy.paymybuddy.controller.UsersController  - removeFriends : test
+INFO    2021-09-02 22:53:53,593 [main] com.paymybuddy.paymybuddy.controller.UsersController  - findUsersInfo : null null
+ERROR   2021-09-02 22:53:53,624 [main] com.paymybuddy.paymybuddy.controller.UsersController  - getUsersInfo => users not found : null
+INFO    2021-09-02 22:53:53,639 [main] com.paymybuddy.paymybuddy.controller.UsersController  - findAllUsers => OK
+INFO    2021-09-02 22:53:53,670 [main] com.paymybuddy.paymybuddy.controller.UsersController  - myProfil SUCCES : null null
+INFO    2021-09-02 22:53:53,702 [main] com.paymybuddy.paymybuddy.controller.UsersController  - addFriends : test
+ERROR   2021-09-02 22:53:53,733 [main] com.paymybuddy.paymybuddy.controller.UsersController  - getUsersInfo => null
+INFO    2021-09-02 22:53:53,858 [main] com.paymybuddy.paymybuddy.service.TransactionService  - EmmetedTransactionDTO
+INFO    2021-09-02 22:53:53,874 [main] com.paymybuddy.paymybuddy.service.TransactionService  - findbyReceiver : 1
+INFO    2021-09-02 22:53:53,874 [main] com.paymybuddy.paymybuddy.service.TransactionService  - findByEmmeter : 1
+INFO    2021-09-02 22:53:53,952 [main] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-09-02 22:53:53,952 [main] com.paymybuddy.paymybuddy.service.TransfertService  - receiveMoneyFromBankAccount : 100.0
+INFO    2021-09-02 22:53:53,952 [main] com.paymybuddy.paymybuddy.service.TransfertService  - findAllByUsersId : 1
+INFO    2021-09-02 22:53:53,967 [main] com.paymybuddy.paymybuddy.service.TransfertService  - sendMoneyToBankAccount : 100.0
+INFO    2021-09-02 22:53:53,967 [main] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-09-02 22:53:53,983 [main] com.paymybuddy.paymybuddy.service.TransfertService  - findById : 1
+ERROR   2021-09-02 22:53:54,061 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe error : john@doe.mail
+DEBUG   2021-09-02 22:53:54,061 [main] com.paymybuddy.paymybuddy.service.UsersService  - findDeleteId 1
+ERROR   2021-09-02 22:53:54,061 [main] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : john@doe.mail
+DEBUG   2021-09-02 22:53:54,077 [main] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : john@doe.mail
+DEBUG   2021-09-02 22:53:54,077 [main] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : JohnDoe@email.com
+DEBUG   2021-09-02 22:53:54,092 [main] com.paymybuddy.paymybuddy.service.UsersService  - update : 1
+DEBUG   2021-09-02 22:53:54,092 [main] com.paymybuddy.paymybuddy.service.UsersService  - findAll
+ERROR   2021-09-02 22:53:54,108 [main] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends error not found : 1
+DEBUG   2021-09-02 22:53:54,108 [main] com.paymybuddy.paymybuddy.service.UsersService  - findById 1
+DEBUG   2021-09-02 22:53:54,108 [main] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 1
+DEBUG   2021-09-02 22:53:54,124 [main] com.paymybuddy.paymybuddy.service.UsersService  - save : com.paymybuddy.paymybuddy.models.Users@43b426b4
+DEBUG   2021-09-02 22:53:54,124 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findUserInfo : john@doe.mail
+DEBUG   2021-09-02 22:53:54,139 [main] com.paymybuddy.paymybuddy.service.UsersService  - findById 2
+DEBUG   2021-09-02 22:53:54,139 [main] com.paymybuddy.paymybuddy.service.UsersService  - addFriends : john@doe.mail
+DEBUG   2021-09-02 22:53:54,249 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe success : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@4939321f
+ERROR   2021-09-02 22:58:34,718 [main] com.paymybuddy.paymybuddy.controller.TransactionController  - sendMoney to null null : Le montant Ã  transfÃ©rer est supÃ©rieur Ã  votre solde. 
+ERROR   2021-09-02 22:59:05,876 [main] com.paymybuddy.paymybuddy.controller.TransactionController  - sendMoney to null null : Le montant Ã  transfÃ©rer est supÃ©rieur Ã  votre solde. 
+ERROR   2021-09-02 23:00:08,539 [main] com.paymybuddy.paymybuddy.controller.TransactionController  - sendMoney to null null : Cet utilisateur ne figure pas dans votre liste d'amis. 
+INFO    2021-09-02 23:00:52,023 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - toggleActiveBankAccount : 01234
+INFO    2021-09-02 23:00:52,052 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findById
+INFO    2021-09-02 23:00:52,061 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - update
+INFO    2021-09-02 23:00:52,072 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - save
+INFO    2021-09-02 23:00:52,080 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - deleteById : 1
+INFO    2021-09-02 23:00:52,089 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findByIban
+INFO    2021-09-02 23:00:52,097 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findAll
+INFO    2021-09-02 23:00:55,158 [main] com.paymybuddy.paymybuddy.controller.TransactionController  - toSendMoney test
+ERROR   2021-09-02 23:00:55,543 [main] com.paymybuddy.paymybuddy.controller.TransactionController  - sendMoney to null null : Le montant à transférer est supérieur à votre solde. 
+INFO    2021-09-02 23:00:55,565 [main] com.paymybuddy.paymybuddy.controller.TransactionController  - sendMoney to null null
+ERROR   2021-09-02 23:00:55,588 [main] com.paymybuddy.paymybuddy.controller.TransactionController  - sendMoney to null null : Cet utilisateur ne figure pas dans votre liste d'amis. 
+INFO    2021-09-02 23:00:57,810 [main] com.paymybuddy.paymybuddy.controller.UsersController  - removeFriends : test
+INFO    2021-09-02 23:00:57,870 [main] com.paymybuddy.paymybuddy.controller.UsersController  - findUsersInfo : null null
+ERROR   2021-09-02 23:00:57,904 [main] com.paymybuddy.paymybuddy.controller.UsersController  - getUsersInfo => users not found : null
+INFO    2021-09-02 23:00:57,936 [main] com.paymybuddy.paymybuddy.controller.UsersController  - findAllUsers => OK
+INFO    2021-09-02 23:00:57,968 [main] com.paymybuddy.paymybuddy.controller.UsersController  - myProfil SUCCES : null null
+INFO    2021-09-02 23:00:57,996 [main] com.paymybuddy.paymybuddy.controller.UsersController  - addFriends : test
+ERROR   2021-09-02 23:00:58,023 [main] com.paymybuddy.paymybuddy.controller.UsersController  - getUsersInfo => null
+INFO    2021-09-02 23:00:58,181 [main] com.paymybuddy.paymybuddy.service.TransactionService  - EmmetedTransactionDTO
+INFO    2021-09-02 23:00:58,190 [main] com.paymybuddy.paymybuddy.service.TransactionService  - findbyReceiver : 1
+INFO    2021-09-02 23:00:58,195 [main] com.paymybuddy.paymybuddy.service.TransactionService  - findByEmmeter : 1
+INFO    2021-09-02 23:00:58,317 [main] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-09-02 23:00:58,318 [main] com.paymybuddy.paymybuddy.service.TransfertService  - receiveMoneyFromBankAccount : 100.0
+INFO    2021-09-02 23:00:58,326 [main] com.paymybuddy.paymybuddy.service.TransfertService  - findAllByUsersId : 1
+INFO    2021-09-02 23:00:58,332 [main] com.paymybuddy.paymybuddy.service.TransfertService  - sendMoneyToBankAccount : 100.0
+INFO    2021-09-02 23:00:58,336 [main] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-09-02 23:00:58,347 [main] com.paymybuddy.paymybuddy.service.TransfertService  - findById : 1
+ERROR   2021-09-02 23:00:58,423 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe error : john@doe.mail
+DEBUG   2021-09-02 23:00:58,429 [main] com.paymybuddy.paymybuddy.service.UsersService  - findDeleteId 1
+ERROR   2021-09-02 23:00:58,439 [main] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : john@doe.mail
+DEBUG   2021-09-02 23:00:58,440 [main] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : john@doe.mail
+DEBUG   2021-09-02 23:00:58,448 [main] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : JohnDoe@email.com
+DEBUG   2021-09-02 23:00:58,455 [main] com.paymybuddy.paymybuddy.service.UsersService  - update : 1
+DEBUG   2021-09-02 23:00:58,462 [main] com.paymybuddy.paymybuddy.service.UsersService  - findAll
+ERROR   2021-09-02 23:00:58,469 [main] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends error not found : 1
+DEBUG   2021-09-02 23:00:58,474 [main] com.paymybuddy.paymybuddy.service.UsersService  - findById 1
+DEBUG   2021-09-02 23:00:58,479 [main] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 1
+DEBUG   2021-09-02 23:00:58,488 [main] com.paymybuddy.paymybuddy.service.UsersService  - save : com.paymybuddy.paymybuddy.models.Users@d8246042
+DEBUG   2021-09-02 23:00:58,493 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findUserInfo : john@doe.mail
+DEBUG   2021-09-02 23:00:58,500 [main] com.paymybuddy.paymybuddy.service.UsersService  - findById 2
+DEBUG   2021-09-02 23:00:58,501 [main] com.paymybuddy.paymybuddy.service.UsersService  - addFriends : john@doe.mail
+DEBUG   2021-09-02 23:00:58,646 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe success : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@9a55e6b5
+ERROR   2021-09-03 08:00:45,297 [main] com.paymybuddy.paymybuddy.controller.UsersController  - addFriends => UserNotFound : test
+ERROR   2021-09-03 08:01:27,455 [main] com.paymybuddy.paymybuddy.controller.UsersController  - addFriends => User All ready Exists : test
+ERROR   2021-09-03 08:06:02,679 [main] com.paymybuddy.paymybuddy.controller.UsersController  - removeFriends => UserNotFound : test
+ERROR   2021-09-03 08:06:35,614 [main] com.paymybuddy.paymybuddy.controller.UsersController  - removeFriends => UserNotFound : test
+INFO    2021-09-03 08:07:43,418 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - toggleActiveBankAccount : 01234
+INFO    2021-09-03 08:07:43,453 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findById
+INFO    2021-09-03 08:07:43,461 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - update
+INFO    2021-09-03 08:07:43,471 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - save
+INFO    2021-09-03 08:07:43,478 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - deleteById : 1
+INFO    2021-09-03 08:07:43,485 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findByIban
+INFO    2021-09-03 08:07:43,492 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findAll
+INFO    2021-09-03 08:07:47,477 [main] com.paymybuddy.paymybuddy.controller.TransactionController  - toSendMoney test
+ERROR   2021-09-03 08:07:47,935 [main] com.paymybuddy.paymybuddy.controller.TransactionController  - sendMoney to null null : Le montant à transférer est supérieur à votre solde. 
+INFO    2021-09-03 08:07:47,960 [main] com.paymybuddy.paymybuddy.controller.TransactionController  - sendMoney to null null
+ERROR   2021-09-03 08:07:47,988 [main] com.paymybuddy.paymybuddy.controller.TransactionController  - sendMoney to null null : Cet utilisateur ne figure pas dans votre liste d'amis. 
+ERROR   2021-09-03 08:07:50,447 [main] com.paymybuddy.paymybuddy.controller.UsersController  - removeFriends => UserNotFound : test
+INFO    2021-09-03 08:07:50,518 [main] com.paymybuddy.paymybuddy.controller.UsersController  - removeFriends : test
+INFO    2021-09-03 08:07:50,544 [main] com.paymybuddy.paymybuddy.controller.UsersController  - findUsersInfo : null null
+INFO    2021-09-03 08:07:50,573 [main] com.paymybuddy.paymybuddy.controller.UsersController  - findAllUsers => OK
+ERROR   2021-09-03 08:07:50,596 [main] com.paymybuddy.paymybuddy.controller.UsersController  - addFriends => UserNotFound : test
+ERROR   2021-09-03 08:07:50,626 [main] com.paymybuddy.paymybuddy.controller.UsersController  - addFriends => User All ready Exists : test
+INFO    2021-09-03 08:07:50,651 [main] com.paymybuddy.paymybuddy.controller.UsersController  - myProfil SUCCES : null null
+ERROR   2021-09-03 08:07:50,678 [main] com.paymybuddy.paymybuddy.controller.UsersController  - getUsersInfo => users not found : null
+INFO    2021-09-03 08:07:50,707 [main] com.paymybuddy.paymybuddy.controller.UsersController  - addFriends : test
+ERROR   2021-09-03 08:07:50,742 [main] com.paymybuddy.paymybuddy.controller.UsersController  - getUsersInfo => null
+INFO    2021-09-03 08:07:50,926 [main] com.paymybuddy.paymybuddy.service.TransactionService  - EmmetedTransactionDTO
+INFO    2021-09-03 08:07:50,934 [main] com.paymybuddy.paymybuddy.service.TransactionService  - findbyReceiver : 1
+INFO    2021-09-03 08:07:50,939 [main] com.paymybuddy.paymybuddy.service.TransactionService  - findByEmmeter : 1
+INFO    2021-09-03 08:07:51,016 [main] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-09-03 08:07:51,017 [main] com.paymybuddy.paymybuddy.service.TransfertService  - receiveMoneyFromBankAccount : 100.0
+INFO    2021-09-03 08:07:51,026 [main] com.paymybuddy.paymybuddy.service.TransfertService  - findAllByUsersId : 1
+INFO    2021-09-03 08:07:51,036 [main] com.paymybuddy.paymybuddy.service.TransfertService  - sendMoneyToBankAccount : 100.0
+INFO    2021-09-03 08:07:51,037 [main] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-09-03 08:07:51,045 [main] com.paymybuddy.paymybuddy.service.TransfertService  - findById : 1
+ERROR   2021-09-03 08:07:51,121 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe error : john@doe.mail
+DEBUG   2021-09-03 08:07:51,126 [main] com.paymybuddy.paymybuddy.service.UsersService  - findDeleteId 1
+ERROR   2021-09-03 08:07:51,135 [main] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : john@doe.mail
+DEBUG   2021-09-03 08:07:51,136 [main] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : john@doe.mail
+DEBUG   2021-09-03 08:07:51,145 [main] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : JohnDoe@email.com
+DEBUG   2021-09-03 08:07:51,153 [main] com.paymybuddy.paymybuddy.service.UsersService  - update : 1
+DEBUG   2021-09-03 08:07:51,159 [main] com.paymybuddy.paymybuddy.service.UsersService  - findAll
+ERROR   2021-09-03 08:07:51,169 [main] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends error not found : 1
+DEBUG   2021-09-03 08:07:51,174 [main] com.paymybuddy.paymybuddy.service.UsersService  - findById 1
+DEBUG   2021-09-03 08:07:51,178 [main] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 1
+DEBUG   2021-09-03 08:07:51,184 [main] com.paymybuddy.paymybuddy.service.UsersService  - save : com.paymybuddy.paymybuddy.models.Users@bac249d8
+DEBUG   2021-09-03 08:07:51,189 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findUserInfo : john@doe.mail
+DEBUG   2021-09-03 08:07:51,195 [main] com.paymybuddy.paymybuddy.service.UsersService  - findById 2
+DEBUG   2021-09-03 08:07:51,196 [main] com.paymybuddy.paymybuddy.service.UsersService  - addFriends : john@doe.mail
+DEBUG   2021-09-03 08:07:51,332 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe success : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@7fe50f1f
+INFO    2021-09-03 08:14:10,257 [main] com.paymybuddy.paymybuddy.controller.TransfertController  - receiveMoneyFromBankAccount : null
+INFO    2021-09-03 08:14:54,986 [main] com.paymybuddy.paymybuddy.controller.TransfertController  - receiveMoneyFromBankAccount : null
+ERROR   2021-09-03 08:18:33,021 [main] com.paymybuddy.paymybuddy.controller.TransfertController  - receiveMoneyFromBankAccount : null : Le compte cible n'est pas actif. 
+ERROR   2021-09-03 08:19:10,022 [main] com.paymybuddy.paymybuddy.controller.TransfertController  - receiveMoneyFromBankAccount : null : Le type de transfert ne correspond pas Ã  la demande. 
+INFO    2021-09-03 08:20:53,921 [main] com.paymybuddy.paymybuddy.controller.TransfertController  - receiveMoneyFromBankAccount : null
+ERROR   2021-09-03 08:23:51,572 [main] com.paymybuddy.paymybuddy.controller.TransfertController  - sendMoneyToBankAccount : null : Le compte cible n'est pas actif. 
+ERROR   2021-09-03 08:25:26,485 [main] com.paymybuddy.paymybuddy.controller.TransfertController  - sendMoneyToBankAccount : null : Le compte cible n'est pas actif. 
+ERROR   2021-09-03 08:26:37,510 [main] com.paymybuddy.paymybuddy.controller.TransfertController  - sendMoneyToBankAccount : null : Le type de transfert ne correspond pas Ã  la demande. 
+ERROR   2021-09-03 08:27:38,599 [main] com.paymybuddy.paymybuddy.controller.TransfertController  - sendMoneyToBankAccount : null : Le montant Ã  transfÃ©rer est supÃ©rieur Ã  votre solde. 
+INFO    2021-09-03 09:15:18,683 [main] com.paymybuddy.paymybuddy.controller.BankAccountController  - banckAccount()
+INFO    2021-09-03 09:20:36,573 [main] com.paymybuddy.paymybuddy.controller.BankAccountController  - banckAccount()
+INFO    2021-09-03 09:30:22,424 [main] com.paymybuddy.paymybuddy.controller.BankAccountController  - banckAccount()
+ERROR   2021-09-03 09:32:48,372 [main] com.paymybuddy.paymybuddy.controller.BankAccountController  - addBankAccount() null null
+ERROR   2021-09-03 09:33:15,221 [main] com.paymybuddy.paymybuddy.controller.BankAccountController  - addBankAccount() null null
+ERROR   2021-09-03 09:34:32,871 [main] com.paymybuddy.paymybuddy.controller.BankAccountController  - addBankAccount() Ce compte existe dÃ©jÃ  ! null
+ERROR   2021-09-03 09:38:56,142 [main] com.paymybuddy.paymybuddy.controller.BankAccountController  - addBankAccount() null null
+INFO    2021-09-03 09:40:09,559 [main] com.paymybuddy.paymybuddy.controller.BankAccountController  - toggleActif() false
+DEBUG   2021-09-03 09:57:40,230 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+INFO    2021-09-03 09:57:40,314 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.security.CustomUserDetailsService  - loadUserByUsername : sb@email.com
+ERROR   2021-09-03 09:57:40,449 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.SecurityController  - register => error : java.lang.IllegalArgumentException: rawPassword cannot be null
+ERROR   2021-09-03 09:58:38,950 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.SecurityController  - register => error : java.lang.IllegalArgumentException: rawPassword cannot be null
+DEBUG   2021-09-03 09:58:48,866 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+INFO    2021-09-03 09:58:48,900 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.security.CustomUserDetailsService  - loadUserByUsername : sb@email.com
+INFO    2021-09-03 09:58:49,045 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 09:58:49,045 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 09:58:49,082 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-09-03 09:58:49,114 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 35
+INFO    2021-09-03 09:58:49,116 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - myProfil SUCCES : Sylvain Bus
+INFO    2021-09-03 09:58:51,260 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 09:58:51,260 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 09:58:51,272 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-09-03 09:58:51,273 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.BankAccountController  - banckAccount()
+INFO    2021-09-03 09:58:52,677 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 09:58:52,678 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 09:58:52,684 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-09-03 09:58:52,692 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - findUsersInfo : Bus Sylvain
+INFO    2021-09-03 09:58:54,612 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 09:58:54,613 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 09:58:54,625 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-09-03 09:58:54,645 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 35
+INFO    2021-09-03 09:58:54,648 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - myProfil SUCCES : Sylvain Bus
+INFO    2021-09-03 09:59:00,163 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 09:59:00,164 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+ERROR   2021-09-03 09:59:00,175 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : jp@jpp.com
+DEBUG   2021-09-03 09:59:00,180 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : jp@jpp.com
+DEBUG   2021-09-03 09:59:00,222 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-09-03 09:59:00,225 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 35
+INFO    2021-09-03 09:59:00,227 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - removeFriends : jp@jpp.com
+INFO    2021-09-03 09:59:06,193 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 09:59:06,194 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 09:59:06,203 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+ERROR   2021-09-03 09:59:06,228 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UsersService  - findUserInfo error not found : bob@mail.com
+ERROR   2021-09-03 09:59:06,232 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - getUsersInfo => users not found : bob@mail.com
+INFO    2021-09-03 09:59:11,036 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 09:59:11,036 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 09:59:11,042 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-09-03 09:59:11,052 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UsersService  - users findUserInfo : jp@jpp.com
+DEBUG   2021-09-03 09:59:11,062 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 35
+ERROR   2021-09-03 09:59:11,063 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - getUsersInfo => jp@jpp.com
+INFO    2021-09-03 09:59:12,853 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 09:59:12,853 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 09:59:12,862 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-09-03 09:59:12,874 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UsersService  - findById 35
+DEBUG   2021-09-03 09:59:12,880 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UsersService  - addFriends : jp@jpp.com
+DEBUG   2021-09-03 09:59:12,892 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 35
+INFO    2021-09-03 09:59:12,893 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - addFriends : jp@jpp.com
+INFO    2021-09-03 09:59:14,521 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 09:59:14,521 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 09:59:14,527 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-09-03 09:59:14,536 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : jp@jpp.com
+INFO    2021-09-03 09:59:14,542 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.TransactionController  - toSendMoney jp@jpp.com
+INFO    2021-09-03 09:59:21,530 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 09:59:21,530 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 09:59:21,533 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : jp@jpp.com
+DEBUG   2021-09-03 09:59:21,536 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-09-03 09:59:21,594 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.TransactionService  - EmmetedTransactionDTO
+DEBUG   2021-09-03 09:59:21,612 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-09-03 09:59:21,613 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-09-03 09:59:21,613 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.TransactionController  - sendMoney to Jack Sparrow
+INFO    2021-09-03 09:59:24,274 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 09:59:24,274 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 09:59:24,283 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-09-03 09:59:24,283 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.BankAccountController  - banckAccount()
+INFO    2021-09-03 09:59:26,479 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 09:59:26,479 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 09:59:26,483 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-09-03 09:59:26,492 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - findUsersInfo : Bus Sylvain
+INFO    2021-09-03 09:59:32,508 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 09:59:32,508 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 09:59:32,517 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-09-03 09:59:32,517 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.BankAccountController  - banckAccount()
+INFO    2021-09-03 09:59:37,143 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 09:59:37,144 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 09:59:37,149 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-09-03 09:59:37,163 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.BankAccountService  - toggleActiveBankAccount : 1
+INFO    2021-09-03 09:59:37,189 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.BankAccountController  - toggleActif() false
+INFO    2021-09-03 10:01:58,624 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:01:58,625 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 10:01:58,631 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-09-03 10:01:58,638 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.BankAccountService  - toggleActiveBankAccount : 1
+INFO    2021-09-03 10:01:58,644 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.BankAccountController  - toggleActif() false
+INFO    2021-09-03 10:02:00,224 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:02:00,224 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 10:02:00,233 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-09-03 10:02:00,242 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.BankAccountService  - toggleActiveBankAccount : 2
+INFO    2021-09-03 10:02:00,251 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.BankAccountController  - toggleActif() false
+INFO    2021-09-03 10:02:01,139 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:02:01,140 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 10:02:01,150 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-09-03 10:02:01,163 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.BankAccountService  - toggleActiveBankAccount : 2
+INFO    2021-09-03 10:02:01,170 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.BankAccountController  - toggleActif() false
+INFO    2021-09-03 10:02:21,658 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:02:21,658 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+INFO    2021-09-03 10:02:21,665 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-09-03 10:02:21,672 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.TransfertService  - receiveMoneyFromBankAccount : 50.0
+INFO    2021-09-03 10:02:21,675 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.TransfertController  - receiveMoneyFromBankAccount : 50.0
+INFO    2021-09-03 10:02:24,662 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:02:24,662 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 10:02:24,685 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-09-03 10:02:24,686 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.BankAccountController  - banckAccount()
+INFO    2021-09-03 10:02:29,544 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:02:29,544 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+INFO    2021-09-03 10:02:29,547 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.TransfertService  - sendMoneyToBankAccount : 50.0
+INFO    2021-09-03 10:02:29,549 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-09-03 10:02:31,532 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:02:31,532 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 10:02:31,537 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-09-03 10:02:31,544 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.UsersController  - findUsersInfo : Bus Sylvain
+INFO    2021-09-03 10:02:36,894 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:02:36,894 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 10:02:36,898 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-09-03 10:02:36,903 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 35
+INFO    2021-09-03 10:02:36,904 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - myProfil SUCCES : Sylvain Bus
+INFO    2021-09-03 10:02:46,718 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:02:46,718 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 10:02:46,724 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+ERROR   2021-09-03 10:02:46,734 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UsersService  - findUserInfo error not found : jp@jp.com
+ERROR   2021-09-03 10:02:46,737 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - getUsersInfo => users not found : jp@jp.com
+INFO    2021-09-03 10:02:53,060 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:02:53,060 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 10:02:53,067 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-09-03 10:02:53,081 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UsersService  - users findUserInfo : jp@jpp.com
+DEBUG   2021-09-03 10:02:53,088 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 35
+ERROR   2021-09-03 10:02:53,089 [http-nio-9001-exec-7] com.paymybuddy.paymybuddy.controller.UsersController  - getUsersInfo => jp@jpp.com
+INFO    2021-09-03 10:02:54,864 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:02:54,865 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 10:02:54,873 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-09-03 10:02:54,888 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - findById 35
+ERROR   2021-09-03 10:02:54,895 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - addFriends error existing friend : jp@jpp.com
+ERROR   2021-09-03 10:02:54,897 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.UsersController  - addFriends => User All ready Exists : jp@jpp.com
+INFO    2021-09-03 10:03:00,607 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:03:00,608 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 10:03:00,616 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-09-03 10:03:00,616 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.BankAccountController  - banckAccount()
+INFO    2021-09-03 10:03:02,242 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:03:02,242 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 10:03:02,247 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-09-03 10:03:02,254 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 35
+INFO    2021-09-03 10:03:02,256 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - myProfil SUCCES : Sylvain Bus
+INFO    2021-09-03 10:03:10,687 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:03:10,688 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 10:03:10,694 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-09-03 10:03:10,711 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - findAll
+INFO    2021-09-03 10:03:10,716 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - findAllUsers => OK
+INFO    2021-09-03 10:03:15,685 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:03:15,685 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 10:03:15,695 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-09-03 10:03:15,696 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.BankAccountController  - banckAccount()
+INFO    2021-09-03 10:03:18,626 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:03:18,626 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 10:03:18,634 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-09-03 10:03:18,647 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 35
+INFO    2021-09-03 10:03:18,649 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - myProfil SUCCES : Sylvain Bus
+INFO    2021-09-03 10:03:23,390 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:03:23,390 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 10:03:23,397 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-09-03 10:03:23,413 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UsersService  - users findUserInfo : jdoe@mail.com
+DEBUG   2021-09-03 10:03:23,422 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 35
+ERROR   2021-09-03 10:03:23,423 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - getUsersInfo => jdoe@mail.com
+INFO    2021-09-03 10:03:25,341 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:03:25,341 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 10:03:25,348 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-09-03 10:03:25,357 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UsersService  - findById 35
+DEBUG   2021-09-03 10:03:25,362 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UsersService  - addFriends : jdoe@mail.com
+DEBUG   2021-09-03 10:03:25,371 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 35
+INFO    2021-09-03 10:03:25,372 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - addFriends : jdoe@mail.com
+INFO    2021-09-03 10:03:32,153 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:03:32,153 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+ERROR   2021-09-03 10:03:32,161 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : jp@jpp.com
+DEBUG   2021-09-03 10:03:32,167 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : jp@jpp.com
+DEBUG   2021-09-03 10:03:32,175 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-09-03 10:03:32,176 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 35
+INFO    2021-09-03 10:03:32,176 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - removeFriends : jp@jpp.com
+INFO    2021-09-03 10:03:38,713 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:03:38,714 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 10:03:38,721 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-09-03 10:03:38,737 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.service.UsersService  - users findUserInfo : jp@jpp.com
+DEBUG   2021-09-03 10:03:38,743 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 35
+ERROR   2021-09-03 10:03:38,745 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - getUsersInfo => jp@jpp.com
+INFO    2021-09-03 10:03:40,407 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:03:40,407 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 10:03:40,411 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-09-03 10:03:40,418 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UsersService  - findById 35
+DEBUG   2021-09-03 10:03:40,421 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UsersService  - addFriends : jp@jpp.com
+DEBUG   2021-09-03 10:03:40,426 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 35
+INFO    2021-09-03 10:03:40,427 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - addFriends : jp@jpp.com
+INFO    2021-09-03 10:03:43,321 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:03:43,322 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 10:03:43,324 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-09-03 10:03:43,328 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.UsersController  - findUsersInfo : Bus Sylvain
+ERROR   2021-09-03 10:04:23,218 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.SecurityController  - register => error : java.lang.IllegalArgumentException: rawPassword cannot be null
+DEBUG   2021-09-03 10:05:01,759 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : s.mail.com
+DEBUG   2021-09-03 10:05:16,240 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : s@email.com
+DEBUG   2021-09-03 10:05:21,626 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+INFO    2021-09-03 10:05:21,628 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.security.CustomUserDetailsService  - loadUserByUsername : sb@email.com
+DEBUG   2021-09-03 10:06:05,533 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+INFO    2021-09-03 10:06:05,617 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.security.CustomUserDetailsService  - loadUserByUsername : sb@email.com
+INFO    2021-09-03 10:06:05,807 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:06:05,807 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 10:06:05,846 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-09-03 10:06:05,864 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 35
+INFO    2021-09-03 10:06:05,866 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - myProfil SUCCES : Sylvain Bus
+INFO    2021-09-03 10:06:08,580 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:06:08,580 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 10:06:08,586 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-09-03 10:06:08,622 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UsersService  - findAll
+INFO    2021-09-03 10:06:08,631 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.UsersController  - findAllUsers => OK
+ERROR   2021-09-03 10:06:17,115 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.SecurityController  - register => error : java.lang.IllegalArgumentException: rawPassword cannot be null
+ERROR   2021-09-03 10:10:48,566 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.SecurityController  - register => error : java.lang.IllegalArgumentException: rawPassword cannot be null
+DEBUG   2021-09-03 10:11:11,813 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : bob@mail.com
+ERROR   2021-09-03 10:12:53,655 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.SecurityController  - register => error : java.lang.IllegalArgumentException: rawPassword cannot be null
+DEBUG   2021-09-03 10:13:04,496 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - subscribe success : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@34cfa3f6
+INFO    2021-09-03 10:13:04,546 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.SecurityController  - resgister succes : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@34cfa3f6
+ERROR   2021-09-03 10:16:53,698 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.SecurityController  - register => error : java.lang.IllegalArgumentException: rawPassword cannot be null
+DEBUG   2021-09-03 10:17:03,274 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UsersService  - subscribe success : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@9dfaa80
+INFO    2021-09-03 10:17:03,331 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.SecurityController  - resgister succes : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@9dfaa80
+ERROR   2021-09-03 10:25:32,790 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.SecurityController  - register => error : java.lang.IllegalArgumentException: rawPassword cannot be null
+DEBUG   2021-09-03 10:25:38,867 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UsersService  - subscribe success : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@ada4df96
+INFO    2021-09-03 10:25:38,910 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.controller.SecurityController  - resgister succes : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@ada4df96
+DEBUG   2021-09-03 10:25:45,468 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : k
+INFO    2021-09-03 10:25:45,483 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.security.CustomUserDetailsService  - loadUserByUsername : k
+INFO    2021-09-03 10:25:45,586 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:25:45,587 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : k
+DEBUG   2021-09-03 10:25:45,599 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 40
+DEBUG   2021-09-03 10:25:45,605 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 40
+INFO    2021-09-03 10:25:45,606 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - myProfil SUCCES : kiki k
+DEBUG   2021-09-03 10:26:09,687 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+INFO    2021-09-03 10:26:09,693 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.security.CustomUserDetailsService  - loadUserByUsername : sb@email.com
+INFO    2021-09-03 10:26:09,786 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:26:09,786 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 10:26:09,790 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-09-03 10:26:09,799 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 35
+INFO    2021-09-03 10:26:09,802 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.UsersController  - myProfil SUCCES : Sylvain Bus
+INFO    2021-09-03 10:26:11,570 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:26:11,570 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 10:26:11,574 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-09-03 10:26:11,604 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.service.UsersService  - findAll
+INFO    2021-09-03 10:26:11,621 [http-nio-9001-exec-2] com.paymybuddy.paymybuddy.controller.UsersController  - findAllUsers => OK
+INFO    2021-09-03 10:37:05,261 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:37:05,262 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 10:37:05,267 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-09-03 10:37:05,278 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 35
+INFO    2021-09-03 10:37:05,280 [http-nio-9001-exec-6] com.paymybuddy.paymybuddy.controller.UsersController  - myProfil SUCCES : Sylvain Bus
+INFO    2021-09-03 10:37:06,557 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:37:06,559 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 10:37:06,567 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-09-03 10:37:06,579 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - findAll
+INFO    2021-09-03 10:37:06,585 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.UsersController  - findAllUsers => OK
+INFO    2021-09-03 10:38:02,662 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 10:38:02,662 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 10:38:02,676 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-09-03 10:38:02,677 [http-nio-9001-exec-10] com.paymybuddy.paymybuddy.controller.BankAccountController  - banckAccount()
+INFO    2021-09-03 10:42:07,791 [main] com.paymybuddy.paymybuddy.controller.SecurityController  - resgister succes : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@5aea7396
+ERROR   2021-09-03 10:44:00,443 [main] com.paymybuddy.paymybuddy.controller.SecurityController  - register => email existant : null
+INFO    2021-09-03 10:46:48,679 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - toggleActiveBankAccount : 01234
+INFO    2021-09-03 10:46:48,717 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findById
+INFO    2021-09-03 10:46:48,727 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - update
+INFO    2021-09-03 10:46:48,736 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - save
+INFO    2021-09-03 10:46:48,747 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - deleteById : 1
+INFO    2021-09-03 10:46:48,755 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findByIban
+INFO    2021-09-03 10:46:48,765 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findAll
+ERROR   2021-09-03 10:46:52,649 [main] com.paymybuddy.paymybuddy.controller.BankAccountController  - addBankAccount() null null
+INFO    2021-09-03 10:46:53,168 [main] com.paymybuddy.paymybuddy.controller.BankAccountController  - toggleActif() false
+ERROR   2021-09-03 10:46:53,199 [main] com.paymybuddy.paymybuddy.controller.BankAccountController  - addBankAccount() Ce compte existe déjà ! null
+INFO    2021-09-03 10:46:53,226 [main] com.paymybuddy.paymybuddy.controller.BankAccountController  - banckAccount()
+INFO    2021-09-03 10:46:56,608 [main] com.paymybuddy.paymybuddy.controller.SecurityController  - resgister succes : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@440a2dd1
+ERROR   2021-09-03 10:46:56,637 [main] com.paymybuddy.paymybuddy.controller.SecurityController  - register => email existant : null
+INFO    2021-09-03 10:46:59,469 [main] com.paymybuddy.paymybuddy.controller.TransactionController  - toSendMoney test
+ERROR   2021-09-03 10:46:59,536 [main] com.paymybuddy.paymybuddy.controller.TransactionController  - sendMoney to null null : Le montant à transférer est supérieur à votre solde. 
+INFO    2021-09-03 10:46:59,564 [main] com.paymybuddy.paymybuddy.controller.TransactionController  - sendMoney to null null
+ERROR   2021-09-03 10:46:59,591 [main] com.paymybuddy.paymybuddy.controller.TransactionController  - sendMoney to null null : Cet utilisateur ne figure pas dans votre liste d'amis. 
+ERROR   2021-09-03 10:47:02,298 [main] com.paymybuddy.paymybuddy.controller.TransfertController  - receiveMoneyFromBankAccount : null : Le type de transfert ne correspond pas à la demande. 
+ERROR   2021-09-03 10:47:02,352 [main] com.paymybuddy.paymybuddy.controller.TransfertController  - sendMoneyToBankAccount : null : Le type de transfert ne correspond pas à la demande. 
+ERROR   2021-09-03 10:47:02,374 [main] com.paymybuddy.paymybuddy.controller.TransfertController  - receiveMoneyFromBankAccount : null : Le compte cible n'est pas actif. 
+ERROR   2021-09-03 10:47:02,399 [main] com.paymybuddy.paymybuddy.controller.TransfertController  - sendMoneyToBankAccount : null : Le compte cible n'est pas actif. 
+INFO    2021-09-03 10:47:02,423 [main] com.paymybuddy.paymybuddy.controller.TransfertController  - receiveMoneyFromBankAccount : null
+ERROR   2021-09-03 10:47:02,474 [main] com.paymybuddy.paymybuddy.controller.TransfertController  - sendMoneyToBankAccount : null : Le montant à transférer est supérieur à votre solde. 
+ERROR   2021-09-03 10:47:05,037 [main] com.paymybuddy.paymybuddy.controller.UsersController  - removeFriends => UserNotFound : test
+INFO    2021-09-03 10:47:05,088 [main] com.paymybuddy.paymybuddy.controller.UsersController  - removeFriends : test
+INFO    2021-09-03 10:47:05,110 [main] com.paymybuddy.paymybuddy.controller.UsersController  - findUsersInfo : null null
+INFO    2021-09-03 10:47:05,129 [main] com.paymybuddy.paymybuddy.controller.UsersController  - findAllUsers => OK
+ERROR   2021-09-03 10:47:05,149 [main] com.paymybuddy.paymybuddy.controller.UsersController  - addFriends => UserNotFound : test
+ERROR   2021-09-03 10:47:05,171 [main] com.paymybuddy.paymybuddy.controller.UsersController  - addFriends => User All ready Exists : test
+INFO    2021-09-03 10:47:05,195 [main] com.paymybuddy.paymybuddy.controller.UsersController  - myProfil SUCCES : null null
+ERROR   2021-09-03 10:47:05,222 [main] com.paymybuddy.paymybuddy.controller.UsersController  - getUsersInfo => users not found : null
+INFO    2021-09-03 10:47:05,259 [main] com.paymybuddy.paymybuddy.controller.UsersController  - addFriends : test
+ERROR   2021-09-03 10:47:05,284 [main] com.paymybuddy.paymybuddy.controller.UsersController  - getUsersInfo => null
+INFO    2021-09-03 10:47:05,465 [main] com.paymybuddy.paymybuddy.service.TransactionService  - EmmetedTransactionDTO
+INFO    2021-09-03 10:47:05,479 [main] com.paymybuddy.paymybuddy.service.TransactionService  - findbyReceiver : 1
+INFO    2021-09-03 10:47:05,488 [main] com.paymybuddy.paymybuddy.service.TransactionService  - findByEmmeter : 1
+INFO    2021-09-03 10:47:05,598 [main] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-09-03 10:47:05,599 [main] com.paymybuddy.paymybuddy.service.TransfertService  - receiveMoneyFromBankAccount : 100.0
+INFO    2021-09-03 10:47:05,610 [main] com.paymybuddy.paymybuddy.service.TransfertService  - findAllByUsersId : 1
+INFO    2021-09-03 10:47:05,620 [main] com.paymybuddy.paymybuddy.service.TransfertService  - sendMoneyToBankAccount : 100.0
+INFO    2021-09-03 10:47:05,621 [main] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-09-03 10:47:05,632 [main] com.paymybuddy.paymybuddy.service.TransfertService  - findById : 1
+ERROR   2021-09-03 10:47:05,713 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe error : john@doe.mail
+DEBUG   2021-09-03 10:47:05,728 [main] com.paymybuddy.paymybuddy.service.UsersService  - findDeleteId 1
+ERROR   2021-09-03 10:47:05,737 [main] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : john@doe.mail
+DEBUG   2021-09-03 10:47:05,738 [main] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : john@doe.mail
+DEBUG   2021-09-03 10:47:05,748 [main] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : JohnDoe@email.com
+DEBUG   2021-09-03 10:47:05,756 [main] com.paymybuddy.paymybuddy.service.UsersService  - update : 1
+DEBUG   2021-09-03 10:47:05,765 [main] com.paymybuddy.paymybuddy.service.UsersService  - findAll
+ERROR   2021-09-03 10:47:05,771 [main] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends error not found : 1
+DEBUG   2021-09-03 10:47:05,781 [main] com.paymybuddy.paymybuddy.service.UsersService  - findById 1
+DEBUG   2021-09-03 10:47:05,787 [main] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 1
+DEBUG   2021-09-03 10:47:05,796 [main] com.paymybuddy.paymybuddy.service.UsersService  - save : com.paymybuddy.paymybuddy.models.Users@a141df40
+DEBUG   2021-09-03 10:47:05,805 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findUserInfo : john@doe.mail
+DEBUG   2021-09-03 10:47:05,818 [main] com.paymybuddy.paymybuddy.service.UsersService  - findById 2
+DEBUG   2021-09-03 10:47:05,819 [main] com.paymybuddy.paymybuddy.service.UsersService  - addFriends : john@doe.mail
+DEBUG   2021-09-03 10:47:06,005 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe success : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@3bbca3a9
+INFO    2021-09-03 17:55:44,702 [main] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+ERROR   2021-09-03 17:55:44,707 [main] com.paymybuddy.paymybuddy.service.TransfertService  - receiveMoneyFromBankAccount 
+INFO    2021-09-03 17:57:49,739 [main] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-09-03 17:57:49,745 [main] com.paymybuddy.paymybuddy.service.TransfertService  - receiveMoneyFromBankAccount : 100.0
+INFO    2021-09-03 17:58:51,020 [main] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-09-03 17:58:51,027 [main] com.paymybuddy.paymybuddy.service.TransfertService  - receiveMoneyFromBankAccount : 100.0
+INFO    2021-09-03 18:04:10,323 [main] com.paymybuddy.paymybuddy.service.TransfertService  - sendMoneyToBankAccount : 100.0
+INFO    2021-09-03 18:04:10,593 [main] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-09-03 18:05:12,475 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - toggleActiveBankAccount : 01234
+INFO    2021-09-03 18:05:12,513 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findById
+INFO    2021-09-03 18:05:12,526 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - update
+INFO    2021-09-03 18:05:12,536 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - save
+INFO    2021-09-03 18:05:12,546 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - deleteById : 1
+INFO    2021-09-03 18:05:12,555 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findByIban
+INFO    2021-09-03 18:05:12,564 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findAll
+ERROR   2021-09-03 18:05:16,564 [main] com.paymybuddy.paymybuddy.controller.BankAccountController  - addBankAccount() null null
+INFO    2021-09-03 18:05:17,178 [main] com.paymybuddy.paymybuddy.controller.BankAccountController  - toggleActif() false
+ERROR   2021-09-03 18:05:17,216 [main] com.paymybuddy.paymybuddy.controller.BankAccountController  - addBankAccount() Ce compte existe déjà ! null
+INFO    2021-09-03 18:05:17,241 [main] com.paymybuddy.paymybuddy.controller.BankAccountController  - banckAccount()
+INFO    2021-09-03 18:05:20,631 [main] com.paymybuddy.paymybuddy.controller.SecurityController  - resgister succes : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@221ce2e
+ERROR   2021-09-03 18:05:20,652 [main] com.paymybuddy.paymybuddy.controller.SecurityController  - register => email existant : null
+INFO    2021-09-03 18:05:23,608 [main] com.paymybuddy.paymybuddy.controller.TransactionController  - toSendMoney test
+ERROR   2021-09-03 18:05:23,659 [main] com.paymybuddy.paymybuddy.controller.TransactionController  - sendMoney to null null : Le montant à transférer est supérieur à votre solde. 
+INFO    2021-09-03 18:05:23,685 [main] com.paymybuddy.paymybuddy.controller.TransactionController  - sendMoney to null null
+ERROR   2021-09-03 18:05:23,713 [main] com.paymybuddy.paymybuddy.controller.TransactionController  - sendMoney to null null : Cet utilisateur ne figure pas dans votre liste d'amis. 
+ERROR   2021-09-03 18:05:26,490 [main] com.paymybuddy.paymybuddy.controller.TransfertController  - receiveMoneyFromBankAccount : null : Le type de transfert ne correspond pas à la demande. 
+ERROR   2021-09-03 18:05:26,537 [main] com.paymybuddy.paymybuddy.controller.TransfertController  - sendMoneyToBankAccount : null : Le type de transfert ne correspond pas à la demande. 
+ERROR   2021-09-03 18:05:26,559 [main] com.paymybuddy.paymybuddy.controller.TransfertController  - receiveMoneyFromBankAccount : null : Le compte cible n'est pas actif. 
+ERROR   2021-09-03 18:05:26,579 [main] com.paymybuddy.paymybuddy.controller.TransfertController  - sendMoneyToBankAccount : null : Le compte cible n'est pas actif. 
+INFO    2021-09-03 18:05:26,598 [main] com.paymybuddy.paymybuddy.controller.TransfertController  - receiveMoneyFromBankAccount : null
+ERROR   2021-09-03 18:05:26,644 [main] com.paymybuddy.paymybuddy.controller.TransfertController  - sendMoneyToBankAccount : null : Le montant à transférer est supérieur à votre solde. 
+ERROR   2021-09-03 18:05:29,249 [main] com.paymybuddy.paymybuddy.controller.UsersController  - removeFriends => UserNotFound : test
+INFO    2021-09-03 18:05:29,293 [main] com.paymybuddy.paymybuddy.controller.UsersController  - removeFriends : test
+INFO    2021-09-03 18:05:29,310 [main] com.paymybuddy.paymybuddy.controller.UsersController  - findUsersInfo : null null
+INFO    2021-09-03 18:05:29,328 [main] com.paymybuddy.paymybuddy.controller.UsersController  - findAllUsers => OK
+ERROR   2021-09-03 18:05:29,345 [main] com.paymybuddy.paymybuddy.controller.UsersController  - addFriends => UserNotFound : test
+ERROR   2021-09-03 18:05:29,366 [main] com.paymybuddy.paymybuddy.controller.UsersController  - addFriends => User All ready Exists : test
+INFO    2021-09-03 18:05:29,386 [main] com.paymybuddy.paymybuddy.controller.UsersController  - myProfil SUCCES : null null
+ERROR   2021-09-03 18:05:29,413 [main] com.paymybuddy.paymybuddy.controller.UsersController  - getUsersInfo => users not found : null
+INFO    2021-09-03 18:05:29,439 [main] com.paymybuddy.paymybuddy.controller.UsersController  - addFriends : test
+ERROR   2021-09-03 18:05:29,466 [main] com.paymybuddy.paymybuddy.controller.UsersController  - getUsersInfo => null
+INFO    2021-09-03 18:05:29,688 [main] com.paymybuddy.paymybuddy.service.TransactionService  - EmmetedTransactionDTO
+INFO    2021-09-03 18:05:29,702 [main] com.paymybuddy.paymybuddy.service.TransactionService  - findbyReceiver : 1
+INFO    2021-09-03 18:05:29,710 [main] com.paymybuddy.paymybuddy.service.TransactionService  - findByEmmeter : 1
+INFO    2021-09-03 18:05:29,826 [main] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-09-03 18:05:29,826 [main] com.paymybuddy.paymybuddy.service.TransfertService  - receiveMoneyFromBankAccount : 100.0
+INFO    2021-09-03 18:05:29,838 [main] com.paymybuddy.paymybuddy.service.TransfertService  - findAllByUsersId : 1
+INFO    2021-09-03 18:05:29,848 [main] com.paymybuddy.paymybuddy.service.TransfertService  - sendMoneyToBankAccount : 100.0
+INFO    2021-09-03 18:05:29,849 [main] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-09-03 18:05:29,860 [main] com.paymybuddy.paymybuddy.service.TransfertService  - findById : 1
+ERROR   2021-09-03 18:05:29,960 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe error : john@doe.mail
+DEBUG   2021-09-03 18:05:29,968 [main] com.paymybuddy.paymybuddy.service.UsersService  - findDeleteId 1
+ERROR   2021-09-03 18:05:29,980 [main] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : john@doe.mail
+DEBUG   2021-09-03 18:05:29,980 [main] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : john@doe.mail
+DEBUG   2021-09-03 18:05:29,992 [main] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : JohnDoe@email.com
+DEBUG   2021-09-03 18:05:30,001 [main] com.paymybuddy.paymybuddy.service.UsersService  - update : 1
+DEBUG   2021-09-03 18:05:30,015 [main] com.paymybuddy.paymybuddy.service.UsersService  - findAll
+ERROR   2021-09-03 18:05:30,027 [main] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends error not found : 1
+DEBUG   2021-09-03 18:05:30,039 [main] com.paymybuddy.paymybuddy.service.UsersService  - findById 1
+DEBUG   2021-09-03 18:05:30,050 [main] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 1
+DEBUG   2021-09-03 18:05:30,059 [main] com.paymybuddy.paymybuddy.service.UsersService  - save : com.paymybuddy.paymybuddy.models.Users@e2688f8b
+DEBUG   2021-09-03 18:05:30,070 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findUserInfo : john@doe.mail
+DEBUG   2021-09-03 18:05:30,081 [main] com.paymybuddy.paymybuddy.service.UsersService  - findById 2
+DEBUG   2021-09-03 18:05:30,082 [main] com.paymybuddy.paymybuddy.service.UsersService  - addFriends : john@doe.mail
+DEBUG   2021-09-03 18:05:30,282 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe success : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@d4e57001
+INFO    2021-09-03 18:13:11,927 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - toggleActiveBankAccount : 01234
+INFO    2021-09-03 18:13:11,954 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findById
+INFO    2021-09-03 18:13:11,964 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - update
+INFO    2021-09-03 18:13:11,969 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - save
+INFO    2021-09-03 18:13:11,975 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - deleteById : 1
+INFO    2021-09-03 18:13:11,982 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findByIban
+INFO    2021-09-03 18:13:11,988 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findAll
+ERROR   2021-09-03 18:13:14,909 [main] com.paymybuddy.paymybuddy.controller.BankAccountController  - addBankAccount() null null
+INFO    2021-09-03 18:13:15,267 [main] com.paymybuddy.paymybuddy.controller.BankAccountController  - toggleActif() false
+ERROR   2021-09-03 18:13:15,285 [main] com.paymybuddy.paymybuddy.controller.BankAccountController  - addBankAccount() Ce compte existe déjà ! null
+INFO    2021-09-03 18:13:15,301 [main] com.paymybuddy.paymybuddy.controller.BankAccountController  - banckAccount()
+INFO    2021-09-03 18:13:17,316 [main] com.paymybuddy.paymybuddy.controller.SecurityController  - resgister succes : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@421437f6
+ERROR   2021-09-03 18:13:17,333 [main] com.paymybuddy.paymybuddy.controller.SecurityController  - register => email existant : null
+INFO    2021-09-03 18:13:19,034 [main] com.paymybuddy.paymybuddy.controller.TransactionController  - toSendMoney test
+ERROR   2021-09-03 18:13:19,069 [main] com.paymybuddy.paymybuddy.controller.TransactionController  - sendMoney to null null : Le montant à transférer est supérieur à votre solde. 
+INFO    2021-09-03 18:13:19,084 [main] com.paymybuddy.paymybuddy.controller.TransactionController  - sendMoney to null null
+ERROR   2021-09-03 18:13:19,097 [main] com.paymybuddy.paymybuddy.controller.TransactionController  - sendMoney to null null : Cet utilisateur ne figure pas dans votre liste d'amis. 
+ERROR   2021-09-03 18:13:20,689 [main] com.paymybuddy.paymybuddy.controller.TransfertController  - receiveMoneyFromBankAccount : null : Le type de transfert ne correspond pas à la demande. 
+ERROR   2021-09-03 18:13:20,715 [main] com.paymybuddy.paymybuddy.controller.TransfertController  - sendMoneyToBankAccount : null : Le type de transfert ne correspond pas à la demande. 
+ERROR   2021-09-03 18:13:20,726 [main] com.paymybuddy.paymybuddy.controller.TransfertController  - receiveMoneyFromBankAccount : null : Le compte cible n'est pas actif. 
+ERROR   2021-09-03 18:13:20,738 [main] com.paymybuddy.paymybuddy.controller.TransfertController  - sendMoneyToBankAccount : null : Le compte cible n'est pas actif. 
+INFO    2021-09-03 18:13:20,749 [main] com.paymybuddy.paymybuddy.controller.TransfertController  - receiveMoneyFromBankAccount : null
+ERROR   2021-09-03 18:13:20,769 [main] com.paymybuddy.paymybuddy.controller.TransfertController  - sendMoneyToBankAccount : null : Le montant à transférer est supérieur à votre solde. 
+ERROR   2021-09-03 18:13:22,322 [main] com.paymybuddy.paymybuddy.controller.UsersController  - removeFriends => UserNotFound : test
+INFO    2021-09-03 18:13:22,348 [main] com.paymybuddy.paymybuddy.controller.UsersController  - removeFriends : test
+INFO    2021-09-03 18:13:22,361 [main] com.paymybuddy.paymybuddy.controller.UsersController  - findUsersInfo : null null
+INFO    2021-09-03 18:13:22,371 [main] com.paymybuddy.paymybuddy.controller.UsersController  - findAllUsers => OK
+ERROR   2021-09-03 18:13:22,383 [main] com.paymybuddy.paymybuddy.controller.UsersController  - addFriends => UserNotFound : test
+ERROR   2021-09-03 18:13:22,397 [main] com.paymybuddy.paymybuddy.controller.UsersController  - addFriends => User All ready Exists : test
+INFO    2021-09-03 18:13:22,407 [main] com.paymybuddy.paymybuddy.controller.UsersController  - myProfil SUCCES : null null
+ERROR   2021-09-03 18:13:22,420 [main] com.paymybuddy.paymybuddy.controller.UsersController  - getUsersInfo => users not found : null
+INFO    2021-09-03 18:13:22,431 [main] com.paymybuddy.paymybuddy.controller.UsersController  - addFriends : test
+ERROR   2021-09-03 18:13:22,443 [main] com.paymybuddy.paymybuddy.controller.UsersController  - getUsersInfo => null
+INFO    2021-09-03 18:13:22,551 [main] com.paymybuddy.paymybuddy.service.TransactionService  - EmmetedTransactionDTO
+INFO    2021-09-03 18:13:22,556 [main] com.paymybuddy.paymybuddy.service.TransactionService  - findbyReceiver : 1
+INFO    2021-09-03 18:13:22,562 [main] com.paymybuddy.paymybuddy.service.TransactionService  - findByEmmeter : 1
+INFO    2021-09-03 18:13:22,630 [main] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-09-03 18:13:22,630 [main] com.paymybuddy.paymybuddy.service.TransfertService  - receiveMoneyFromBankAccount : 100.0
+INFO    2021-09-03 18:13:22,634 [main] com.paymybuddy.paymybuddy.service.TransfertService  - findAllByUsersId : 1
+INFO    2021-09-03 18:13:22,640 [main] com.paymybuddy.paymybuddy.service.TransfertService  - sendMoneyToBankAccount : 100.0
+INFO    2021-09-03 18:13:22,640 [main] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-09-03 18:13:22,648 [main] com.paymybuddy.paymybuddy.service.TransfertService  - findById : 1
+ERROR   2021-09-03 18:13:22,714 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe error : john@doe.mail
+DEBUG   2021-09-03 18:13:22,718 [main] com.paymybuddy.paymybuddy.service.UsersService  - findDeleteId 1
+ERROR   2021-09-03 18:13:22,722 [main] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : john@doe.mail
+DEBUG   2021-09-03 18:13:22,722 [main] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : john@doe.mail
+DEBUG   2021-09-03 18:13:22,726 [main] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : JohnDoe@email.com
+DEBUG   2021-09-03 18:13:22,732 [main] com.paymybuddy.paymybuddy.service.UsersService  - update : 1
+DEBUG   2021-09-03 18:13:22,737 [main] com.paymybuddy.paymybuddy.service.UsersService  - findAll
+ERROR   2021-09-03 18:13:22,741 [main] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends error not found : 1
+DEBUG   2021-09-03 18:13:22,747 [main] com.paymybuddy.paymybuddy.service.UsersService  - findById 1
+DEBUG   2021-09-03 18:13:22,750 [main] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 1
+DEBUG   2021-09-03 18:13:22,753 [main] com.paymybuddy.paymybuddy.service.UsersService  - save : com.paymybuddy.paymybuddy.models.Users@3883ecaf
+DEBUG   2021-09-03 18:13:22,755 [main] com.paymybuddy.paymybuddy.service.UsersService  - users findUserInfo : john@doe.mail
+DEBUG   2021-09-03 18:13:22,759 [main] com.paymybuddy.paymybuddy.service.UsersService  - findById 2
+DEBUG   2021-09-03 18:13:22,759 [main] com.paymybuddy.paymybuddy.service.UsersService  - addFriends : john@doe.mail
+DEBUG   2021-09-03 18:13:22,839 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe success : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@607f8140
+INFO    2021-09-03 18:13:50,930 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - save
+INFO    2021-09-03 18:13:50,963 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - toggleActiveBankAccount : 01234
+INFO    2021-09-03 18:13:53,224 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - save
+INFO    2021-09-03 18:13:53,230 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - update
+INFO    2021-09-03 18:13:55,106 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - save
+INFO    2021-09-03 18:13:56,839 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - save
+INFO    2021-09-03 18:13:56,845 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - deleteById : 1
+INFO    2021-09-03 18:13:56,860 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findByIban
+INFO    2021-09-03 18:13:58,371 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - save
+INFO    2021-09-03 18:13:58,376 [main] com.paymybuddy.paymybuddy.service.BankAccountService  - findAll
+INFO    2021-09-03 18:13:59,905 [main] com.paymybuddy.paymybuddy.service.TransfertService  - sendMoneyToBankAccount : 100.0
+INFO    2021-09-03 18:13:59,928 [main] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-09-03 18:14:01,392 [main] com.paymybuddy.paymybuddy.service.TransfertService  - setTransfert
+INFO    2021-09-03 18:14:01,395 [main] com.paymybuddy.paymybuddy.service.TransfertService  - receiveMoneyFromBankAccount : 100.0
+DEBUG   2021-09-03 18:14:03,035 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe success : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@1875b343
+DEBUG   2021-09-03 18:14:03,042 [main] com.paymybuddy.paymybuddy.service.UsersService  - findDeleteId 1
+DEBUG   2021-09-03 18:14:04,621 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe success : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@388e1c72
+DEBUG   2021-09-03 18:14:04,693 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe success : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@6a314eb2
+DEBUG   2021-09-03 18:14:04,695 [main] com.paymybuddy.paymybuddy.service.UsersService  - findById 2
+DEBUG   2021-09-03 18:14:04,700 [main] com.paymybuddy.paymybuddy.service.UsersService  - addFriends : john@doe.mail
+DEBUG   2021-09-03 18:14:06,318 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe success : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@7d49ca9d
+DEBUG   2021-09-03 18:14:06,324 [main] com.paymybuddy.paymybuddy.service.UsersService  - update : 1
+DEBUG   2021-09-03 18:14:07,768 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe success : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@11aea380
+DEBUG   2021-09-03 18:14:07,773 [main] com.paymybuddy.paymybuddy.service.UsersService  - findById 1
+DEBUG   2021-09-03 18:14:09,207 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe success : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@6d4b2d3f
+DEBUG   2021-09-03 18:14:09,214 [main] com.paymybuddy.paymybuddy.service.UsersService  - findAll
+DEBUG   2021-09-03 18:14:09,218 [main] com.paymybuddy.paymybuddy.service.UsersService  - findAll
+DEBUG   2021-09-03 18:14:10,664 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe success : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@5cbdbd2c
+DEBUG   2021-09-03 18:14:10,671 [main] com.paymybuddy.paymybuddy.service.UsersService  - findById 1
+DEBUG   2021-09-03 18:14:12,133 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe success : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@7c81f78f
+DEBUG   2021-09-03 18:14:12,201 [main] com.paymybuddy.paymybuddy.service.UsersService  - subscribe success : com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO@3d9aff8a
+DEBUG   2021-09-03 18:14:12,203 [main] com.paymybuddy.paymybuddy.service.UsersService  - findById 2
+DEBUG   2021-09-03 18:14:12,207 [main] com.paymybuddy.paymybuddy.service.UsersService  - addFriends : john@doe.mail
+ERROR   2021-09-03 18:14:12,211 [main] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : john@doe.mail
+DEBUG   2021-09-03 18:14:12,213 [main] com.paymybuddy.paymybuddy.service.UsersService  - removeFriends : john@doe.mail
+DEBUG   2021-09-03 18:20:46,544 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+INFO    2021-09-03 18:20:46,594 [http-nio-9001-exec-3] com.paymybuddy.paymybuddy.security.CustomUserDetailsService  - loadUserByUsername : sb@email.com
+INFO    2021-09-03 18:20:46,693 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 18:20:46,693 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 18:20:46,713 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-09-03 18:20:46,729 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 35
+INFO    2021-09-03 18:20:46,733 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.UsersController  - myProfil SUCCES : Sylvain Bus
+INFO    2021-09-03 18:20:50,171 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 18:20:50,172 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 18:20:50,180 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-09-03 18:20:50,180 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.BankAccountController  - banckAccount()
+INFO    2021-09-03 18:20:51,696 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 18:20:51,697 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 18:20:51,699 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-09-03 18:20:51,706 [http-nio-9001-exec-9] com.paymybuddy.paymybuddy.controller.UsersController  - findUsersInfo : Bus Sylvain
+INFO    2021-09-03 18:21:03,396 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 18:21:03,396 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 18:21:03,407 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-09-03 18:21:03,407 [http-nio-9001-exec-1] com.paymybuddy.paymybuddy.controller.BankAccountController  - banckAccount()
+INFO    2021-09-03 18:21:04,662 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 18:21:04,663 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 18:21:04,667 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-09-03 18:21:04,673 [http-nio-9001-exec-4] com.paymybuddy.paymybuddy.controller.UsersController  - findUsersInfo : Bus Sylvain
+INFO    2021-09-03 18:21:05,844 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 18:21:05,844 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 18:21:05,854 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+INFO    2021-09-03 18:21:05,854 [http-nio-9001-exec-5] com.paymybuddy.paymybuddy.controller.BankAccountController  - banckAccount()
+INFO    2021-09-03 18:21:07,860 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UtilsService  - findCurrentUser
+DEBUG   2021-09-03 18:21:07,860 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - findByEmail : sb@email.com
+DEBUG   2021-09-03 18:21:07,863 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - findCurrentUserInfo : 35
+DEBUG   2021-09-03 18:21:07,871 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.service.UsersService  - findUsersFriends : 35
+INFO    2021-09-03 18:21:07,872 [http-nio-9001-exec-8] com.paymybuddy.paymybuddy.controller.UsersController  - myProfil SUCCES : Sylvain Bus
