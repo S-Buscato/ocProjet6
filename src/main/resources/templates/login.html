@@ -34,6 +34,10 @@
 
 							<input type="submit" value="Sign In" class="btn btn-primary text-center mt-2"/>
 							<div class="row mt-3">
+								<div class="badge text-wrap mx-auto alert-success" th:if="${userSubscribeOkDTO}">
+									Register success !
+								</div>
+
 								<!-- show notification on error -->
 								<div class="badge text-wrap mx-auto bg-danger text-white" th:if="${param.error}">
 									Invalid username or password

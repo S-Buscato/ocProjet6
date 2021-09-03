@@ -23,7 +23,7 @@ public class BankAccount {
 
     private boolean actif;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
     @JoinColumn(name="users_id")
     private Users users;
 

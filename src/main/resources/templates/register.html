@@ -22,8 +22,8 @@
 					<h5 class="card-header">Paymybuddy</h5>
 
 					<div class="card-body">
-						<form th:action="@{'/subscribe'}" th:method="post" th:object="${usersMinimalsInfoDTO}">
-							<h2 >Please subscribe</h2>
+						<form th:action="@{'/register'}" th:method="post" th:object="${usersMinimalsInfoDTO}">
+							<h2 >Please register</h2>
 							<label class="text-xl-center">Your Firstname</label>
 							<input type="text" name="firstName" th:required="required" th:autofocus="autofocus"/>
 							<br/>
@@ -39,7 +39,7 @@
 							<input type="password" name="password" placeholder="Password" th:required="required" />
 							<br/>
 
-							<input type="submit" value="Subscribe" class="btn btn-primary text-center mt-2"/>
+							<input type="submit" value="Register" class="btn btn-primary text-center mt-2"/>
 						</form>
 						<div class="row mt-2 alert alert-danger" th:if="${error}" th:text="${error}"></div>
 						<div class="row mt-2 alert alert-success" th:if="${userSubscribeOkDTO}" th:text="Succes"></div>
