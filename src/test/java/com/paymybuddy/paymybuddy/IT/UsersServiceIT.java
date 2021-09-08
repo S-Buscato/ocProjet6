@@ -1,4 +1,4 @@
-package com.paymybuddy.paymybuddy.serviceTest.IT;
+package com.paymybuddy.paymybuddy.IT;
 
 import com.paymybuddy.paymybuddy.constant.TransfertType;
 import com.paymybuddy.paymybuddy.dto.*;

@@ -1,4 +1,4 @@
-package com.paymybuddy.paymybuddy.serviceTest.IT;
+package com.paymybuddy.paymybuddy.IT;
 
 import com.paymybuddy.paymybuddy.dto.BankAccountDTO;
 import com.paymybuddy.paymybuddy.exception.BankAccountExistsException;

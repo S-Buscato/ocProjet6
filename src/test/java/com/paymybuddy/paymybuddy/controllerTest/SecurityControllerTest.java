@@ -1,4 +1,4 @@
-package com.paymybuddy.paymybuddy.serviceTest.controllerTest;
+package com.paymybuddy.paymybuddy.controllerTest;
 
 import com.paymybuddy.paymybuddy.dto.UserSubscribeOkDTO;
 import com.paymybuddy.paymybuddy.dto.UsersSubscribeDTO;

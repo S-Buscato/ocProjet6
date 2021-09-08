@@ -29,7 +29,6 @@ public class CustomUserDetailsService implements UserDetailsService {
         if (email.trim().isEmpty()) {
             logger.error("loadUserByUsername ");
             throw new UsernameNotFoundException("username is empty");
-
         }
 
         Users user = userService.findByEmail(email).get();
@@ -41,23 +40,4 @@ public class CustomUserDetailsService implements UserDetailsService {
         logger.info("loadUserByUsername : " + email);
         return UserDetailsImpl.build(user);
     }
-
-/*    public UserDetails getCurrentUser(String email) throws UsernameNotFoundException {
-        if (email.trim().isEmpty()) {
-            throw new UsernameNotFoundException("username is empty");
-        }
-
-        Users user = userService.findByEmail(email).get();
-
-        if (user == null) {
-            throw new UsernameNotFoundException("User " + email + " not found");
-        }
-
-        return UserDetailsImpl.build(user);
-    }*/
-
-/*    private List<GrantedAuthority> getGrantedAuthorities(Users user) {
-        List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
-        return Collections.emptyList();
-    }*/
 }

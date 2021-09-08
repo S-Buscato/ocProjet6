@@ -61,22 +61,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .withUser("user").password("password").roles("USER");
     }
 
-    private class AuthentificationLoginSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
-        @Override
-        public void onAuthenticationSuccess(HttpServletRequest request,
-                                            HttpServletResponse response, Authentication authentication)
-                throws IOException, ServletException {
-            response.setStatus(HttpServletResponse.SC_OK);
-        }
-    }
-    private class AuthentificationLogoutSuccessHandler extends SimpleUrlLogoutSuccessHandler {
-        @Override
-        public void onLogoutSuccess(HttpServletRequest request, HttpServletResponse response,
-                                    Authentication authentication) throws IOException, ServletException {
-            response.setStatus(HttpServletResponse.SC_OK);
-        }
-    }
-
     @Override
     protected void configure(AuthenticationManagerBuilder authManagerBuilder) throws Exception {
         authManagerBuilder.userDetailsService(customUserDetailsService).passwordEncoder(bCryptPasswordEncoder());

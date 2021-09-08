@@ -50,7 +50,7 @@ public class BankAccountController {
 
 
     @PostMapping(path="/bank/add")
-    public ModelAndView addBankAccount(@ModelAttribute("bankAccountDTO") BankAccountDTO bankAccountDTO) throws UsersNotFoundException {
+    public ModelAndView addBankAccount(@ModelAttribute("bankAccountDTO") BankAccountDTO bankAccountDTO) {
         Users currentUser = utilsService.findCurrentUser();
         ModelAndView modelAndView = new ModelAndView(new RedirectView("/paymybuddy/bank/account", true));
         modelAndView.setViewName("users/bankAccount");

@@ -1,11 +1,9 @@
-package com.paymybuddy.paymybuddy.serviceTest.IT;
+package com.paymybuddy.paymybuddy.IT;
 
 import com.paymybuddy.paymybuddy.constant.TransfertType;
-import com.paymybuddy.paymybuddy.dto.BankAccountDTO;
 import com.paymybuddy.paymybuddy.dto.BankTransfertDTO;
 import com.paymybuddy.paymybuddy.dto.TransfertDTO;
 import com.paymybuddy.paymybuddy.exception.BadTransfertTypeException;
-import com.paymybuddy.paymybuddy.exception.BankAccountExistsException;
 import com.paymybuddy.paymybuddy.exception.InsuffisientBalanceException;
 import com.paymybuddy.paymybuddy.exception.NotActiveBankAccountException;
 import com.paymybuddy.paymybuddy.models.BankAccount;
@@ -14,7 +12,6 @@ import com.paymybuddy.paymybuddy.models.Users;
 import com.paymybuddy.paymybuddy.repository.BankAccountRepository;
 import com.paymybuddy.paymybuddy.repository.TransfertRepository;
 import com.paymybuddy.paymybuddy.repository.UsersRepository;
-import com.paymybuddy.paymybuddy.service.BankAccountService;
 import com.paymybuddy.paymybuddy.service.TransfertService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

@@ -57,7 +57,7 @@
 					<td >
 						<form th:action="@{'/paymybuddy/users/addfriends'}" th:method="post">
 							<input type="hidden" name="email" id="mail" th:value='${foundedUser.email}'/>
-							<button type="submit" class="btn btn-primary btn-sm" >Add</button>
+							<button th:if="${foundedUser.email} != ${currentUser.email} " type="submit" class="btn btn-primary btn-sm" >Add</button>
 						</form>
 					</td>
 				</tr>

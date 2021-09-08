@@ -26,7 +26,6 @@
 					<th>Full Name</th>
 					<th>User Name</th>
 					<th>email</th>
-					<th>add to friend list</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -34,12 +33,6 @@
 					<td th:text="${user.firstName}"></td>
 					<td th:text="${user.lastName}"></td>
 					<td th:text="${user.email}"></td>
-					<td >
-						<form th:action="@{'/paymybuddy/users/addfriends/'+${currentUser.id}}" th:method="post">
-							<input type="hidden" name="email" id="email" th:value='${user.email}'/>
-							<button type="submit" class="btn btn-primary btn-sm" >Add</button>
-						</form>
-					</td>
 				</tr>
 			</tbody>
 		</table>

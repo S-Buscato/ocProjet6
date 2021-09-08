@@ -26,10 +26,6 @@ public class Users{
     private String lastName;
     private String password;
     private String email;
-
-    @Column(name="role")
-    private String role;
-
     @Column(name="total_amount")
     private Double totalAmount;
 
@@ -145,9 +141,5 @@ public class Users{
 
     public void setEmmetedTransactions(List<Transaction> emmetedTransactions) {
         EmmetedTransactions = emmetedTransactions;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
     }
 }
