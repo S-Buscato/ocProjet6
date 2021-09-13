@@ -40,7 +40,7 @@ public class BankAccountService implements IBankAccountService {
     }
 
     @Override
-    @Transactional
+    @Transactional(readOnly = true)
     public List<BankAccountDTO> findAll(Long id) {
         logger.info("findAll");
         Users users = usersRepository.findById(id).get();
@@ -48,14 +48,14 @@ public class BankAccountService implements IBankAccountService {
     }
 
     @Override
-    @Transactional
+    @Transactional(readOnly = true)
     public BankAccountDTO findById(long id) {
         logger.info("findById");
         return BankAccountMapper.INSTANCE.convertBankAccountToBankAccountDTO(bankAccountRepository.findById(id).get());
     }
 
     @Override
-    @Transactional
+    @Transactional(readOnly = true)
     public BankAccountDTO findByIban(String iban) {
         logger.info("findByIban");
         return BankAccountMapper.INSTANCE.convertBankAccountToBankAccountDTO(bankAccountRepository.findByIban(iban));
