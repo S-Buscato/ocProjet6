@@ -75,6 +75,7 @@ public class TransactionController {
         catch (InsuffisientBalanceException e) {
             modelAndView.addObject("currentUser", usersService.findCurrentUserInfo(currentUser.getId()));
             modelAndView.addObject("error", e.getMessage());
+            modelAndView.addObject("receiver", usersService.findCurrentUserInfo(currentUser.getId()));
             logger.error("sendMoney to "+ requestTransactionDTO.getReceiver().getFirstName() + " " + requestTransactionDTO.getReceiver().getLastName() + " : " + e.getMessage());
             return modelAndView;
         }
